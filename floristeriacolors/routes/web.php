@@ -11,6 +11,7 @@
 |
 */
 Route::get('/','PrincipalController@index');
+Route::resource('categoria','CategoryController');
 
 /*Route::get('/', function () {
     //return view('welcome');
