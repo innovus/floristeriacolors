@@ -4,6 +4,9 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Http\Requests;
+use FloristeriaColors\Category;
+use Session;
+use Redirect;
 
 class CategoryController extends Controller
 {
@@ -14,7 +17,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories =  \FloristeriaColors\Category::All();
+        $categories = Category::All();
         return view('category.index',compact('categories'));
     }
 
@@ -36,7 +39,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        \FloristeriaColors\Category::create([
+        Category::create([
             'name' => $request['name'],
             ]);
         return redirect('/categoria')->with('message','store');
@@ -61,6 +64,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
+        $categoria = Category::find($id);
+        return view('category.edit',['category'=>$categoria]);
         //
     }
 
@@ -73,7 +78,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $categoria = Category::find($id);
+        $categoria->fill($request->all());
+        $categoria->save();
+
+        Session::flash('message','Usuario Editado correctamente');
+
+        return Redirect::to('/categoria');
     }
 
     /**
