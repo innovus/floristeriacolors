@@ -11,6 +11,7 @@
 |
 */
 Route::get('/','PrincipalController@index');
+Route::get('realizarArreglo/','PrincipalController@realizarArreglo');
 Route::resource('categoria','CategoryController');
 
 /*Route::get('/', function () {

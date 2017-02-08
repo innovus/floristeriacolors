@@ -13,7 +13,15 @@ class PrincipalController extends Controller
      */
     public function index()
     {
-        return View('web.index');
+        return View('plantillas.index');
     }
-
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function realizarArreglo()
+    {
+        return View('plantillas.realizarArreglo');
+    }
 }
