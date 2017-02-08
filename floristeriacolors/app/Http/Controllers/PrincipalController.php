@@ -13,7 +13,7 @@ class PrincipalController extends Controller
      */
     public function index()
     {
-        return 'este es index';
+        return View('web.index');
     }
 
 }
