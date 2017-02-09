@@ -20,7 +20,10 @@
         </div>
         <!--fin separador -->
         @yield('content')
-       
+
+        
+        @include('layouts.puntoscompra')
+        @include('layouts.seccion2')      
         @include('layouts.footer')
 
         @include('layouts.script')
