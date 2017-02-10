@@ -24,4 +24,13 @@ class PrincipalController extends Controller
     {
         return View('plantillas.realizarArreglo');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function categoriaSeleccionada()
+    {
+        return View('plantillas.categoriaSeleccionada');
+    }
 }

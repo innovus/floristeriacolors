@@ -10,10 +10,7 @@
                     <!-- service item -->
                     <div class="col-md-2 col-md-offset-1 wow fadeInLeft" data-wow-duration="500ms">
                         <div class="service-item">
-                            <!--<div class="service-icon">
-                                
-                            </div>-->
-                            
+                                                    
                             <div class="service-desc">
                                 
                                

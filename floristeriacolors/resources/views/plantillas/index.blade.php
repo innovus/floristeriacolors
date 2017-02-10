@@ -44,9 +44,9 @@
 
       <!-- fin seccion 1-->
 
-      @include('plantillas.categorias')
+      @include('layouts.categorias')
 
-      @include('plantillas.trespasos')
+      @include('layouts.trespasos')
 
       <!-- formas de pago -->
         <section id="" class="formasPago">

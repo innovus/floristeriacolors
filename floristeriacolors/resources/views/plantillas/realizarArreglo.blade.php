@@ -3,83 +3,15 @@
 
 @section('content')
 
-<section class="bienvenida">
-        <div class="container"> 
-
-            <div class="row">
-                <div class="col-md-6 text-center">
-                   <p>Bienvenido a la Floristeria mas importante de Colombia</p> 
-                   <h4>Tu compra segura y 100% garantizada!</h4>
-                </div>
-                <div class="col-md-6">
-                     
-                    <div class="input-group">
-                                   
-                        <input type="text" class="form-control" name="city" placeholder="Buscar arreglo. ej: Arreglo de rosas">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="fa fa-search fa-1x"></span></button>
-                        </span>
-                    </div>                             
-                                
-                            
-                </div>
-               
-                
-            </div>
-
-            
-        </div>
-        
-    </section>
+@include('layouts.buscadorArreglos')
 
     <section class="categoriasFlores">
         <div class="container">
             <div class="row ">
                   <div class="col-md-3">
-                        <div class="contenedor-menu">
-                                <!-- -->
-                                <ul id="accordion" class="accordion">
-                                    <li>
-                                        <div class="link"><a rel="nofollow" rel="noreferrer" href="#">Todos los Arreglos</a></div>
-                                    </li>
-                                    <li ><!--class="default open" -->
-                                        <div class="link">Los más Destacados<i class="fa fa-chevron-down"></i></div>
-                                        <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Rosas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Girasoles</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div class="link">Categorias<i class="fa fa-chevron-down"></i></div>
-                                        <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Arreglos Florales</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Diseños</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Frutas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Gerberas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Margaritas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Rosas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Girasoles</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><div class="link">Ocasiones<i class="fa fa-chevron-down"></i></div>
-                                        <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Amor</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Condolencias</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la Madre</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la mujer</a></li>
-                                        </ul>
-                                    </li>
-                                      <li><div class="link">Con descuentos especiales<i class="fa fa-chevron-down"></i></div>
-                                        <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Amor</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Condolencias</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la Madre</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la mujer</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            <!-- -->
-                        </div>
+                       <!--menu categorias -->
+                       @include('layouts.menuCategorias')
+                       <!--fin menu categorias -->
                       
                   </div>
 
@@ -148,5 +80,23 @@
         </div>
     </section>
 @include('layouts.categorias')
-
+     <section class="div-ofertas">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center"> 
+                        <h2>
+                            Siempre mantenemos ofertas del mes!
+                        </h2>
+                        <h3>
+                            Aprovecha ofertas hasta de un <strong>40% OFF</strong>..!
+                        </h3>
+                        <input type="submit" name="" value="VER ARREGLOS">
+                      
+                </div>
+            
+        </div>
+            
+        </div>
+        
+    </section>
 @stop

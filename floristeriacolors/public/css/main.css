@@ -279,19 +279,22 @@ top: -8px;
   border:1px solid #9E9E9E;
   border-radius: 7px;
   background-color: #FAFAFA;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-bottom: 50px !important;
+  padding: 5px 5px !important;
+  margin:3px 0;
+  cursor: pointer;
 }
+
 .service-desc:hover{
   border:1px solid #512DA8;
+  background-color: #EDE7F6;
 
 }
 .service-desc img{
-  padding-bottom: 5px;
+  padding:5px 0 ;
+  height: 200px !important;
 }
-.service-desc img:hover{
- width: 150px;
+.ordenar-arreglos{
+  padding: 5px 0;
 }
 .sec-sub-title {
   margin-top:1px;
@@ -316,7 +319,7 @@ top: -8px;
   margin-bottom: 3px;
   margin-top: 5px;
 }
-.ser
+
 .service-desc p{
   color: red !important;
 }
@@ -1286,4 +1289,36 @@ li.currento{
 }
 .div-descuento h3,p{
   color: #eeeeee;
+}
+/*=========================================
+  div-ofertas
+  ========================================*/
+
+.div-ofertas{
+  background-color: #86ae00;
+  width: 100%;
+  margin: 0;
+  padding-bottom:1px;
+  padding-top: 2px;
+}
+.div-ofertas div.row{
+  padding: 0;
+  margin:0;
+}
+.div-ofertas h2{
+  color: #fff;
+  font-size: 21px;
+  font-weight: ;
+}
+.div-ofertas h3,p{
+  color: #eeeeee;
+}
+.div-ofertas input{
+  border: 1px solid #1B5E20;
+  
+  padding: 5px 15px;
+  height: 40px;
+  background-color: #6B9400;
+  margin: 5px 5px;
+
 }
