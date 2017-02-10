@@ -1,7 +1,8 @@
 @extends('layouts.admin')
 
 @section('content')
-
+	@include('alerts.request')
+	
 	{!!Form::open(['route'=> 'categoria.store', 'method'=>'POST'])!!}
 		@include('category.forms.formCategory')
 

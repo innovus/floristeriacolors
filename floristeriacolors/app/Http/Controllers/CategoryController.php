@@ -4,6 +4,8 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Http\Requests;
+use FloristeriaColors\Http\Requests\CategoryCreateRequest;
+
 use FloristeriaColors\Category;
 use Session;
 use Redirect;
@@ -37,7 +39,7 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoryCreateRequest $request)
     {
         Category::create([
             'name' => $request['name'],
@@ -95,6 +97,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
+        Category::destroy($id);
+        Session::flash('message','Usuario Editado correctamente');
+
+        return Redirect::to('/categoria');
         //
     }
 }

@@ -23,7 +23,13 @@
 	<tbody>
 		<td>{{$category->id}}</td>
 		<td>{{$category->name}}</td>
-		<td>{!!link_to_route('categoria.edit',$title = 'Editar',$parameters = $category->id,$attributes =['class'=>'btn btn-primary'])!!}</td>
+		<td>{!!link_to_route('categoria.edit',$title = 'Editar',$parameters = $category->id,$attributes =['class'=>'btn btn-primary'])!!}  {!!Form::open(['route'=>['categoria.destroy',$category->id],'method'=>'DELETE'])!!}
+		{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
+
+	{!!Form::close()!!}
+
+		</td>
+
 		
 		
 	</tbody>
