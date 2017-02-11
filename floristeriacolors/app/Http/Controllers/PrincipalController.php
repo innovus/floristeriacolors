@@ -33,4 +33,13 @@ class PrincipalController extends Controller
     {
         return View('plantillas.categoriaSeleccionada');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function arregloSeleccionado()
+    {
+        return View('plantillas.arregloSeleccionado');
+    }
 }

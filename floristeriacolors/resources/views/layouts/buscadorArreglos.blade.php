@@ -2,7 +2,7 @@
         <div class="container"> 
 
             <div class="row">
-                <div class="col-md-6 text-center">
+                <div class="col-md-6 text-center saludo">
                    <p>Bienvenido a la Floristeria mas importante de Colombia</p> 
                    <h4>Tu compra segura y 100% garantizada!</h4>
                 </div>

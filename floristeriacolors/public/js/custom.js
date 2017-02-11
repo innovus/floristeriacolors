@@ -127,6 +127,13 @@ $(document).ready(function(){
 	
 });
 
+/*======================================================
+tabs de adicionar algun detalle en el carrito de compas
+========================================================*/
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
 
 
 

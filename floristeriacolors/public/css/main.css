@@ -1264,6 +1264,12 @@ li.currento{
     height: 80px;
     padding-bottom: 0px;
   }
+  .saludo{
+    display: none;
+  }
+  .cantidad-arreglo {
+    width: 70% !important;
+  }
 }
 
 
@@ -1321,4 +1327,88 @@ li.currento{
   background-color: #6B9400;
   margin: 5px 5px;
 
+}
+/*===========================
+detalles de arreglos 
+=============================*/
+
+.arreglo-detalles{
+  background: #fff;
+  padding: 8px 0;
+}
+.arreglo-detalles p{
+  color: #616161;
+  font-size: 16px;
+  font-weight: 100;
+}
+.cantidad-arreglo{
+  background: #fff;
+  border: 1px solid #6B9400;
+  border-radius: 30px;
+  width: 25%;
+  height: 40px;
+  padding: 10px 10px;
+  margin-top: 20px;
+}
+.cantidad-arreglo p,input{
+  float: left;
+
+}
+.cantidad-arreglo input{
+  margin-top: -3px !important;
+  margin-left: 10px;
+  color: #424242;
+  background-color: #fff;
+  border: none;
+  width: 40px;
+}
+.cantidad-arreglo p{
+  color: #86ae00 ; /*#6B9400 */
+  font-weight: bold;
+}
+.detalles-arreglo{
+  margin: 15px 0px;
+
+}
+.detalles-arreglo h3{
+  font-size: 18px;
+  color: #6B9400;
+  padding-bottom: 10px;
+}
+
+.detalle-desc {
+  width: 100% !important;
+  position: relative;
+  text-align: center;
+  border:1px solid #9E9E9E;
+  border-radius: 7px;
+  background-color: #FAFAFA;
+  padding: 5px 5px !important;
+  margin:3px 0;
+  cursor: pointer;
+}
+
+.detalle-desc:hover{
+  border:1px solid #512DA8;
+  background-color: #EDE7F6;
+
+}
+.detalle-desc img{
+  padding:5px 0 ;
+  height: 130px !important;
+}
+.detalle-desc h3 {
+  color:  #424242 !important;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 1px;
+  margin-top: 1px;
+}
+
+.detalle-desc p{
+  color: red !important;
+}
+.arreglo-detalles ul li a{
+  color: #212121 !important;
+  font-weight: bold;
 }
