@@ -8,13 +8,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Category extends Model
 {
+	
     protected $fillable = [
         'name',
     ];
 
-    protected $dates = [
-        'deleted_at',
-    ];
+    /**
+     * Get the comments for the blog post.
+     */
+    public function products()
+    {
+        return $this->hasMany('App\Product');
+    }
+
+   
 
 
 }
