@@ -14,13 +14,13 @@
                                     <li>
                                         <div class="link">Categorias<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Arreglos Florales</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Diseños</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Frutas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Gerberas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Margaritas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Rosas</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Girasoles</a></li>
+                                        @foreach($categories as $category)
+                                        
+                                        <li><a rel="nofollow" rel="noreferrer" href="/categoriaSeleccionada/{{$category->id}}">{{$category->name}}</a></li>
+
+                                        
+                                        @endforeach
+
                                         </ul>
                                     </li>
                                     <li><div class="link">Ocasiones<i class="fa fa-chevron-down"></i></div>

@@ -12,8 +12,9 @@
 */
 Route::get('/','PrincipalController@index');
 Route::get('realizarArreglo/','PrincipalController@realizarArreglo');
-Route::get('categoriaSeleccionada/','PrincipalController@categoriaSeleccionada');
+Route::get('categoriaSeleccionada/{id}','PrincipalController@categoriaSeleccionada');
 Route::get('arregloSeleccionado/','PrincipalController@arregloSeleccionado');
+
 Route::resource('categoria','CategoryController');
 Route::resource('producto','ProductController');
 

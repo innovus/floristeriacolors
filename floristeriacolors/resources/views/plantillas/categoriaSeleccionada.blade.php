@@ -20,7 +20,7 @@
                     </div>
                     <div class="row ordenar-arreglos">
                         <div class="col-md-7">
-                            <h5><strong>Floristeria Colors</strong>/Todos los arreglos</h5>
+                            <h5><strong>Floristeria Colors</strong>/{{$categoria->name}}</h5>
                         </div>
                         <div class="col-md-5">
                             <h5><strong>Ordenar por: </strong><a href="">Todos</a>|<a href="">Menos precio</a>|<a href="">Mayor precio</a></h5>
@@ -28,118 +28,27 @@
                         
                     </div>
                     <!--listado de arreglos de la categoria seleccionada -->
+
                             <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
+
+                            @foreach($categoria->products as $product)
+                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="service-item">
                                                             
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/rosas.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
+                                         <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
+                                          <h3>{{$product->nombre}}</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
                                 </div>
                             </div>
+
+                             @endforeach
+                           
                             <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/cesta2.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/cajarosas.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/MI-DETALLE.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/jarron-impresionista.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/jarron.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/mi corazon.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="service-item">
-                                                            
-                                    <div class="service-desc">
-                                        
-                                       
-                                         <img src="img/arreglos/AMANECER2.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
+                           
                     <!--fin listado de arreglos de la categoria seleccionada  -->
                                          
                   </div>
@@ -179,7 +88,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/AMANECER2.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/AMANECER2.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
@@ -193,7 +102,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/cajarosas.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/cajarosas.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
@@ -207,7 +116,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/mi corazon.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/mi corazon.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
@@ -221,7 +130,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/jarron-impresionista.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/jarron-impresionista.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
@@ -235,7 +144,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/alegria.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/alegria.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>
@@ -249,7 +158,7 @@
                                     <div class="service-desc">
                                         
                                        
-                                         <img src="img/arreglos/MI-DETALLE.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/MI-DETALLE.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                     </div>

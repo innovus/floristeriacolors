@@ -3,6 +3,7 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Category;
 
 class PrincipalController extends Controller
 {
@@ -22,16 +23,22 @@ class PrincipalController extends Controller
      */
     public function realizarArreglo()
     {
-        return View('plantillas.realizarArreglo');
+        $categories = Category::All();
+        return View('plantillas.realizarArreglo',compact('categories'));
     }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function categoriaSeleccionada()
+    public function categoriaSeleccionada($id)
     {
-        return View('plantillas.categoriaSeleccionada');
+        $categories = Category::All();
+        $categoria = Category::find($id);
+        return View('plantillas.categoriaSeleccionada',compact('categories','categoria'));
+
+        
+       // return View('plantillas.categoriaSeleccionada');
     }
     /**
      * Display a listing of the resource.
