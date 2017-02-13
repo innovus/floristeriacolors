@@ -17,3 +17,22 @@
 	{!!Form::label('Categoria','Categoria: ')!!}
 	{!!Form::select('category_id',$categories)!!}		
 </div>
+
+<div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Tamaño</th>
+				<th>Precio</th>
+			</tr>
+		
+		</thead>
+		<tbody>
+			<th>{!!Form::text('tamaño',null,['class'=>'form-control','placeholder'=>'Ingresa el tamaño'])!!}</th>
+			<th>{!!Form::text('precio',null,['class'=>'form-control','placeholder'=>'Ingresa en Precio'])!!}</th>	
+		</tbody>		
+	</table>
+		{!!Form::submit('Agregar',['class'=>'btn btn-primary'])!!}
+		<hr>
+
+</div>

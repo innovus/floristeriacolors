@@ -17,6 +17,7 @@ Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado')
 
 Route::resource('categoria','CategoryController');
 Route::resource('producto','ProductController');
+Route::resource('price','PriceController');
 
 /*Route::get('/', function () {
     //return view('welcome');

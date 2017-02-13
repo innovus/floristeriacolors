@@ -32,4 +32,8 @@ class Product extends Model
     {
         return $this->belongsTo('FloristeriaColors\Category');
     }
+    public function prices()
+    {
+        return $this->hasMany('FloristeriaColors\Price');
+    }
 }
