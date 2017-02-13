@@ -9,13 +9,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <img src="img/arreglos/AMANECER2.jpg" class="img-responsive">
+                <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
             </div>
 
             <div class="col-md-7">
-                <h2>AMANECER</h2>
+                <h2>{{$producto->nombre}}</h2>
                 <p>
-                    Rústico Amanecer! Es un sencillo y hermoso detalle que combina la belleza de las texturas tanto de la base como de las 12 Rosas que al ir abriendo cambian su tono.
+                    {{$producto->descripcion}}
                 </p>
                 <h2><strong>COP 90,000</strong></h2>
                 <div class="cantidad-arreglo">

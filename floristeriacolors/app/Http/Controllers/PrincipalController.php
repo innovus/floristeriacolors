@@ -4,6 +4,7 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Category;
+use FloristeriaColors\Product;
 
 class PrincipalController extends Controller
 {
@@ -45,8 +46,9 @@ class PrincipalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function arregloSeleccionado()
+    public function arregloSeleccionado($id)
     {
-        return View('plantillas.arregloSeleccionado');
+        $producto = Product::find($id);
+        return View('plantillas.arregloSeleccionado',compact('producto'));
     }
 }
