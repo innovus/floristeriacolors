@@ -4,6 +4,16 @@
 @section('content')
 
 @include('layouts.buscadorArreglos')
+<section class="menu-carrito">
+    <div class="row">
+        <div class="col-md-6  col-sm-12 text-center">
+            <h4>Hay <strong>4</strong> productos en tu carrito de compras por <strong>$127.000</strong></h4>
+        </div>
+        <div class="col-md-6 text-left">
+            <button>VER DETALLES</button>
+        </div>
+    </div>
+</section>
 
 <section class="arreglo-detalles">
     <div class="container">
@@ -81,7 +91,7 @@
                                          <img src="img/arreglos/its-a-boy.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">Solicitar</button>
+                                          <button class="btn btn-success form-control">Seleccionar</button>
                                     </div>
                                 
                             </div>
@@ -95,6 +105,30 @@
                   </div>
 
                 </div>
+
+                
+            </div>
+            <div class="col-md-5 ">
+                <div class="row puntosGanados">
+                    <div class="col-md-4 col-sm-6 cuadro text-center">
+                        <p><h4>PUNTOS POR COMPRA</h4></p>
+                        <H4>1995</H4>
+
+                    </div>
+                    <div class="col-md-4 col-sm-6 cuadro text-center">
+                        <p><h4>GARANTIA 100% ASEGURADA</h4></p>
+                        
+                    </div>
+                    <div class="col-md-4 col-sm-6 text-center">
+                        <p><h4>SITIO WEB SEGURO</h4></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-3 col-md-offset-2">
+
+                    <button class="btn-comprar">COMPRAR AHORA</button>
+                    
             </div>
             
         </div>
