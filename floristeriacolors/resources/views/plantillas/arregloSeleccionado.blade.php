@@ -6,10 +6,10 @@
 @include('layouts.buscadorArreglos')
 <section class="menu-carrito">
     <div class="row">
-        <div class="col-md-6  col-sm-12 text-center">
+        <div class="col-md-6 col-md-offset-2 col-sm-12 text-center">
             <h4>Hay <strong>4</strong> productos en tu carrito de compras por <strong>$127.000</strong></h4>
         </div>
-        <div class="col-md-6 text-left">
+        <div class="col-md-3 col-sm-12 text-left">
             <button>VER DETALLES</button>
         </div>
     </div>
@@ -56,7 +56,7 @@
                         <!-- un arreglo -->
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="detalle-desc">                                   
-                                         <img src="img/arreglos/29131.bmp" class="img-responsive">
+                                         <img src="/img/arreglos/29131.bmp" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                           <button class="btn btn-success form-control">Solicitar</button>
@@ -66,7 +66,7 @@
                             <!-- un arreglo -->
                             <div class="col-md-3 .col-sm-6 wow fadeInLeft" data-wow-duration="500ms">                                                           
                                     <div class="detalle-desc">                           
-                                         <img src="img/arreglos/get-well11.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/get-well11.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                           <button class="btn btn-success form-control">Solicitar</button>
@@ -77,7 +77,7 @@
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">                                                       
                                     <div class="detalle-desc">
                                                                                
-                                         <img src="img/arreglos/its-a-girl.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/its-a-girl.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                           <button class="btn btn-success form-control">Solicitar</button>
@@ -88,7 +88,7 @@
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                                                                        
                                     <div class="detalle-desc">                           
-                                         <img src="img/arreglos/its-a-boy.jpg" class="img-responsive">
+                                         <img src="/img/arreglos/its-a-boy.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
                                           <button class="btn btn-success form-control">Seleccionar</button>

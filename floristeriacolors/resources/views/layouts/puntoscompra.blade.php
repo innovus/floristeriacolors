@@ -21,12 +21,12 @@
                     </div>
                     <div class="col-md-4 flores " >
                        <h4 class="text-center">¿COMO CUIDAR TUS FLORES ?</h4>
-                       <img src="img/flores.png" class="img-responsive ">
+                       <img src="/img/flores.png" class="img-responsive ">
                     </div>
 
                      <div class="col-md-4 flores2 " >
                        <h4 class="text-center">PLANTA UN ÁRBOL MEMORIAL </h4>
-                       <img src="img/arbol.png" class="img-responsive ">
+                       <img src="/img/arbol.png" class="img-responsive ">
                     </div>
                     
                 </div>
