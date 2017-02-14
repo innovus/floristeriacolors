@@ -16,7 +16,7 @@
                   <!-- arreglos de la respectiva categoria seleccionada -->
                   <div class="col-md-9">
                     <div class="imagen-categoria">
-                        <img src="img/Agradecimiento.jpg" class="img-responsive">                        
+                        <img src="/img/Agradecimiento.jpg" class="img-responsive">                        
                     </div>
                     <div class="row ordenar-arreglos">
                         <div class="col-md-7">

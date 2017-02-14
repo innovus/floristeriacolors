@@ -5,12 +5,15 @@
         ================================================== -->
         <!-- Main jQuery -->
         <script src="/js/jquery-1.11.1.min.js"></script>
+        <script src="/js/bootstrap.js"></script>
+        <script src="/js/bootstrap-modal.js"></script>
+         <script src="/js/bootstrap-modalmanager.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/js/menu.js"></script>
         <script type="text/javascript" src="/js/slider.js"></script>
         <!-- Single Page Nav -->
         <script src="/js/jquery.singlePageNav.min.js"></script>
-        <!-- Twitter Bootstrap -->
-        <script src="/js/bootstrap.min.js"></script>
         <!-- jquery.fancybox.pack -->
         <script src="/js/jquery.fancybox.pack.js"></script>
         <!-- jquery.isotope -->

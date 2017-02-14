@@ -135,5 +135,11 @@ $('#myTabs a').click(function (e) {
   $(this).tab('show')
 })
 
+/*=====================================================
+para la ventana modal del carrito de compras
+======================================================*/
 
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
 

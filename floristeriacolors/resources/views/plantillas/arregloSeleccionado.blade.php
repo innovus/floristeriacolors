@@ -6,13 +6,15 @@
 @include('layouts.buscadorArreglos')
 <section class="menu-carrito">
     <div class="row">
-        <div class="col-md-6 col-md-offset-2 col-sm-12 text-center">
-            <h4>Hay <strong>4</strong> productos en tu carrito de compras por <strong>$127.000</strong></h4>
+        <div class="col-md-4 col-md-offset-2 col-sm-12 text-center">
+            <h4>Hay <strong>4</strong> productos en tu carrito de compras</h4>
         </div>
-        <div class="col-md-3 col-sm-12 text-left">
-            <button>VER DETALLES</button>
-        </div>
+       
+                <div class="col-md-3 col-sm-12 text-left">
+                    <button class="demo btn  btn-lg" data-toggle="modal" href="#responsive">VER DEATALLES</button>
+                </div>
     </div>
+
 </section>
 
 <section class="arreglo-detalles">
@@ -136,5 +138,53 @@
     </div>
     
 </section>
+<div id="responsive" class="modal fade" tabindex="-1" data-width="760" style="display: none;">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+    <span class="fa fa-close fa-2x"></span>
+    </button>
+    
+  </div>
+  <div class="modal-body text-center">
+    <div class="row text-center">
+            <h3>MI CARRITO DE COMPRAS</h3>
+          <div class="col-md-6 col-md-offset-3">
+            <!-- un detalle-->
+            <div class="row">
+                <div class="col-md-2 col-xs-2 text-center">
+                    <div class="cant"><h4>5</h4></div>
+                </div>
+                <div class="col-md-4 col-xs-4">
+                    <img src="/img/cesta.jpg" class="img-responsive">
+                </div>
+                <div class="col-md-4 ">
+                    <strong>Cesta Rosas</strong>
+                    <h4>COP:27.000</h4>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger">Quitar</button>
+                </div>
+                
+            </div>
+            <hr>
+            <!--fin un detalle -->
+               
+         
+
+          </div>
+          <div class="col-md-12 text-center">
+              <h2><strong>SUBTOTAL:</strong>127.000</h2>
+          </div>
+     </div>
+        <div class="modal-footer">
+            <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+            <button type="button" class="btn btn-primary">Confirmar Compra</button>
+        </div>
+  </div>
+ 
+</div>
+
+
+@include('layouts.productosRelacionados')
 
 @stop
