@@ -8,29 +8,15 @@
         <section id="facts" class="facts">
             <div class="parallax-overlay">
                 <div class="container">
-                <br><br><br> 
-                    <div class="row  col-md-6 col-md-offset-3"><!--formulario inicios de sesion -->
-                      <form method="POST"> 
+                <br>
+                    <div class=" col-md-6 col-ms-6 col-md-offset-3">
                         <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
                             <h2 class="sec">BIENVENIDO</h2>
                             
-                            <p class="sec-title ">a la mejor Floristeria de todo Colombia.</p>
-                        </div>
-                        
-                          
-                            <div class="col-md-12 ">
-                                <div class="input-group">
-                                   
-                                    <input type="text" class="form-control" name="city" placeholder="Busca tu ciudad">
-                                    <span class="input-group-btn">
-                                         <button class="btn btn-default" type="button"><span class="fa fa-search fa-1x"></span></button>
-                                    </span>
-                                </div>                             
-                                
-                            </div>
-
-                        </form>
-                    </div><!-- fin formulario inicio de sesion -->
+                            <p class="sec-title ">a la mejor Floristeria de todo Colombia.</p><br><br><br>
+                            <a href="/realizarArreglo" class="btn-entrada">REALIZA Y COMPRA TU ARREGLO FLORAL</a>
+                        </div>  
+                    </div>
                     <div class="col-md-10 col-md-offset-1">
                         <div class="sec-title text-center mb50 wow rubberBand animated" data-wow-duration="1000ms">
                                                       

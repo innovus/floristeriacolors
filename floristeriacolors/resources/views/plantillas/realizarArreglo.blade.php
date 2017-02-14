@@ -89,8 +89,8 @@
                         </h2>
                         <h3>
                             Aprovecha ofertas hasta de un <strong>40% OFF</strong>..!
-                        </h3>
-                        <input type="submit" name="" value="VER ARREGLOS">
+                        </h3><br>
+                        <a href="" class="btn-v">VER ARREGLOS</a>
                       
                 </div>
             
