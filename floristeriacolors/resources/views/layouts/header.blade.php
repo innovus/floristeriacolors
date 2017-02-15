@@ -10,7 +10,7 @@
                     <!-- /responsive nav button -->
                     
                     <!-- logo -->
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="/">
                         <h1 id="logo">
                             <img src='/img/logo.jpg' alt="Floristeria Colors" class="img-responsive logo">
                         </h1>
