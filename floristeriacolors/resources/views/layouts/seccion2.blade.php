@@ -2,7 +2,7 @@
         <section id="facts2" class="facts2">
                 <div class="parallax-overlay">
                     <div class="container">
-                    <br><br><br> 
+                    
                         <div class="row  col-md-6 col-md-offset-3"><!--formulario inicios de sesion -->
                          
                         </div><!-- fin formulario inicio de sesion -->

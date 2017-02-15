@@ -26,18 +26,8 @@
                         
                         <li><a href="#">Ayuda</a></li>
                         <li><a href="#">Contáctanos</a></li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tu cuenta</a>
-                          <ul class="dropdown-menu">
-                            <li><a href="#"></span> Cambiar contraseña</a></li>
-                            <li><a href="#">Terminos legales</a></li>
-                            <li><a href="#"> Precios Publicidad</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#"></span>¿Buscas trabajo?. Publica tu CV</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#"></span> ¿Necesitas ayuda ?</a></li>
-                          </ul>
-                        </li>
+                        <li><a href="/login">Tu cuenta</a></li>
+                        
                        
                       
                         

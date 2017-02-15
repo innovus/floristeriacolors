@@ -51,4 +51,15 @@ class PrincipalController extends Controller
         $producto = Product::find($id);
         return View('plantillas.arregloSeleccionado',compact('producto'));
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function login()
+    {
+        
+        return View('plantillas.login');
+    }
 }
