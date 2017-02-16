@@ -310,7 +310,7 @@ top: -8px;
   position: absolute;
   background-color: rgba(0,0,0,0.5);
   width: 100%;
-  height: 257px;
+  height: 100%;
   left: 0px;
   top: 0px;
   border-radius: 5px;
@@ -590,7 +590,7 @@ formas de pago
   font-size: 15px;
   border: 1px solid #27ae60;
   padding-left: 5px;
-  margin-top: 2px;
+  margin-top: 12px;
   
 }
 .btnsusc{
@@ -942,7 +942,7 @@ label.error {
 .footer h6 {
   border-bottom: 1px solid #6B9400;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 14px;
   margin-bottom: 10px;
   color: #6B9400;
@@ -1053,8 +1053,8 @@ categoriasFlores
 .categoriasFlores{
   background-color: #EEEEEE;
   color: #000;
-  padding-top: 3px;
-  padding-bottom: 0px !important;
+  padding-top: 20px;
+  padding-bottom: 20px !important;
   
 }
 .categoriasFlores .container{
@@ -1425,12 +1425,17 @@ detalles de arreglos
 
 .arreglo-detalles{
   background: #fff;
-  padding: 8px 0;
+  padding: 35px 0;
 }
 .arreglo-detalles p{
   color: #616161;
   font-size: 16px;
   font-weight: 100;
+}
+.img-arreglo-detalles img{
+  width: 100%;
+  height: 330px;
+  margin-bottom: 40px;
 }
 .cantidad-arreglo{
   background: #fff;
@@ -1525,6 +1530,7 @@ detalles de arreglos
 }
 .cuadro{
   border-right: 1px solid #9E9E9E;
+
   
 }
 .menu-carrito{
@@ -1672,3 +1678,122 @@ LOGIN
   font-weight: 600;
   text-align: justify-all;
 }
+/*=======================
+form contacto
+========================*/
+.contacto{
+  background-color: #689F38;
+}
+.titulo-contacto h3{
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #eee;
+
+}
+.landmarkit{
+  background-color: #eee;
+  padding: 10px 0;
+}
+.landmarkit h3{
+  font-weight: 700;
+  padding-top:10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+.landmarkit h5{
+  padding: 4px 0;
+}
+.landmarkit span{
+  color: #689F38;
+}
+.date1{
+  padding: 0 0; 
+}
+.date{
+  background-color: #689F38;
+  margin-top: 2px;
+  padding: 10px 0;
+}
+.date input{
+  width: 46%;
+  height: 40px;
+  padding: 4px 4px;
+  margin-right:3%;
+  color: #000;
+  border:none;
+  border-radius: none;
+  background-color: #eee;
+  font-size: 15px;
+}
+::-webkit-input-placeholder { 
+  color: #689F38; 
+}
+
+.date textarea{
+  width: 95%;
+  background-color: #eee;
+  padding: 4px 4px;
+  margin-top: 8px;
+  margin-right:2%;
+  color: #000 !important;
+  border:none;
+  border-radius: none;
+  font-size: 15px;
+  height: 150px;
+}
+.btn-contact{
+  background-color: #CCFF90 !important;
+  margin-top: 0;
+  font-weight: 600;
+}
+.date2{
+  background-color: #eee;
+  margin-top: 25px;
+  padding: 10px 0;
+  height: 250px;
+}
+
+/*===============================
+cuentaUsuario
+==================================*/
+.cuentaUsuario{
+  background-color: #F9FBE7;
+}
+.cUsuario-1{
+  padding: 15px 0;
+}
+.item-panel {
+  width: 98%;
+  float: left;
+  margin-left: 1%;
+  margin-bottom: 5px;
+  background-color: #eee;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  padding: 20px 3px;
+  height: 140px;
+
+}
+.item-panel span{
+  color:  #6B9400;;
+}
+.item-panel p{
+  color:  #424242;
+}
+.h-item{
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  width: 90%;
+  margin-left: 5%;
+  height: 140px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4px;
+ 
+
+}
+.h-item:hover{
+  background-color: rgba(0,0,0,0);
+} 

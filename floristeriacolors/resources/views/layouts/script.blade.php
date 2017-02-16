@@ -85,13 +85,14 @@
                         $(form).ajaxSubmit({
                             type:"POST",
                             data: $(form).serialize(),
-                            url:"process.php",
+                            url:"/img/process.php",
                             success: function() {
                                 $('#contact-form :input').attr('disabled', 'disabled');
                                 $('#contact-form').fadeTo( "slow", 0.15, function() {
                                     $(this).find(':input').attr('disabled', 'disabled');
                                     $(this).find('label').css('cursor','default');
                                     $('#success').fadeIn();
+                                    alert("loca");
                                 });
                             },
                             error: function() {

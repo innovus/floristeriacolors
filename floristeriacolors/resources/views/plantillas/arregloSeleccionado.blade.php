@@ -20,9 +20,42 @@
 <section class="arreglo-detalles">
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
-                <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
+            <div class="col-md-5 img-arreglo-detalles">
+                <div class="col-md-12">
+                  <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
+                </div>
+                
+              
+            <!-- -->
+            <div class="col-md-12 ">
+                <div class="row puntosGanados">
+                    <div class="col-md-4 col-sm-6 cuadro text-center">
+                        <p><h5>PUNTOS POR COMPRA <strong>1995</strong></h5></p>
+                        
+
+                    </div>
+                    <div class="col-md-4 col-sm-6 cuadro text-center">
+                        <p><h5>GARANTIA 100% ASEGURADA</h5></p>
+                        
+                    </div>
+                    <div class="col-md-4 col-sm-6 text-center">
+                        <p><h5>SITIO WEB SEGURO</h5></p>
+                    </div>
+                    
+                </div>
             </div>
+
+            <!-- -->
+            <div class="col-md-12">
+
+                    <button class="btn-comprar">COMPRAR AHORA</button>
+                    
+            </div>
+
+            <!-- -->
+
+            </div>
+
 
             <div class="col-md-7">
                 <h2>{{$producto->nombre}}</h2>
@@ -110,28 +143,8 @@
 
                 
             </div>
-            <div class="col-md-5 ">
-                <div class="row puntosGanados">
-                    <div class="col-md-4 col-sm-6 cuadro text-center">
-                        <p><h4>PUNTOS POR COMPRA</h4></p>
-                        <H4>1995</H4>
-
-                    </div>
-                    <div class="col-md-4 col-sm-6 cuadro text-center">
-                        <p><h4>GARANTIA 100% ASEGURADA</h4></p>
-                        
-                    </div>
-                    <div class="col-md-4 col-sm-6 text-center">
-                        <p><h4>SITIO WEB SEGURO</h4></p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="col-md-3 col-md-offset-2">
-
-                    <button class="btn-comprar">COMPRAR AHORA</button>
-                    
-            </div>
+       
+            
             
         </div>
         

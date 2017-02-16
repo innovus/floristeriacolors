@@ -62,4 +62,25 @@ class PrincipalController extends Controller
         
         return View('plantillas.login');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contacto()
+    {
+        
+        return View('plantillas.contacto');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function cuentaUsuario()
+    {
+        
+        return View('plantillas.cuentaUsuario');
+    }
 }

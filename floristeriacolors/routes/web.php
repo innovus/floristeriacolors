@@ -16,6 +16,8 @@ Route::get('categoriaSeleccionada/{id}','PrincipalController@categoriaSelecciona
 Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado');
 /*-----login----------*/
 Route::get('login/','PrincipalController@login');
+Route::get('contacto/','PrincipalController@contacto');
+Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
 /*-------------------*/
 Route::resource('categoria','CategoryController');
 Route::resource('producto','ProductController');

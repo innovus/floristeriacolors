@@ -25,7 +25,7 @@
                         <li class="current"><a href="#">Conócenos</a></li>
                         
                         <li><a href="#">Ayuda</a></li>
-                        <li><a href="#">Contáctanos</a></li>
+                        <li><a href="/contacto">Contáctanos</a></li>
                         <li><a href="/login">Tu cuenta</a></li>
                         
                        
