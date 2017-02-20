@@ -18,6 +18,8 @@ Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado')
 Route::get('login/','PrincipalController@login');
 Route::get('contacto/','PrincipalController@contacto');
 Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
+Route::get('ayuda/','PrincipalController@ayuda');
+Route::get('conocenos/','PrincipalController@conocenos');
 /*-------------------*/
 Route::resource('categoria','CategoryController');
 Route::resource('producto','ProductController');

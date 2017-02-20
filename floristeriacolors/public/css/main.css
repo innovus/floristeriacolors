@@ -1891,3 +1891,96 @@ PUNTOS
 .info-puntosRedimir p{
   font-size: 17px;
 }
+
+/*=================================
+FAQ
+=================================*/
+.faq{
+  background-color: #F9FBE7;
+  margin-top: 0px;
+  padding: 5px 0;
+}
+.faq-h3 h3{
+  color:#EF5350; 
+  padding: 10px 0;
+}
+
+.fq-video iframe{
+  width: 100%;
+}
+#facts3 {
+  background-image: url("../img/parallax/tulipanes.jpg");
+  border-top: 5px solid #EF5350;/*#b4494f;*/
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px 0;
+  height: 360px;
+}
+
+.sec-titles{
+  
+  font-size: 23px !important;
+  font-weight: 700;
+  
+}
+.sec-titles p{
+  color: #eee;
+  font-size: 23px !important;
+  margin-top: 5px !important;
+  
+}
+.secs{
+  font-size: 40px !important;
+  padding-bottom: 10px;
+}
+
+.parallax-overlay2 {
+  background-color: rgba(0,0,0,0.3);
+  padding: 119px 0;
+}
+.parallax-overlay2 h3{
+  color: #eee;
+  font-weight: 700;
+}
+.parallax-overlay2 strong{
+  color: #eee;
+  font-weight: 400;
+  font-size: 34px;
+}
+/*====================================
+conocenos
+=====================================*/
+#facts4 {
+  background-image: url("../img/parallax/city.jpg");
+  border-top: 5px solid #EF5350;/*#b4494f;*/
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 15px 0;
+  height: 375px;
+}
+.parallax-overlay4 {
+  background-color: rgba(0,0,0,0.3);
+  padding: 119px 0;
+}
+.parallax-overlay4 h3{
+  color: #eee;
+  font-weight: 700;
+}
+.parallax-overlay4 strong{
+  color: #eee;
+  font-weight: 400;
+  font-size: 34px;
+}
+.info-conocenos{
+  padding: 20px 0;
+}
+.info-conocenos p{
+  color: #424242;
+  font-size: 18px;
+  text-align: justify !important;
+  padding: 5px 0;
+}

@@ -22,9 +22,9 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul  class="nav navbar-nav">
                                                
-                        <li class="current"><a href="#">Conócenos</a></li>
+                        <li class="current"><a href="/conocenos">Conócenos</a></li>
                         
-                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="/ayuda">Ayuda</a></li>
                         <li><a href="/contacto">Contáctanos</a></li>
                         <li><a href="/login">Tu cuenta</a></li>
                         
