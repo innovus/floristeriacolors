@@ -1292,6 +1292,7 @@ li.currento{
     padding: 0 0 !important;
     margin-left: 0 !important;
   }
+
 }
 
 @media only screen and (max-width: 535px){
@@ -1329,6 +1330,7 @@ li.currento{
     padding: 0 0 !important;
     margin-left: 0 !important;
   }
+
 }
 @media only screen and (max-width : 320px) {
   .sli-container{
@@ -1354,6 +1356,7 @@ li.currento{
     padding: 0 0 !important;
     margin-left: 0 !important;
   }
+ 
   
 }
 
@@ -1772,28 +1775,119 @@ cuentaUsuario
   background-color: #eee;
   border: 1px solid #BDBDBD;
   border-radius: 4px;
-  padding: 20px 3px;
+  padding: 10px 3px;
   height: 140px;
 
 }
 .item-panel span{
-  color:  #6B9400;;
+  color:  #6B9400;
+  padding-top: 5px;
 }
 .item-panel p{
   color:  #424242;
 }
-.h-item{
-  position: absolute;
-  background-color: rgba(0,0,0,0.3);
-  width: 90%;
-  margin-left: 5%;
-  height: 140px;
-  left: 0px;
-  top: 0px;
-  border-radius: 4px;
- 
+
+.item-panel:hover{
+  background-color: rgba(0,0,0,0.1);
+} 
+
+/*================================
+Modal datos usuario
+==================================*/
+.date-user input {
+   color: #f49c0b;
+   font-weight: bold;
+   height: 40px !important;
+}
+.se{
+  margin-top: 270px !important;
+  color: #f49c0b;
+  font-weight: bold;
+  height: 40px !important;
+}
+
+.checkbox label:after, 
+.radio label:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.checkbox .cr,
+.radio .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+.radio .cr {
+    border-radius: 50%;
+}
+
+.checkbox .cr .cr-icon,
+.radio .cr .cr-icon {
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.radio .cr .cr-icon {
+    margin-left: 0.04em;
+}
+
+.checkbox label input[type="checkbox"],
+.radio label input[type="radio"] {
+    display: none;
+}
+
+.checkbox label input[type="checkbox"] + .cr > .cr-icon,
+.radio label input[type="radio"] + .cr > .cr-icon {
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
+.radio label input[type="radio"]:checked + .cr > .cr-icon {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled + .cr,
+.radio label input[type="radio"]:disabled + .cr {
+    opacity: .5;
+}
+
+/*===============================================
+PUNTOS
+================================================*/
+
+.puntosRedimir h4{
+ color:#f49c0b;
+ background-color: #eee;
+}
+.puntosRedimir{
+ background-color: #eee;
+}
+.puntosRedimir-titulo h3{
+  color:#f49c0b;
+}
+
+.info-puntosRedimir{
+  background-color: #8E24AA;
 
 }
-.h-item:hover{
-  background-color: rgba(0,0,0,0);
-} 
+.puntosRedimir-titulo h4{
+  padding: 10px 0;
+  color: #f49c0b;
+}
+.info-puntosRedimir p{
+  font-size: 17px;
+}

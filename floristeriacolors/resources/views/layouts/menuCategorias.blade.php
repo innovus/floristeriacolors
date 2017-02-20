@@ -1,4 +1,4 @@
- <div class="contenedor-menu">
+<div class="contenedor-menu">
                                 <!-- -->
                                 <ul id="accordion" class="accordion">
                                     <li>
@@ -41,4 +41,4 @@
                                     </li>
                                 </ul>
                             <!-- -->
-                        </div>
+                        </div>                       

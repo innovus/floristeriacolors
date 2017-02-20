@@ -17,3 +17,109 @@
 #accordion section:target p {
     display: block;
 }
+
+/*================================
+menu de acordeon Ayuda 
+================================*/
+#accordion2 section p {
+    display: none;
+    text-align: center;
+    color:red;
+}
+
+#accordion2 section a {
+    text-align: center;
+    color: green;
+    text-decoration: none;
+}
+
+#accordion2 section a:hover {
+    text-decoration: underline;
+}
+
+#accordion2 section:target p {
+    display: block;
+}
+
+.accordion2 {
+    width: 100%;
+    margin: 1px auto 20px;
+    background-color: #EEE;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    color: #4D4D4D;
+ }
+
+.accordion2 .link {
+    cursor: pointer;
+    display: block;
+    padding: 15px 15px 15px 42px;
+    color: #4D4D4D;
+    font-size: 14px;
+    font-weight: 700;
+    border-bottom: 1px solid #CCC;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion2 li:last-child .link {
+    border-bottom: 0;
+}
+
+.accordion2 li i {
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    font-size: 18px;
+    color: #595959;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.accordion2 li i.fa-chevron-down {
+    right: 12px;
+    left: auto;
+    font-size: 16px;
+}
+
+.accordion2 li.open .link2 {
+    color: #b63b4d;
+}
+
+.accordion2 li.open i {
+    color: #b63b4d;
+}
+.accordion2 li.open i.fa-chevron-down {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.accordion2 li.default .submenu {display: block;}
+/*=============================
+  Submenu
+ =============================*/
+ .submenu2 {
+    display: none;
+    background: #F3E5F5;
+    font-size: 14px;
+ }
+.submenu2 {
+    padding: 5px 20px;
+}
+ .submenu2 p {
+    color: #000;
+ }
+.submenu2 span{
+    color: #EC407A;
+}
+.submenu2 h4{
+    color: #f49c0b;
+}
+
+
