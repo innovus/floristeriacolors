@@ -1977,10 +1977,44 @@ conocenos
 }
 .info-conocenos{
   padding: 20px 0;
+  background-color: #F9FBE7;
 }
 .info-conocenos p{
   color: #424242;
   font-size: 18px;
   text-align: justify !important;
   padding: 5px 0;
+}
+/*=====================================
+puntosFLoristeria
+======================================*/
+.puntosFloristeria{
+  background: #eee;
+  padding: 20px 0;
+}
+.puntosRedimir2 h4{
+ color:#f49c0b;
+ background-color: #eee;
+ padding: 5px 0;
+}
+.puntosRedimir2{
+ background-color: #eee;
+ padding: 10px 0;
+}
+.puntosRedimir-titulo2 h3{
+  color:#f49c0b;
+  font-size: 20px;
+  padding: 5px 0;
+}
+
+.info-puntosRedimir2{
+  background-color: #8E24AA;
+
+}
+.puntosRedimir-titulo2 h4{
+  padding: 10px 0;
+  color: #f49c0b;
+}
+.info-puntosRedimir2 p{
+  font-size: 17px;
 }

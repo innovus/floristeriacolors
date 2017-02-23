@@ -20,6 +20,8 @@ Route::get('contacto/','PrincipalController@contacto');
 Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
 Route::get('ayuda/','PrincipalController@ayuda');
 Route::get('conocenos/','PrincipalController@conocenos');
+Route::get('puntosFloristeria/','PrincipalController@puntosFloristeria');
+
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');
 Route::resource('admin/productos','ProductController');

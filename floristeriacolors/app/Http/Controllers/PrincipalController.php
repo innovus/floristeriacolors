@@ -107,4 +107,14 @@ class PrincipalController extends Controller
         
         return View('plantillas.conocenos');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function puntosFloristeria()
+    {
+        
+        return View('plantillas.puntosFloristeria');
+    }
 }
