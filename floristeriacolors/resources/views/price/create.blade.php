@@ -3,8 +3,8 @@
 @section('content')
 	@include('alerts.request')
 	
-	{!!Form::open(['route'=> 'productos.store', 'method'=>'POST','files' => true])!!}
-		@include('product.forms.formProduct')
+	{!!Form::open(['route'=> 'precios.store', 'method'=>'POST'])!!}
+		@include('price.forms.formPrice')
 
 		{!!Form::submit('Registrar',['class'=>'btn btn-primary∫'])!!}
 

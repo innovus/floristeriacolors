@@ -21,9 +21,9 @@ Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
 Route::get('ayuda/','PrincipalController@ayuda');
 Route::get('conocenos/','PrincipalController@conocenos');
 /*-------------------*/
-Route::resource('categoria','CategoryController');
-Route::resource('producto','ProductController');
-Route::resource('price','PriceController');
+Route::resource('admin/categorias','CategoryController');
+Route::resource('admin/productos','ProductController');
+Route::resource('admin/precios','PriceController');
 
 /*Route::get('/', function () {
     //return view('welcome');

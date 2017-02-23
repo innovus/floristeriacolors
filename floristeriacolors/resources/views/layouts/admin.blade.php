@@ -55,33 +55,33 @@
                             <a href="#"><i class="fa fa-users fa-fw"></i> Categorias<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="/categoria/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="/admin/categorias/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Categorias</a>
+                                    <a href="/admin/categoria"><i class='fa fa-list-ol fa-fw'></i> Categorias</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-film fa-fw"></i> Pelicula<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-film fa-fw"></i> Productos<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="/admin/productos/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Peliculas</a>
+                                    <a href="/admin/productos"><i class='fa fa-list-ol fa-fw'></i> Productos</a>
                                 </li>
                             </ul>
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-child fa-fw"></i> Genero<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-child fa-fw"></i> Precios<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#"><i class='fa fa-plus fa-fw'></i> Agregar</a>
+                                    <a href="/admin/precios/create"><i class='fa fa-plus fa-fw'></i> Agregar</a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class='fa fa-list-ol fa-fw'></i> Generos</a>
+                                    <a href="/admin/precios"><i class='fa fa-list-ol fa-fw'></i> Precios</a>
                                 </li>
                             </ul>
                         </li>

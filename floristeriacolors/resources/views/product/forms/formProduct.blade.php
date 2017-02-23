@@ -19,7 +19,7 @@
 </div>
 
 <div>
-	<table class="table">
+	<table class="table" id="tprices">
 		<thead>
 			<tr>
 				<th>Tamaño</th>
@@ -28,8 +28,15 @@
 		
 		</thead>
 		<tbody>
-			<th>{!!Form::text('tamaño',null,['class'=>'form-control','placeholder'=>'Ingresa el tamaño'])!!}</th>
-			<th>{!!Form::text('precio',null,['class'=>'form-control','placeholder'=>'Ingresa en Precio'])!!}</th>	
+		@for ($i = 0; $i < 3; $i++)
+			<tr>
+				<th>{!!Form::text('tamaño'.$i,null,['class'=>'form-control','placeholder'=>'Ingresa el tamaño'])!!}</th>
+				<th>{!!Form::text('precio'.$i,null,['class'=>'form-control','placeholder'=>'Ingresa en Precio'])!!}</th>
+			
+			</tr>
+		@endfor
+		
+	
 		</tbody>		
 	</table>
 		{!!Form::submit('Agregar',['class'=>'btn btn-primary'])!!}

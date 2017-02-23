@@ -7,83 +7,29 @@
                         <h5>Aquellos que han enamorado a nuestros clientes</h5>
                     </div>
                     <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
+                     @foreach($masVendidos as $producto)
+                     <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
                         <div class="service-desc">
-                           <img src="/img/arreglos/mi corazon.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
+                           <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
+                              <h3>{{$producto->nombre}}</h3>
+
+                              @if($producto->prices->isEmpty())
+                                <h3>$40,000</h3>
+                              @else
+                                <h3>${{number_format($producto->prices->first()->precio)}}</h3>
+                              @endif  
+ 
+                              
                             <div class="ver-boton">
-                              <a href="/arregloSeleccionado/1" class=" btn-ver form-control">VER</a>
+                              <a href="/arregloSeleccionado/{{$producto->id}}" class=" btn-ver form-control">VER</a>
                             </div>  
                         </div>
                         
                     </div>
+                      @endforeach
+
                   <!-- fin un arreglo -->
-                    <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/27MI-DETALLE.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/3" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/AMANECER2.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/2" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/48jarron importado.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/2" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/cajarosas.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/2" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/58jarron.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/2" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
+                    
 
                      
                      <!-- boton ver todas categorias                        <div class="col-md-4 col-md-offset-4">

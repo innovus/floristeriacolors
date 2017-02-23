@@ -3,6 +3,9 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Http\Requests;
+use FloristeriaColors\Price;
+use FloristeriaColors\Product;
 
 class PriceController extends Controller
 {
@@ -13,6 +16,8 @@ class PriceController extends Controller
      */
     public function index()
     {
+        $prices = Price::All();
+        return view('price.index',compact('prices'));
         //
     }
 
@@ -23,7 +28,8 @@ class PriceController extends Controller
      */
     public function create()
     {
-        //
+        $products = Product::pluck('nombre','id');
+        return view('price.create',compact('products'));
     }
 
     /**
@@ -34,7 +40,8 @@ class PriceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Price::create($request->all());
+        return redirect('/admin/precios')->with('message','store');
     }
 
     /**
@@ -56,7 +63,8 @@ class PriceController extends Controller
      */
     public function edit($id)
     {
-        //
+         $precio = Price::find($id);
+        return view('price.edit',['Price'=>$precio]);
     }
 
     /**

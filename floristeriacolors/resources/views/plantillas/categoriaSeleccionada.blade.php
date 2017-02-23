@@ -37,7 +37,14 @@
                                   <div class="service-desc">
                                     <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
                                           <h3>{{$product->nombre}}</h3>
-                                          <h3>COP 40.000</h3>
+
+                                          @if($product->prices->isEmpty())
+                                          <h3>$40,000</h3>
+
+                                          @else
+                                            <h3>${{number_format($product->prices->first()->precio)}}</h3>
+                                          @endif  
+                                         
 
                                       <div class="ver-boton">
                                          <a href="/arregloSeleccionado/{{$product->id}}" class="btn-ver form-control">VER</a>
@@ -167,4 +174,5 @@
             </div>
         </div>
     </div>
+
 @stop

@@ -62,7 +62,12 @@
                 <p>
                     {{$producto->descripcion}}
                 </p>
-                <h2><strong>COP 90,000</strong></h2>
+                @if($producto->prices->isEmpty())
+                  <h2><strong>COP 90,000</strong></h2>
+                @else
+                  <h2><strong>COP {{number_format($producto->prices->first()->precio)}}</strong></h2>
+            
+                @endif  
                 <div class="cantidad-arreglo">
                     <p class="text-cantidad">Cantidad:</p> 
                     <input type="number" step="1" min="0"  name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
@@ -168,10 +173,10 @@
                     <div class="cant"><h4>5</h4></div>
                 </div>
                 <div class="col-md-4 col-xs-4">
-                    <img src="/img/cesta.jpg" class="img-responsive">
+                    <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
                 </div>
                 <div class="col-md-4 ">
-                    <strong>Cesta Rosas</strong>
+                    <strong>{{$producto->nombre}}</strong>
                     <h4>COP:27.000</h4>
                 </div>
                 <div class="col-md-2">

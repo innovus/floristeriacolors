@@ -15,7 +15,8 @@ class PrincipalController extends Controller
      */
     public function index()
     {
-        return View('plantillas.index');
+        $masVendidos = Product::limit(6)->get();
+        return View('plantillas.index',compact('categories','masVendidos'));
     }
     /**
      * Display a listing of the resource.
@@ -25,7 +26,8 @@ class PrincipalController extends Controller
     public function realizarArreglo()
     {
         $categories = Category::All();
-        return View('plantillas.realizarArreglo',compact('categories'));
+        $masVendidos = Product::limit(6)->get();
+        return View('plantillas.realizarArreglo',compact('categories','masVendidos'));
     }
     /**
      * Display a listing of the resource.
