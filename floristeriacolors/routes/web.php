@@ -17,7 +17,7 @@ Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado')
 /*-----login----------*/
 Route::get('login/','PrincipalController@login');
 Route::get('contacto/','PrincipalController@contacto');
-Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
+//Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
 Route::get('ayuda/','PrincipalController@ayuda');
 Route::get('conocenos/','PrincipalController@conocenos');
 Route::get('puntosFloristeria/','PrincipalController@puntosFloristeria');
@@ -36,3 +36,14 @@ Route::resource('admin/precios','PriceController');
 /*Route::get('/', function () {
     //return view('welcome');
 });*/
+
+
+//Auth::routes();
+Route::post('/registro','Auth\RegisterController@register');
+Route::post('/login','Auth\LoginController@login');
+Route::post('/logout','Auth\LoginController@logout');
+
+
+Route::get('/home', 'HomeController@index');
+Route::get('/cuentaUsuario', 'CuentaController@index');
+

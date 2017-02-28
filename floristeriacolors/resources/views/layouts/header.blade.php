@@ -25,8 +25,16 @@
                         <li class="current"><a href="/conocenos">Conócenos</a></li>
                         <li><a href="/ayuda">Ayuda</a></li>
                         <li><a href="/contacto">Contáctanos</a></li>
+<<<<<<< HEAD
                         <li><a href="/login">Tu cuenta</a></li>
                         <li><a><span class="fa fa-shopping-cart fa-2x"></span></a></li>
+=======
+                        <li><a href="/cuentaUsuario">Tu cuenta</a></li>
+                        
+                       
+                      
+                        
+>>>>>>> origin/master
                     </ul>
                 </nav>
                 <!-- /main nav -->

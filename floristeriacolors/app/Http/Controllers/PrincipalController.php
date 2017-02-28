@@ -80,11 +80,12 @@ class PrincipalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function cuentaUsuario()
     {
         
         return View('plantillas.cuentaUsuario');
-    }
+    }*/
 
     /**
      * Display a listing of the resource.

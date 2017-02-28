@@ -8,15 +8,29 @@
         <h2>MI CUENTA</h2>
                 <hr>
             <div class="col-md-4 col-xs-11 col-sm-5 formu">
-                 <form>
+                 <form  method="POST" action="/login" >
+                 {{ csrf_field() }}
                         <h3>Iniciar Sesión</h3><br>
-                        <div class="form-group ">
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                            <h5>Correo electrónico: <strong>*</strong></h5>
-                           <input type="text" class="form-control" name="">
+                           <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+
+                              @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
                         </div>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                            <h5>Contraseña: <strong>*</strong></h5>
-                           <input type="password" class="form-control" name="">
+                           <input id="password" type="password" class="form-control" name="password" required>
+
+                           @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+
                         </div>
                         <div class="form-group">
                            
@@ -30,15 +44,27 @@
             </div>
             
             <div class="col-md-4 col-xs-11 col-sm-6 formu">
-               <form>
+               <form  method="POST" action="/registro" >
+                 {{ csrf_field() }}
                         <h3>¿Aún no estas resgistrado?</h3><br>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                            <h5>Correo electrónico: <strong>*</strong></h5>
-                           <input type="text" class="form-control" name="">
+                           <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                           @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                            @endif
                         </div>
-                        <div class="form-group">
+                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                            <h5>Contraseña: <strong>*</strong></h5>
-                           <input type="password" class="form-control" name="">
+                           <input id="password" type="password" class="form-control" name="password" required>
+
+                           @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
                         </div>
                            <div class="form-group">
                            <input type="submit" name="" class="btn btn-primary" value="Aceptar Registro">
