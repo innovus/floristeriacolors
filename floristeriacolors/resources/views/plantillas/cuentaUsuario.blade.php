@@ -6,10 +6,11 @@
         <div class="row">
             <div class="col-md-12 cUsuario-1">
                 <div class="col-md-6 text-left">
-                    <h4>Bienvenido:<strong>Jhon Frey Diaz</strong></h4>
+                    <h4>Bienvenido:<strong>{{$user->email}}</strong></h4>
                 </div>
                 <div class="col-md-6 text-right">
-                    <strong>Salir</strong>
+                    <strong>
+                    Salir</strong>
                 </div>
             </div>
             <!-- -->

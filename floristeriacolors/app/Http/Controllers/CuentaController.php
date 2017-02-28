@@ -3,6 +3,10 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+// Get the currently authenticated user...
+
 
 class CuentaController extends Controller
 {
@@ -23,6 +27,7 @@ class CuentaController extends Controller
      */
     public function index()
     {
-        return View('plantillas.cuentaUsuario');
+        $user = Auth::user();
+        return View('plantillas.cuentaUsuario',compact('user'));
     }
 }
