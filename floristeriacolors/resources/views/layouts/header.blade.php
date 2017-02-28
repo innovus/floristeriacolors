@@ -26,7 +26,7 @@
                         
                         <li><a href="/ayuda">Ayuda</a></li>
                         <li><a href="/contacto">Contáctanos</a></li>
-                        <li><a href="/login">Tu cuenta</a></li>
+                        <li><a href="/cuentaUsuario">Tu cuenta</a></li>
                         
                        
                       
