@@ -50,4 +50,18 @@ $(function() {
     }   
 
     var accordion = new Accordion($('#accordion2'), false);
+    var accordion = new Accordion($('#accordion3'), false);
+    var accordion = new Accordion($('#accordion4'), false);
+    var accordion = new Accordion($('#accordion5'), false);
+    var accordion = new Accordion($('#accordion6'), false);
+    var accordion = new Accordion($('#accordion7'), false);
+    var accordion = new Accordion($('#accordion8'), false);
+});
+
+/* ======================================================= */
+$('.jf-date input').datepicker({
+    format: "dd/mm/yyyy",
+    startDate: "today",
+    todayBtn: "linked",
+    language: "espanish"
 });

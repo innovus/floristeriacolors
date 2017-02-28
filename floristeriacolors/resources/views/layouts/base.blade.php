@@ -11,6 +11,7 @@
 
     </head>
     
+    
     <body id="body">
         @include('layouts.header')
 

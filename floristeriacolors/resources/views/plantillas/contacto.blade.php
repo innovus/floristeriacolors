@@ -37,7 +37,7 @@
             <div class="col-md-8 col-md-offset-2 date1" >                
 
               <!-- ****************************************** --> 
-               <div class="col-md-6 date">
+               <div class="col-md-6 dates">
                 <form action="#" id="contact-form" name="contact-form">
                     <div class="form-group">
                         <input type="text" name="name" id="name" placeholder="Nombres:">

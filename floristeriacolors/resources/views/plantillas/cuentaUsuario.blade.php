@@ -143,6 +143,7 @@
             
                 <input type="text" class="form-control" placeholder="Nombres ">
                 <input type="text" class="form-control" placeholder="Apellidos">
+                <input type="text" class="form-control" placeholder="ID/C.c">
                 <input type="text" class="form-control" placeholder="Teléfono">
                 <input type="text" class="form-control" placeholder="Fecha de Nacimiento">
                 <input type="text" class="form-control" placeholder="Dirección">
@@ -152,22 +153,22 @@
             <!--fin datos-->
           </div>
             <div class="col-sm-12">
-        <div class="radio">
-          <label>
-            <input type="radio" name="o1" value="">
-            <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-            Femenino
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="o1" value="" checked>
-            <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-            Masculino
-          </label>
-        </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="o1" value="">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
+                    Femenino
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="o1" value="" checked>
+                    <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
+                    Masculino
+                  </label>
+                </div>
         
-    </div>
+            </div>
 
           <!--<div class="col-md-12 text-center">
               <h2><strong>SUBTOTAL:</strong>127.000</h2>

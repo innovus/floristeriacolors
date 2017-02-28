@@ -11,7 +11,7 @@
         </div>
        
                 <div class="col-md-3 col-sm-12 text-left">
-                    <button class="demo btn  btn-lg" data-toggle="modal" href="#responsive">VER DEATALLES</button>
+                    <button class="demo btn  btn-lg" data-toggle="modal" href="#responsive">VER CARRITO DE COMPRAS</button>
                 </div>
     </div>
 
@@ -48,7 +48,7 @@
             <!-- -->
             <div class="col-md-12">
 
-                    <button class="btn-comprar">COMPRAR AHORA</button>
+                    <button class="btn-comprar">AGREGAR A CARRITO DE COMPRAS</button>
                     
             </div>
 
@@ -99,7 +99,7 @@
                                          <img src="/img/arreglos/29131.bmp" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">Solicitar</button>
+                                          <button class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -109,7 +109,7 @@
                                          <img src="/img/arreglos/get-well11.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">Solicitar</button>
+                                          <button class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -120,7 +120,7 @@
                                          <img src="/img/arreglos/its-a-girl.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">Solicitar</button>
+                                          <button class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -131,7 +131,7 @@
                                          <img src="/img/arreglos/its-a-boy.jpg" class="img-responsive">
                                           <h3>Rosas!</h3>
                                           <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">Seleccionar</button>
+                                          <button class="btn btn-success form-control">AGREGAR</button>
                                     </div>
                                 
                             </div>

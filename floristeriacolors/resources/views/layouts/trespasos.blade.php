@@ -37,7 +37,7 @@
                             <h5>Efectua el pago. Y lo llevaremos hasta donde tu Destinatario!</h5>
                         </div>
                         <div class="col-md-4 col-md-offset-4 btnn">
-                            <a href="" class="form-control ">Fácil, rápido y seguro</a>
+                            <a href="" class="">FÁCIL, RÁPIDO Y SEGURO</a>
                         </div>
                     </div>
                 </div>

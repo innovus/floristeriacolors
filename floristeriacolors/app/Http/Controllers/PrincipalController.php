@@ -117,4 +117,45 @@ class PrincipalController extends Controller
         
         return View('plantillas.puntosFloristeria');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function resumenCompra()
+    {
+        
+        return View('plantillas.resumenCompra');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function finalizarCompra()
+    {
+        
+        return View('plantillas.finalizarCompra');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blog()
+    {
+        
+        return View('plantillas.blog');
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function panelAdmin()
+    {
+        
+        return View('plantillas.panelAdmin');
+    }
 }

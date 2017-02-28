@@ -21,6 +21,12 @@ Route::get('cuentaUsuario/','PrincipalController@cuentaUsuario');
 Route::get('ayuda/','PrincipalController@ayuda');
 Route::get('conocenos/','PrincipalController@conocenos');
 Route::get('puntosFloristeria/','PrincipalController@puntosFloristeria');
+Route::get('resumenCompra/','PrincipalController@resumenCompra');
+Route::get('finalizarCompra/','PrincipalController@finalizarCompra');
+Route::get('blog/','PrincipalController@blog');
+
+
+Route::get('panelAdmin/','PrincipalController@panelAdmin');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');

@@ -535,19 +535,19 @@ top: -8px;
 
 }
 .btnn{
-height: 10px;
-color: #fff;
+background-color: #C62828 !important; 
 text-align: center;
-padding-bottom: 35px;
+padding:10px 0;
 }
 .btnn a{
- background-color: #C62828 !important; 
+ 
  color: #fff;
- font-size: 19px;
+ font-size: 20px;
+ font-weight: 700;
 
 
 }
-.btnn:hover{
+.btnn a:hover{
  color: #fff; 
 }
 .titulo-pasos h2{
@@ -694,7 +694,11 @@ formas de pago
   color: #f49c0b;
   font-weight: bold;
 }
-
+.flores a{
+  padding-top: 15px;
+  color: #f49c0b;
+  font-weight: bold;
+}
 .flores2:hover{
   background-color: rgba(0,0,0,0.1);
 }
@@ -1714,12 +1718,12 @@ form contacto
 .date1{
   padding: 0 0; 
 }
-.date{
+.dates{
   background-color: #689F38;
   margin-top: 2px;
   padding: 10px 0;
 }
-.date input{
+.dates input{
   width: 46%;
   height: 40px;
   padding: 4px 4px;
@@ -1734,7 +1738,7 @@ form contacto
   color: #689F38; 
 }
 
-.date textarea{
+.dates textarea{
   width: 95%;
   background-color: #eee;
   padding: 4px 4px;
@@ -2018,3 +2022,159 @@ puntosFLoristeria
 .info-puntosRedimir2 p{
   font-size: 17px;
 }
+
+/*=================================
+resumenCarrito
+==================================*/
+.resumenCarrito{
+  padding: 20px 0 !important;
+  background-color: #F9FBE7;
+}
+.date-comprador{
+  margin:10px 0;
+  border-radius:10px ;
+  margin: 10px 0;
+  padding: 10px 0px;
+}
+.sel{
+  margin-top: 12px !important;
+  color: #f49c0b;
+  font-weight: bold;
+  height: 40px !important;
+  margin-bottom: 0px;
+}
+
+.date-comprador textarea{
+  height: 100px;
+  margin: 10px 0;
+}
+.resumenCarrito-detalles{
+  background-color: #fff;
+}
+.z{
+  padding: 0 4px !important;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: green;
+  color: red;
+}
+.zz{
+  padding: 0 0;
+  margin-top: 10px;
+  background: yellow;
+  margin-bottom: 0px;
+  height: 30px !important;
+}
+.tt{
+  background-color: blue;
+  height: 40px !important;
+}
+
+/*=============================
+finalizar compra
+==============================*/
+
+.info-final{
+  background: #eee;
+  padding-bottom: 5px;
+  margin: 10px 12px;
+  border:1px solid #BDBDBD;
+  border-radius: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+
+}
+.info-final-titulo{   
+  background-color: #6B9400;
+  padding: 5px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 5px;
+
+}
+
+/*===============================
+blog
+================================*/
+#blog{
+  background-image: url("../img/floresblog.png");
+  
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.blog .devider:before,
+.blog .devider:after {
+  color: #737C85;
+}
+.sec-title{
+  color: #fff;
+  font-size: 26px !important;
+  
+}
+.sec-title2{
+  color: #fff;
+  font-size: 26px !important;
+  margin-top: 45px !important;
+  
+}
+.sec{
+  font-size: 40px !important;
+  padding-bottom: 10px;
+}
+
+.parallax-overlays {
+  background-color: rgba(0,0,0,.6);
+  padding: 100px 0;
+}
+.parallax-overlays h3{
+  color: #EEE;
+  font-weight: 700;
+}
+.parallax-overlays strong{
+  color: #eee;
+  font-weight: 400;
+  font-size: 34px;
+}
+
+.blog h2 {
+  color: #eee;
+  font-weight: 800;
+
+}
+
+.post-floral{
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-top: 5px;
+  border:1px solid #BDBDBD;
+}
+.post-floral h3 strong{
+  color:  #f49c0b;
+  font-size: 24px;
+  margin-bottom: 25px;
+  font-weight: 700;
+
+}
+.img-post{
+  margin-top: 5px;
+}
+.texto-blog{
+  
+  padding: 15px 15px;
+  text-align: justify-all;
+}
+.texto-blog p{
+  font-size: 18px;
+  color: #000;
+  text-align: justify-all;
+}
+
+/*=================================
+panelAdmin
+==================================*/

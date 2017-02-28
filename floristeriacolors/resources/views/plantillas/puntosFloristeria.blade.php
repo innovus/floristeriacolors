@@ -23,9 +23,7 @@
              </p>
          </div>
      </div>
-     <div class="col-md-12 puntosRedimir-titulo2 text-center">
-         <h4>Tienes <strong>10.300 puntos</strong>, que esquivale a <strong>10.300 pesos.</strong></h4>
-     </div>
+     
         
     </div>
 </section>

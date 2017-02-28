@@ -17,7 +17,9 @@
                             <a href="/realizarArreglo" class="btn-entrada text-center">REALIZA TU ARREGLO FLORAL!</a>
                         </div>   <br><br><br>
                         <div data-wow-duration="1000ms" class="wow slideInLeft animated col-md-6 col-md-offset-3 text-center">
-                            <h3>Garantizamos el mejor precio con la más alta calidad y diseño.</strog></h3>
+                            <h3>
+                            <strong>Garantizamos el mejor precio con la más alta calidad y diseño.</strong>
+                            </h3>
                         </div><br><br><br>                     
                    </div>
                                         
