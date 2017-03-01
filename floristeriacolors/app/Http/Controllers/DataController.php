@@ -3,6 +3,9 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Data;
+use Session;
+use Redirect;
 
 class DataController extends Controller
 {
@@ -13,7 +16,8 @@ class DataController extends Controller
      */
     public function index()
     {
-        //
+        $data = Data::limit(1)->get();;
+        return view('data.index',compact('data'));
     }
 
     /**
