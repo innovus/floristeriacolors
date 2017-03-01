@@ -159,4 +159,25 @@ class PrincipalController extends Controller
         
         return View('plantillas.misDatos');
     }
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function misProductos()
+    {
+        
+        return View('plantillas.misProductos');
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function nuevoProducto()
+    {
+        
+        return View('plantillas.nuevoProducto');
+    }
 }

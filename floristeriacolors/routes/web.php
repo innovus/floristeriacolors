@@ -27,6 +27,8 @@ Route::get('blog/','PrincipalController@blog');
 
 
 Route::get('misDatos/','PrincipalController@misDatos');
+Route::get('misProductos/','PrincipalController@misProductos');
+Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');

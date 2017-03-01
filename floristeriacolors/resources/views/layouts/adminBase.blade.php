@@ -41,14 +41,14 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/misProductos">
+                            <a href="">
                                 <i class="fa fa-leaf fa-1x"></i>
                                 PRODUCTOS
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
+                            <li><a>NUEVO PRODUCTO</a></li>
+                            <li><a href="/misProductos">LISTA DE PRODUCTOS</a></li>
                         </ul>
                     </li>
                     <li>
