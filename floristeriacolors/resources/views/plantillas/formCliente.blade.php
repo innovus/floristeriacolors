@@ -7,12 +7,8 @@
                         {!!Form::date('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
                         {!!Form::text('celular',null,['class'=>'form-control','placeholder'=>'Celular'])!!}
                         {!!Form::text('direccion',null,['class'=>'form-control','placeholder'=>'Direccion'])!!}
-                        {!!Form::hidden('user_id',{{$user->id}})!!}
+                        {!!Form::hidden('user_id',$user->id)!!}
 
-                       <!--- <select class="form-control se">
-                            <option>Ciudad</option>
-                        </select>
-                        -->
                     <!--fin datos-->
                     </div>
                     <div class="col-sm-12">
