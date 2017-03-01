@@ -5,6 +5,9 @@ namespace FloristeriaColors\Http\Controllers;
 use Illuminate\Http\Request;
 use FloristeriaColors\Client;
 
+use Session;
+use Redirect;
+
 class ClientController extends Controller
 {
     /**
@@ -36,6 +39,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         Client::create($request->all());
+        return redirect('/cuentaUsuario');
     }
 
     /**
@@ -69,7 +73,14 @@ class ClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cliente = Client::find($id);
+        $cliente->fill($request->all());
+        $cliente->save();
+
+        Session::flash('message','Usuario Editado correctamente');
+
+        return Redirect::to('/cuentaUsuario');
+        
     }
 
     /**

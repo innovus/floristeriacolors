@@ -137,51 +137,36 @@
     
   </div>
     <div class="modal-body text-center">
-        
-        <form method="" name="" id="">
-            <!--aqui comienza el form --> 
-            <div class="row text-center">
-                    <h3>MI INFORMACIÓN</h3>
-                    <div class="col-md-6 col-md-offset-3 date-user">
-                    <!-- datos-->
-                    
-                        <input type="text" class="form-control" placeholder="Nombres ">
-                        <input type="text" class="form-control" placeholder="Apellidos">
-                        <input type="text" class="form-control" placeholder="ID/C.c">
-                        <input type="text" class="form-control" placeholder="Teléfono">
-                        <input type="text" class="form-control" placeholder="Fecha de Nacimiento">
-                        <input type="text" class="form-control" placeholder="Dirección">
-                        <select class="form-control se">
-                            <option>Ciudad</option>
-                        </select>
-                    <!--fin datos-->
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="o1" value="">
-                            <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-                            Femenino
-                          </label>
-                        </div>
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="o1" value="" checked>
-                            <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-                            Masculino
-                          </label>
-                        </div>
-                
-                    </div>
+    @if($user->client)
 
-                 
-            </div>
+    {!!Form::model($user->client,['route'=>['clientes.update',$user->client->id],'method'=>'PUT'])!!}
+            <!--aqui comienza el form --> 
+            @include('plantillas.formCliente')
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
+                {!!Form::submit('Guardar',['class'=>'btn btn-primary'])!!}
             </div>
             <!--aqui termina el form --> 
-        </form>
+        {!!Form::close()!!}
+
+    @else
+
+    <!--<form method="POST" name="" id="">-->
+    {!!Form::open(['route'=> 'clientes.store', 'method'=>'POST'])!!}
+            <!--aqui comienza el form --> 
+            @include('plantillas.formCliente')
+
+            <div class="modal-footer">
+
+                <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
+                <!--<button type="button" class="btn btn-primary">Guardar</button>-->
+                 {!!Form::submit('Guardar',['class'=>'btn btn-primary'])!!}
+            </div>
+            <!--aqui termina el form --> 
+        <!--</form>-->
+        {!!Form::close()!!}
+    @endif 
+    
         
     </div>
  
