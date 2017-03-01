@@ -25,5 +25,6 @@
         <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
         <link rel="stylesheet" href='/js/bootstrap-datepicker/css/bootstrap-datepicker.css'>
         
+        
 
         <!--fin head_css -->
