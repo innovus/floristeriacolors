@@ -31,18 +31,24 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+               
+                <li class="">
                     <a href="#">
                         <i class="fa fa-address-card fa-1x"></i>
                         <p>MI INFORMACIÓN</p>
                     </a>
                 </li>
-                 <li class="">
-                    <a href="">
-                        <i class="fa fa-list-alt fa-1x"></i>
-                        <p>PRODUCTOS</p>
-                    </a>
-                </li>
+                <!--************************************************ -->
+                 <li>
+                        <div class="link">¿Cómo comprar?
+                            <i class="fa fa-chevron-down">
+                            </i>
+                        </div>
+                        <ul class="submenu2">
+                             <p>Entregamos a domicilio tu Arreglo Floral, sigue estos sencillos pasos:</p>
+                        </ul>
+                    </li>
+                 <!--************************************************ -->
                 <li class="">
                     <a href="">
                         <i class="fa fa-table fa-1x"></i>
@@ -57,22 +63,23 @@
                 </li>
                 <li class="">
                     <a href="">
-                        <i class="fa fa-user fa-1x"></i>
+                        <i class="fa fa-line-chart fa-1x"></i>
                         <p>VENTAS</p>
                     </a>
                 </li>
                 <li class="">
                     <a href="">
-                        <i class="fa fa-user fa-1x"></i>
+                        <i class="fa fa-youtube-play fa-1x"></i>
                         <p>VIDEOS</p>
                     </a>
                 </li>
                 <li class="">
                     <a href="">
-                        <i class="fa fa-user fa-1x"></i>
+                        <i class="fa fa-newspaper-o fa-1x"></i>
                         <p>NOTICIAS BLOG</p>
                     </a>
                 </li>
+               
 
             </ul>
         </div>
@@ -88,21 +95,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Dashboard</a>
+                    <a class="navbar-brand" href="#">Panel administrador</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-dashboard"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                            <a href="">
-                               Account
+                               Cerrar Sesión
                             </a>
                         </li>
                     </ul>
@@ -110,7 +111,7 @@
             </div>
         </nav>
 
-
+        <!-- contenedor de acciones -->
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
@@ -118,22 +119,13 @@
                 </div>
             </div>
         </div>
+        <!-- fin contenedor de acciones -->
 
 
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                Home
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
                 <p class="copyright pull-right">
-                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                    &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://www.facebook.com/jhon.f.diaz.96">Jhon Diaz</a>-<a href="https://www.facebook.com/GeorgeJDC">Jorge Viveros</a> Desarrollo frontend- backend 
                 </p>
             </div>
         </footer>
