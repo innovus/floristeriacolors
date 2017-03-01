@@ -157,7 +157,7 @@
 
                 <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
                 <!--<button type="button" class="btn btn-primary">Guardar</button>-->
-                 {!!Form::button('Guardar',['class'=>'btn btn-primary'])!!}
+                 {!!Form::submit('Guardar',['class'=>'btn btn-primary'])!!}
             </div>
             <!--aqui termina el form --> 
         <!--</form>-->
