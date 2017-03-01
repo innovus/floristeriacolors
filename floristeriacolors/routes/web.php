@@ -32,6 +32,7 @@ Route::get('panelAdmin/','PrincipalController@panelAdmin');
 Route::resource('admin/categorias','CategoryController');
 Route::resource('admin/productos','ProductController');
 Route::resource('admin/precios','PriceController');
+Route::resource('admin/clientes','ClientController');
 
 /*Route::get('/', function () {
     //return view('welcome');
