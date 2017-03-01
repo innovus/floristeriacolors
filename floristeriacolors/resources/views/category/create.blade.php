@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.adminBase')
 
 @section('content')
 	@include('alerts.request')

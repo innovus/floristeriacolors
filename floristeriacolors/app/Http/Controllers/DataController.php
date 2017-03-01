@@ -3,19 +3,9 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
-use FloristeriaColors\Http\Requests;
-use FloristeriaColors\Http\Requests\CategoryCreateRequest;
 
-use FloristeriaColors\Category;
-use Session;
-use Redirect;
-
-//sirve para obtener
-use Illuminate\Routing\Route;
-
-class CategoryController extends Controller
+class DataController extends Controller
 {
-
     /**
      * Display a listing of the resource.
      *
@@ -23,8 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::All();
-        return view('category.index',compact('categories'));
+        //
     }
 
     /**
@@ -34,7 +23,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        //
     }
 
     /**
@@ -43,10 +32,9 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(CategoryCreateRequest $request)
+    public function store(Request $request)
     {
-        Category::create($request->all());
-        return redirect('/categoria')->with('message','store');
+        //
     }
 
     /**
@@ -68,8 +56,6 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $categoria = Category::find($id);
-        return view('category.edit',['category'=>$categoria]);
         //
     }
 
@@ -82,13 +68,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $categoria = Category::find($id);
-        $categoria->fill($request->all());
-        $categoria->save();
-
-        Session::flash('message','Usuario Editado correctamente');
-
-        return Redirect::to('/admin/categorias');
+        //
     }
 
     /**
@@ -99,17 +79,6 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        try {
-                Category::destroy($id);
-                Session::flash('message','Usuario eliminado correctamente');
-                return Redirect::to('/admin/categorias');
-
-            } catch (\Illuminate\Database\QueryException $e) {
-                Session::flash('error','No se puede eliminar por que tiene productos');
-                return Redirect::to('/admin/categorias');
-
-            } 
-       
         //
     }
 }

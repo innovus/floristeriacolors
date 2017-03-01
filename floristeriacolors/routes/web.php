@@ -33,6 +33,7 @@ Route::resource('admin/categorias','CategoryController');
 Route::resource('admin/productos','ProductController');
 Route::resource('admin/precios','PriceController');
 Route::resource('admin/clientes','ClientController');
+Route::get('admin/datos','DataController');
 
 /*Route::get('/', function () {
     //return view('welcome');
