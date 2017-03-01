@@ -41,7 +41,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="#">
+                            <a href="/misProductos">
                                 <i class="fa fa-leaf fa-1x"></i>
                                 PRODUCTOS
                             </a>
