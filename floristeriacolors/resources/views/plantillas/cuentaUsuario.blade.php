@@ -8,9 +8,12 @@
                 <div class="col-md-6 text-left">
                     <h4>Bienvenido:<strong>{{$user->email}}</strong></h4>
                 </div>
-                <div class="col-md-6 text-right">
-                    <strong>
-                    Salir</strong>
+                <div class="col-md-6  btn-salir">
+                    <!--formulario para cerrar sesión -->
+                    <form>
+                        <input type="submit" name="" value="Salir">
+                    </form>
+                    <!--fin formulario para cerrar sesión -->
                 </div>
             </div>
             <!-- -->
@@ -110,17 +113,11 @@
             </div>
             <hr>
             <!--fin un detalle -->
-               
-         
 
           </div>
-          <!--<div class="col-md-12 text-center">
-              <h2><strong>SUBTOTAL:</strong>127.000</h2>
-          </div>-->
      </div>
         <div class="modal-footer">
             <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
-            <!--<button type="button" class="btn btn-primary">Confirmar Compra</button>-->
         </div>
   </div>
  
@@ -160,7 +157,7 @@
 
                 <button type="button" data-dismiss="modal" class="btn btn-default">Cerrar</button>
                 <!--<button type="button" class="btn btn-primary">Guardar</button>-->
-                 {!!Form::submit('Guardar',['class'=>'btn btn-primary'])!!}
+                 {!!Form::button('Guardar',['class'=>'btn btn-primary'])!!}
             </div>
             <!--aqui termina el form --> 
         <!--</form>-->

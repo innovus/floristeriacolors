@@ -1771,6 +1771,14 @@ cuentaUsuario
 .cUsuario-1{
   padding: 15px 0;
 }
+.btn-salir input{
+  background: transparent;
+  color: #000;
+  border:none;
+  float: right;
+  margin-top: 0;
+  font-weight: 700;
+}
 .item-panel {
   width: 98%;
   float: left;
