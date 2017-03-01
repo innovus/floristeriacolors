@@ -10,7 +10,8 @@
                 </div>
                 <div class="col-md-6  btn-salir">
                     <!--formulario para cerrar sesión -->
-                    <form>
+                    <form action="/logout" method="POST"> 
+                    {{ csrf_field() }}
                         <input type="submit" name="" value="Salir">
                     </form>
                     <!--fin formulario para cerrar sesión -->

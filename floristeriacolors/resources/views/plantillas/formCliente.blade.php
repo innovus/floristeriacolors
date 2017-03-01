@@ -4,7 +4,13 @@
                     <!-- datos-->
                         {!!Form::text('nombres',null,['class'=>'form-control','placeholder'=>'Nombres'])!!}
                         {!!Form::text('apellidos',null,['class'=>'form-control','placeholder'=>'Apellidos'])!!}
-                        {!!Form::date('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
+                        <div class="col-md-6 seccion-datos ">
+                           <div class="form-group date-user jf-date">
+                            {!!Form::text('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
+                               
+                           </div>
+                        </div>
+                       
                         {!!Form::text('celular',null,['class'=>'form-control','placeholder'=>'Celular'])!!}
                         {!!Form::text('direccion',null,['class'=>'form-control','placeholder'=>'Direccion'])!!}
                         {!!Form::hidden('user_id',$user->id)!!}
