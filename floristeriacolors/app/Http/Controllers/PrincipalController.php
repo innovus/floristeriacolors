@@ -154,9 +154,9 @@ class PrincipalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function panelAdmin()
+    public function misDatos()
     {
         
-        return View('plantillas.panelAdmin');
+        return View('plantillas.misDatos');
     }
 }

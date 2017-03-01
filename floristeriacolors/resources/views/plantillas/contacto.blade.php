@@ -14,7 +14,7 @@
             <div class="col-md-8 col-md-offset-2 landmarkit">
                 <h3>Punto de Referencia</h3>
                 <div class="col-md-4">
-                    <h5>Floristeria Flowers</h5>
+                    <h5>Floristeria Colors</h5>
                     <h5>Calle 19 #31 -19 Las Cuadras</h5>
                     <h5>San Juan de Pasto</h5>
                     

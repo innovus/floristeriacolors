@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
     <title>Admin Colors</title>
@@ -16,6 +16,7 @@
     <link href="/assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>    
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+    <link rel="stylesheet" href='/css/style.css'>
 
 </head>
 <body>
@@ -23,65 +24,100 @@
 <div class="wrapper">
     <div class="sidebar" data-color="green" data-image="assets/img/sidebar-5.jpg">
 
-        <div class="sidebar-wrapper">
+        <div class="sidebar-wrapper clasico">
             <div class="logo">
                 <a href="http://www.floristeriaColors.com" class="simple-text">
                     FLORISTERÍA COLORS
                 </a>
             </div>
-
-            <ul class="nav">
-               
-                <li class="">
-                    <a href="#">
-                        <i class="fa fa-address-card fa-1x"></i>
-                        <p>MI INFORMACIÓN</p>
-                    </a>
-                </li>
-                <!--************************************************ -->
-                 <li>
-                        <div class="link">¿Cómo comprar?
-                            <i class="fa fa-chevron-down">
-                            </i>
+             <ul id="accordion9" class=" nav">
+                    <li>
+                        <div class="link linkito">
+                            <a href="/misDatos">
+                                <i class="fa fa-address-card fa-1x"></i>
+                                MI INFORMACIÓN
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-leaf fa-1x"></i>
+                                PRODUCTOS
+                            </a>
                         </div>
                         <ul class="submenu2">
-                             <p>Entregamos a domicilio tu Arreglo Floral, sigue estos sencillos pasos:</p>
+                            <li>Nuevo</li>
+                            <li>listar</li>
                         </ul>
                     </li>
-                 <!--************************************************ -->
-                <li class="">
-                    <a href="">
-                        <i class="fa fa-table fa-1x"></i>
-                        <p>CATEGORIAS</p>
-                    </a>
-                </li>
-                 <li class="">
-                    <a href="">
-                        <i class="fa fa-money fa-1x"></i>
-                        <p>PRECIOS</p>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="">
-                        <i class="fa fa-line-chart fa-1x"></i>
-                        <p>VENTAS</p>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="">
-                        <i class="fa fa-youtube-play fa-1x"></i>
-                        <p>VIDEOS</p>
-                    </a>
-                </li>
-                <li class="">
-                    <a href="">
-                        <i class="fa fa-newspaper-o fa-1x"></i>
-                        <p>NOTICIAS BLOG</p>
-                    </a>
-                </li>
-               
+                    <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-table fa-1x"></i>
+                                CATEGORIAS
+                            </a>
+                        </div>
+                        <ul class="submenu2">
+                            <li>Nuevo</li>
+                            <li>listar</li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-money fa-1x"></i>
+                                PRECIOS
+                            </a>
+                        </div>
+                        <ul class="submenu2">
+                            <li>Nuevo</li>
+                            <li>listar</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-line-chart fa-1x"></i>
+                                VENTAS
+                            </a>
+                        </div>
+                        <ul class="submenu2">
+                            <li>Nuevo</li>
+                            <li>listar</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-youtube-play fa-1x"></i>
+                                VIDEOS
+                            </a>
+                        </div>
+                        <ul class="submenu2">
+                            <li>Nuevo</li>
+                            <li>listar</li>
+                        </ul>
+                    </li>
 
+
+                     <li>
+                        <div class="link linkito">
+                            <a href="#">
+                                <i class="fa fa-newspaper-o fa-1x"></i>
+                                NOTICIAS BLOG
+                            </a>
+                        </div>
+                        <ul class="submenu2">
+                            <li>Nuevo</li>
+                            <li>listar</li>
+                        </ul>
+                    </li>
             </ul>
+
+
+            
         </div>
     </div>
 
@@ -95,16 +131,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Panel administrador</a>
+                    <a class="navbar-brand" href="#">Administrador</a>
                 </div>
-                <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse ">
                     
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                           <a href="">
-                               Cerrar Sesión
-                            </a>
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li >
+
+                           <!--formulario cerrar sesión admin -->
+                           <form method="">
+
+                               <input type="submit" name="" class="btn" value="SALIR">
+
+                           </form>
+
+                           <!--fin formulario cerrar sesión admin -->
                         </li>
                     </ul>
                 </div>
@@ -115,7 +157,7 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-
+                    @yield('content')
                 </div>
             </div>
         </div>
@@ -137,9 +179,10 @@
 </body>
 
     <!--   Core JS Files   -->
+
     <script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
     <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
-
+    <script src='/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js'></script>
     <!--  Checkbox, Radio & Switch Plugins -->
     <script src="/assets/js/bootstrap-checkbox-radio-switch.js"></script>
 
@@ -157,6 +200,7 @@
 
     <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
     <script src="/assets/js/demo.js"></script>
+    <script type="text/javascript" src="/js/menu.js"></script>
 
 
 </html>

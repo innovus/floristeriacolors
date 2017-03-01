@@ -26,7 +26,7 @@ Route::get('finalizarCompra/','PrincipalController@finalizarCompra');
 Route::get('blog/','PrincipalController@blog');
 
 
-Route::get('panelAdmin/','PrincipalController@panelAdmin');
+Route::get('misDatos/','PrincipalController@misDatos');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');

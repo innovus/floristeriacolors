@@ -56,6 +56,8 @@ $(function() {
     var accordion = new Accordion($('#accordion6'), false);
     var accordion = new Accordion($('#accordion7'), false);
     var accordion = new Accordion($('#accordion8'), false);
+    var accordion = new Accordion($('#accordion9'), false);
+    var accordion = new Accordion($('#accordion10'), false);
 });
 
 /* ======================================================= */
