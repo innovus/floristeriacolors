@@ -5,6 +5,7 @@ namespace FloristeriaColors\Http\Controllers;
 use Illuminate\Http\Request;
 use FloristeriaColors\Category;
 use FloristeriaColors\Product;
+use FloristeriaColors\Data;
 
 class PrincipalController extends Controller
 {
@@ -71,8 +72,8 @@ class PrincipalController extends Controller
      */
     public function contacto()
     {
-        
-        return View('plantillas.contacto');
+        $data = Data::first();
+        return View('plantillas.contacto',compact('data'));
     }
 
     /**

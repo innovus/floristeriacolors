@@ -16,7 +16,7 @@ class DataController extends Controller
      */
     public function index()
     {
-        $data = Data::limit(1)->get();;
+        $data = Data::first();
         return view('data.index',compact('data'));
     }
 
@@ -72,7 +72,13 @@ class DataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Data::find($id);
+        $data->fill($request->all());
+        $data->save();
+
+        Session::flash('message','Datos Editados correctamente');
+
+        return Redirect::to('/admin/datos');
     }
 
     /**

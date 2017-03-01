@@ -15,14 +15,14 @@
                 <h3>Punto de Referencia</h3>
                 <div class="col-md-4">
                     <h5>Floristeria Colors</h5>
-                    <h5>Calle 19 #31 -19 Las Cuadras</h5>
-                    <h5>San Juan de Pasto</h5>
+                    <h5>{{$data->direccion}}</h5>
+                    <h5>{{$data->ciudad}}</h5>
                     
                 </div>
                  <div class="col-md-4">
-                    <h5><span class="fa  fa-whatsapp fa-1x"></span> (+57) 3183072264</h5>
-                    <h5><span class="fa  fa-phone fa-1x"></span> 7290041</h5>
-                    <h5><span class="fa  fa-envelope fa-1x"></span> floristeriaColor@gmail.com</h5>
+                    <h5><span class="fa  fa-whatsapp fa-1x"></span> {{$data->celular}}</h5>
+                    <h5><span class="fa  fa-phone fa-1x"></span>{{$data->telefono}}</h5>
+                    <h5><span class="fa  fa-envelope fa-1x"></span> {{$data->email}}</h5>
                 </div>
                  <div class="col-md-4 text-center">
                     <span class="fa fa-map-marker fa-5x"></span>
