@@ -33,22 +33,22 @@
              <ul id="accordion9" class=" nav">
                     <li>
                         <div class="link linkito">
-                            <a href="/misDatos">
+                            <a href="/admin/datos">
                                 <i class="fa fa-address-card fa-1x"></i>
-                                MI INFORMACIÓN
+                                MIS DATOS
                             </a>
                         </div>
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="">
+                            <a>
                                 <i class="fa fa-leaf fa-1x"></i>
                                 PRODUCTOS
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li><a>NUEVO PRODUCTO</a></li>
-                            <li><a href="/misProductos">LISTA DE PRODUCTOS</a></li>
+                            <li><a>NUEVO</a></li>
+                            <li><a href="/misProductos">LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
