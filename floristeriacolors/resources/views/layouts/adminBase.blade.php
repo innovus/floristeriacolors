@@ -22,7 +22,7 @@
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="green" data-image="/assets/img/sidebar-5.jpg">
 
         <div class="sidebar-wrapper clasico">
             <div class="logo">

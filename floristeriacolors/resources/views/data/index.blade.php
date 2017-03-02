@@ -77,4 +77,34 @@
                             </div>
                         </div>
                     </div>
+    <!-- se muestra un resumen de la info registrada o actualizada -->                
+    <div class="col-md-4">
+                        <div class="card card-user">
+                            <div class="image">
+                                <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="..."/>
+                            </div>
+                            <div class="content">
+                                <div class="author">
+                                     <a href="#">
+                                    <img class="avatar border-gray" src="/img/logo.jpg" alt="..."/>
+
+                                      <h4 class="title">Floristería Colors<br />
+                                         <small>Calle 19 #31 -19 Las Cuadras</small>
+                                      </h4>
+                                    </a>
+                                </div>
+                                <p class="description text-center"> 7290041 <br>
+                                                    3183072264 <br>
+                                                    San Juan de Pasto 
+                                </p>
+                            </div>
+                            <hr>
+                            <div class="text-center">
+                                <button href="https://www.facebook.com/Floristeria-Colors-826542960800106/?fref=ts" class="btn btn-simple"><i class="fa fa-facebook-square"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-twitter"></i></button>
+                                <button href="#" class="btn btn-simple"><i class="fa fa-google-plus-square"></i></button>
+
+                            </div>
+                        </div>
+                    </div>
 @stop
