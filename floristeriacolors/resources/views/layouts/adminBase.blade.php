@@ -47,21 +47,17 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li><a href="/nuevoProducto">  NUEVO<a></li>
+                            <li><a href="/nuevoProducto">  NUEVO</a></li>
                             <li><a href="/misProductos">  LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="#">
+                            <a href="/misCategorias">
                                 <i class="fa fa-table fa-1x"></i>
                                 CATEGORIAS
                             </a>
                         </div>
-                        <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
-                        </ul>
                     </li>
                     
                     <li>
@@ -72,8 +68,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
+                            <li><a href="/nuevoPrecio">  NUEVO</a></li>
+                            <li><a href="/misPrecios">  LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
@@ -90,15 +86,11 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="#">
+                            <a href="/videos">
                                 <i class="fa fa-youtube-play fa-1x"></i>
-                                VIDEOS
+                                MIS VIDEOS
                             </a>
                         </div>
-                        <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
-                        </ul>
                     </li>
 
 
@@ -110,8 +102,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
+                             <li><a href="/nuevoPost">  NUEVO</a></li>
+                            <li><a href="/adminBlog">  LISTAR</a></li>
                         </ul>
                     </li>
             </ul>

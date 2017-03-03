@@ -6,14 +6,13 @@
 <div class="col-md-12">
     <div class="card">
         <div class="header">
-            <h4 class="title">MIS PRODUCTOS REGISTRADOS</h4>
+            <h4 class="title">PUBLICACIONES EN MI BLOG FLORAL</h4>
             <p class="category">www.floristeriaColors.com</p>
         </div>
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>Nombre</th>
-                    <th>Categoría</th>
+                    <th>Título</th>
                     <th>Descripción</th>
                     <th>Imagen</th>
                     <th>Acciones</th>
@@ -21,21 +20,8 @@
                 <tbody>
                 <!--inicio un producto -->
                     <tr>
-                        <td>Caja de 12 rosas</td>
-                        <td>Rosas</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repudiandae debitis, eligendi veritatis maxime quod, aspernatur modi architecto, quia.</td>
-                        <td>rosas.jpg</td>
-                        <td>
-                            <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
-                            <button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
-                        </td>
-                    </tr>
-                <!-- finr un producto -->
-                    <!--inicio un producto -->
-                    <tr>
-                        <td>Caja de 12 rosas</td>
-                        <td>Rosas</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repudiandae debitis, eligendi veritatis maxime quod.</td>
+                        <td>¿QUÉ SIGNIFICA REGALAR ROSAS?</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eos aliquid porro id, perferendis excepturi iusto quae voluptatem aut velit, quis ut unde, nulla. Similique blanditiis illum magni ratione, omnis.</td>
                         <td>rosas.jpg</td>
                         <td>
                             <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
@@ -45,16 +31,27 @@
                 <!-- finr un producto -->
                 <!--inicio un producto -->
                     <tr>
-                        <td>Caja de 12 rosas</td>
-                        <td>Rosas</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates repudiandae debitis, eligendi veritatis maxime quod, aspernatur modi architecto, quia.</td>
+                        <td>¿QUÉ SIGNIFICA REGALAR ROSAS?</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eos aliquid porro id, perferendis excepturi iusto quae voluptatem aut velit, quis ut unde, nulla. Similique blanditiis illum magni ratione, omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eos aliquid porro id, perferendis excepturi iusto quae voluptatem aut velit, quis ut unde, nulla. Similique blanditiis illum magni ratione, omnis.</td>
                         <td>rosas.jpg</td>
                         <td>
                             <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
                             <button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
                         </td>
                     </tr>
-                <!-- finr un producto --> 
+                <!-- finr un producto -->
+                <!--inicio un producto -->
+                    <tr>
+                        <td>¿QUÉ SIGNIFICA REGALAR ROSAS?</td>
+                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eos aliquid porro id, perferendis excepturi iusto quae voluptatem aut velit, quis ut unde, nulla. Similique blanditiis illum magni ratione, omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eos aliquid porro id, perferendis excepturi iusto quae voluptatem aut velit, quis ut unde, nulla. Similique blanditiis illum magni ratione, omnis.</td>
+                        <td>rosas.jpg</td>
+                        <td>
+                            <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
+                            <button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
+                        </td>
+                    </tr>
+                <!-- finr un producto -->
+                    
                 </tbody>
             </table>
 

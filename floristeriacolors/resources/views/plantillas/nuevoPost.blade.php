@@ -4,29 +4,21 @@
                     <div class="col-md-8 col-md-offset-2">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">NUEVO PRODUCTO</h4>
+                                <h4 class="title">NUEVO POST FLORAL</h4>
                                   <p class="category">www.floristeriaColors.com</p>
                             </div>
                             <div class="content">
-                                <!-- aqui inicia el formulario de crear nuevo post -->
+                                <!-- aqui inicia el formulario de crear nuevo producto -->
                                 <form>
                                     <div class="row">                                      
                                         <div class="col-md-12">
                                             <div class="form-group">
-                                                <label>Nombre producto:</label>
-                                                <input type="text" class="form-control" placeholder="Nombre producto" value="">
+                                                <label>Título:</label>
+                                                <input type="text" class="form-control" placeholder="Título post" >
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row">                                      
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Categoria:</label>
-                                                <select class="form-control">
-                                                    <option>Flores</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                    <div class="row">    
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Escoge una imágen:</label>
@@ -50,7 +42,7 @@
                                     <button type="submit" class="btn btn-info btn-fill pull-right">REGISTRAR</button>
                                     <div class="clearfix"></div>
                                 </form>
-                                <!-- aqui finaliza el formulario de crear post -->
+                                <!-- aqui finaliza el formulario de crear nuevo producto -->
                             </div>
                         </div>
                     </div>

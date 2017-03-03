@@ -181,4 +181,65 @@ class PrincipalController extends Controller
         
         return View('plantillas.nuevoProducto');
     }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function misCategorias()
+    {
+        
+        return View('plantillas.misCategorias');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function nuevoPrecio()
+    {
+        
+        return View('plantillas.nuevoPrecio');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function misPrecios()
+    {
+        
+        return View('plantillas.misPrecios');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function videos()
+    {
+        
+        return View('plantillas.videos');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function adminBlog()
+    {
+        
+        return View('plantillas.adminBlog');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function nuevoPost()
+    {
+        
+        return View('plantillas.nuevoPost');
+    }
 }
