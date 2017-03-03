@@ -4,9 +4,7 @@ namespace FloristeriaColors;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Occasion extends Model
+class CategoryType extends Model
 {
-    protected $fillable = [
-        'ocasion'
-    ];
+    //
 }

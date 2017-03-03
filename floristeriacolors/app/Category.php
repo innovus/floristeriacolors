@@ -21,6 +21,11 @@ class Category extends Model
         return $this->hasMany('FloristeriaColors\Product');
     }
 
+    public function category_type()
+    {
+        return $this->belongsTo('FloristeriaColors\CategoryType');
+    }
+
    
 
 
