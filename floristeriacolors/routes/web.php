@@ -35,6 +35,9 @@ Route::get('misPrecios/','PrincipalController@misPrecios');
 Route::get('videos/','PrincipalController@videos');
 Route::get('adminBlog/','PrincipalController@adminBlog');
 Route::get('nuevoPost/','PrincipalController@nuevoPost');
+Route::get('ocasiones/','PrincipalController@ocasiones');
+Route::get('moreVendidos/','PrincipalController@moreVendidos');
+Route::get('destacados/','PrincipalController@destacados');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');

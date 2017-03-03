@@ -59,6 +59,30 @@
                             </a>
                         </div>
                     </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="/ocasiones">
+                                <i class="fa fa-telegram fa-1x"></i>
+                                OCASIONES
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="/moreVendidos">
+                                <i class="fa fa-ravelry fa-1x"></i>
+                                MAS VENDIDOS
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="link linkito">
+                            <a href="/destacados">
+                                <i class="fa fa-check fa-1x"></i>
+                                DESTACADOS
+                            </a>
+                        </div>
+                    </li>
                     
                     <li>
                         <div class="link linkito">

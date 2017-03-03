@@ -242,4 +242,34 @@ class PrincipalController extends Controller
         
         return View('plantillas.nuevoPost');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function ocasiones()
+    {
+        
+        return View('plantillas.ocasiones');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function moreVendidos()
+    {
+        
+        return View('plantillas.moreVendidos');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function destacados()
+    {
+        
+        return View('plantillas.destacados');
+    }
 }

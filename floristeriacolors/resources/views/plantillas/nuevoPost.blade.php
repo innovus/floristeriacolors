@@ -19,7 +19,7 @@
                                         </div>
                                     </div>
                                     <div class="row">    
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Escoge una imágen:</label>
                                                 <input type="file" class="form-control" name="">
