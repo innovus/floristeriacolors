@@ -47,8 +47,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li><a>NUEVO</a></li>
-                            <li><a href="/misProductos">LISTAR</a></li>
+                            <li><a href="/nuevoProducto">  NUEVO<a></li>
+                            <li><a href="/misProductos">  LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
@@ -142,7 +142,7 @@
                            <!--formulario cerrar sesión admin -->
                            <form method="">
 
-                               <input type="submit" name="" class="btn" value="SALIR">
+                               <input type="submit" name="" class="btn btni" value="CERRAR SESIÓN">
 
                            </form>
 

@@ -14,7 +14,7 @@
 
                         <div class="card">
                             <div class="header">
-                                <h4 class="title"></h4>
+                                <h4 class="title">EDITAR MI INFORMACIÓN</h4>
                             </div>
                             <div class="content">
                                 {!!Form::model($data,['route'=>['datos.update',$data->id],'method'=>'PUT'])!!}

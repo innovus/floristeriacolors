@@ -132,9 +132,10 @@ menu de acordeon Ayuda
 .linkito a{
     color: #eee;
     font-weight: 500px !important;
-    font-size: 20px !important;
+    font-size: 15px !important;
 
 }
+
 .linkito {
     padding: 10px 10px;
 }
@@ -145,18 +146,19 @@ menu de acordeon Ayuda
 }
 
 
-.btn{
+.btni{
   background: transparent !important;
   color: #424242 !important;
   border:none !important;
   margin-left: 6px; 
-  font-size: 17px;
-  font-weight: 500 !important;
+  font-size: 10px !important;
+  font-weight: bold;
+  
 }
 
 
 @media only screen and (max-width : 320px) {
-.btn{
+.btni{
   background: transparent !important;
   color: #fff !important;
   
