@@ -7,7 +7,7 @@
 <section class="menu-carrito">
     <div class="row">
         <div class="col-md-4 col-md-offset-2 col-sm-12 text-center">
-            <h4>Hay <strong>4</strong> productos en tu carrito de compras</h4>
+            <h4>Hay <strong id="cantidad">0</strong> productos en tu carrito de compras</h4>
         </div>
        
                 <div class="col-md-3 col-sm-12 text-left">
@@ -48,7 +48,7 @@
             <!-- -->
             <div class="col-md-12">
 
-                    <button class="btn-comprar">AGREGAR A CARRITO DE COMPRAS</button>
+                    <button class="btn-comprar" onclick="AgregarProducto()">AGREGAR A CARRITO DE COMPRAS</button>
                     
             </div>
 
@@ -63,14 +63,15 @@
                     {{$producto->descripcion}}
                 </p>
                 @if($producto->prices->isEmpty())
-                  <h2><strong>COP 90,000</strong></h2>
+                  <h2><strong>COP 0</strong></h2>
                 @else
+                <input type="hidden" name="" id="valorProducto" value="{{number_format($producto->prices->first()->precio)}}">
                   <h2><strong>COP {{number_format($producto->prices->first()->precio)}}</strong></h2>
             
                 @endif  
                 <div class="cantidad-arreglo">
                     <p class="text-cantidad">Cantidad:</p> 
-                    <input type="number" step="1" min="0"  name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                    <input type="number" step="1" min="0"  id="cantidadProducto" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
                 </div>
                 <div class="detalles-arreglo">
                     <h3>Si quieres sorprender en grande.. <strong>Agrega un detalle.!</strong></h3>
@@ -97,9 +98,10 @@
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="detalle-desc">                                   
                                          <img src="/img/arreglos/29131.bmp" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">AGREGAR</button>
+                                         <input type="hidden" id="4" value="70000" name="">
+                                          <h3>love!</h3>
+                                          <h3><strong>COP 70.000</strong></h3>
+                                          <button onclick="agregarDetalle(4)" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -107,9 +109,10 @@
                             <div class="col-md-3 .col-sm-6 wow fadeInLeft" data-wow-duration="500ms">                                                           
                                     <div class="detalle-desc">                           
                                          <img src="/img/arreglos/get-well11.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">AGREGAR</button>
+                                          <h3>get well!</h3>
+                                          <input type="hidden" id="3" value="40000" name="">
+                                          <h3><strong>COP 40.000</strong></h3>
+                                          <button onclick="agregarDetalle(3)" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -118,9 +121,10 @@
                                     <div class="detalle-desc">
                                                                                
                                          <img src="/img/arreglos/its-a-girl.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">AGREGAR</button>
+                                          <h3>girl!</h3>
+                                          <input type="hidden" id="2" value="60000" name="">
+                                          <h3><strong>COP 60.000</strong></h3>
+                                          <button onclick="agregarDetalle(2)" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
@@ -129,9 +133,10 @@
                                                                                        
                                     <div class="detalle-desc">                           
                                          <img src="/img/arreglos/its-a-boy.jpg" class="img-responsive">
-                                          <h3>Rosas!</h3>
-                                          <h3>COP 40.000</h3>
-                                          <button class="btn btn-success form-control">AGREGAR</button>
+                                          <h3>Boy!</h3>
+                                          <input type="hidden" id="1" value="40000" name="">
+                                          <h3><strong>COP 40.000</strong></h3>
+                                          <button onclick="agregarDetalle(1)" class="btn btn-success form-control">AGREGAR</button>
                                     </div>
                                 
                             </div>
@@ -191,7 +196,7 @@
 
           </div>
           <div class="col-md-12 text-center">
-              <h2><strong>SUBTOTAL:</strong>127.000</h2>
+              <h2>SUBTOTAL:<strong id="subtotalCarrito">0</strong></h2>
           </div>
      </div>
         <div class="modal-footer">

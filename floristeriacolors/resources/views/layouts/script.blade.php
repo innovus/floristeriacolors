@@ -19,6 +19,7 @@
         <script src="/js/jquery-countTo.js"></script>
         <!-- jquery.appear -->
         <script src="/js/jquery.appear.js"></script>
+        <script src="/js/carrito.js"></script>
         <!-- Contact form validation -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
