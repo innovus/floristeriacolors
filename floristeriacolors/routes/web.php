@@ -27,8 +27,8 @@ Route::get('blog/','PrincipalController@blog');
 
 
 Route::get('misDatos/','PrincipalController@misDatos');
-Route::get('misProductos/','PrincipalController@misProductos');
-Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
+//Route::get('misProductos/','PrincipalController@misProductos');
+//Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
 Route::get('misCategorias/','PrincipalController@misCategorias');
 Route::get('nuevoPrecio/','PrincipalController@nuevoPrecio');
 Route::get('misPrecios/','PrincipalController@misPrecios');
@@ -56,7 +56,6 @@ Route::resource('admin/datos','DataController');
 //Auth::routes();
 Route::post('/registro','Auth\RegisterController@register');
 Route::post('/login','Auth\LoginController@login');
-Route::get('/login2','Auth\LoginController@showLoginForm');
 Route::post('/logout','Auth\LoginController@logout');
 
 

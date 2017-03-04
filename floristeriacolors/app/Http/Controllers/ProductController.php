@@ -41,7 +41,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         Product::create($request->all());
-        return back()->withInput();
+        return redirect('/admin/productos')->with('message','store');
     }
 
     /**

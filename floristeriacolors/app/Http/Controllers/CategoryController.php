@@ -7,6 +7,9 @@ use FloristeriaColors\Http\Requests;
 use FloristeriaColors\Http\Requests\CategoryCreateRequest;
 
 use FloristeriaColors\Category;
+use FloristeriaColors\CategoryType;
+
+
 use Session;
 use Redirect;
 
@@ -24,7 +27,8 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::All();
-        return view('category.index',compact('categories'));
+        $category_types = CategoryType::pluck('name','id');
+        return view('category.index',compact('categories','category_types'));
     }
 
     /**
@@ -46,7 +50,7 @@ class CategoryController extends Controller
     public function store(CategoryCreateRequest $request)
     {
         Category::create($request->all());
-        return redirect('/categoria')->with('message','store');
+        return redirect('/admin/categorias')->with('message','store');
     }
 
     /**
