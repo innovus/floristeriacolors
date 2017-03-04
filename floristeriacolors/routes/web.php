@@ -30,6 +30,8 @@ Route::get('misDatos/','PrincipalController@misDatos');
 //Route::get('misProductos/','PrincipalController@misProductos');
 //Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
 //Route::get('misCategorias/','PrincipalController@misCategorias');
+
+
 Route::get('nuevoPrecio/','PrincipalController@nuevoPrecio');
 Route::get('misPrecios/','PrincipalController@misPrecios');
 
@@ -48,6 +50,7 @@ Route::resource('admin/productos','ProductController');
 Route::resource('admin/precios','PriceController');
 Route::resource('admin/clientes','ClientController');
 Route::resource('admin/datos','DataController');
+Route::resource('admin/ocasiones','OccasionController');
 
 /*Route::get('/', function () {
     //return view('welcome');

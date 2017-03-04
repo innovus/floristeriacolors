@@ -3,6 +3,10 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Occasion;
+
+use Session;
+use Redirect;
 
 class OccasionController extends Controller
 {
@@ -13,7 +17,9 @@ class OccasionController extends Controller
      */
     public function index()
     {
-        //
+        //$ocasiones = Occasion::All();
+        return view('occasion.index');
+        
     }
 
     /**
@@ -34,7 +40,9 @@ class OccasionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Occasion::create($request->all());
+        return redirect('/admin/ocasiones')->with('message','Ocasion Guardada con exito');
+
     }
 
     /**
@@ -56,7 +64,7 @@ class OccasionController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -68,7 +76,13 @@ class OccasionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ocasion = Occasion::find($id);
+        $ocasion->fill($request->all());
+        $ocasion->save();
+
+        Session::flash('message','Ocasion Editado correctamente');
+
+        return Redirect::to('/admin/ocasiones');
     }
 
     /**
@@ -79,6 +93,15 @@ class OccasionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+                Ocassion::destroy($id);
+                Session::flash('message','Ocasion eliminado correctamente');
+                return Redirect::to('/admin/ocasiones');
+
+            } catch (\Illuminate\Database\QueryException $e) {
+                Session::flash('error','No se puede eliminar por que tiene productos');
+                return Redirect::to('/admin/ocasiones');
+
+            } 
     }
 }
