@@ -56,6 +56,7 @@ Route::resource('admin/datos','DataController');
 //Auth::routes();
 Route::post('/registro','Auth\RegisterController@register');
 Route::post('/login','Auth\LoginController@login');
+Route::get('/login2','Auth\LoginController@showLoginForm');
 Route::post('/logout','Auth\LoginController@logout');
 
 
