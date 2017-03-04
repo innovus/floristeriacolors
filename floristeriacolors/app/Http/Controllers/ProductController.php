@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use FloristeriaColors\Category;
 use FloristeriaColors\Product;
 
+use Session;
+use Redirect;
 class ProductController extends Controller
 {
     /**
@@ -61,7 +63,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $producto = Product::find($id);
+        $categories = Category::pluck('name','id');
+        return view('product.edit',['product'=>$producto,'categories'=>$categories]);
     }
 
     /**
@@ -73,7 +77,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $producto = Product::find($id);
+        $producto->fill($request->all());
+        $producto->save();
+
+        Session::flash('message','Producto Editado correctamente');
+
+        return Redirect::to('/admin/productos');
     }
 
     /**
@@ -84,6 +94,15 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+                Product::destroy($id);
+                Session::flash('message','Producto eliminado correctamente');
+                return Redirect::to('/admin/productos');
+
+            } catch (\Illuminate\Database\QueryException $e) {
+                Session::flash('error','No se puede eliminar por que tiene precios');
+                return Redirect::to('/admin/productos');
+
+            } 
     }
 }

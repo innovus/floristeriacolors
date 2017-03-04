@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.adminBase')
 
 
 @if(Session::has('message'))
@@ -11,34 +11,49 @@
 @endif
 
 @section('content')
-<table class="table">
 
-	<thead>
-		<th>Nombre</th>
-		<th>Categoria</th>
-		<th>Descripcion</th>
-		<th>Imagen</th>
-		
-		
-	</thead>
-	@foreach($products as $product)
-	<tbody>
-		<td>{{$product->nombre}}</td>
-		<td>{{$product->category->name}}</td>
-		<td>{{$product->descripcion}}</td>
-		<td>{{$product->imagen}}</td>
+<div class="col-md-12">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">MIS PRODUCTOS REGISTRADOS</h4>
+            <p class="category">www.floristeriaColors.com</p>
+        </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Categoría</th>
+                    <th>Descripción</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+                </thead>
 
-		<td>{!!link_to_route('productos.edit',$title = 'Editar',$parameters = $product->id,$attributes =['class'=>'btn btn-primary'])!!} 
-		 {!!Form::open(['route'=>['productos.destroy',$product->id],'method'=>'DELETE'])!!}
-		{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
+                <!--inicio un producto -->
+                @foreach($products as $product)
+				<tbody>
+					<td>{{$product->nombre}}</td>
+					<td>{{$product->category->name}}</td>
+					<td>{{$product->descripcion}}</td>
+					<td>{{$product->imagen}}</td>
 
-	{!!Form::close()!!}
+					<td>
+					<a href="/admin/productos/{{$product->id}}/edit" class="btn btn-success"><span class="fa fa-pencil fa-1x"></span></a>
+					
 
-		</td>
+		 			{!!Form::open(['route'=>['productos.destroy',$product->id],'method'=>'DELETE'])!!}
+					<button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
 
-		
-		
-	</tbody>
-	@endforeach
-</table>
+					{!!Form::close()!!}
+
+					</td>
+				</tbody>
+				@endforeach
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
 @stop
