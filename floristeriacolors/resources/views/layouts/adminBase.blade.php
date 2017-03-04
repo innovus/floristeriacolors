@@ -56,8 +56,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li><a href="/nuevoProducto">  NUEVO</a></li>
-                            <li><a href="/misProductos">  LISTAR</a></li>
+                            <li><a href="/admin/productos/create">  NUEVO</a></li>
+                            <li><a href="/admin/productos">  LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
