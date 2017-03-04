@@ -164,3 +164,97 @@ menu de acordeon Ayuda
   
 }
 }
+
+
+@media only screen and (max-width: 825px){
+  .sli-container{
+    width: 100%;
+
+  }
+  .sli-wrapper{
+     height: 180px;
+      width: 100%;
+  }
+  .caption{
+    padding:  1px;
+  }
+  .modal-body{
+    width: 70% !important;
+
+    margin-left: 15% !important;
+    text-align: center !important;
+  }
+.modal-body h3{
+  font-size: 18px;
+}
+.modal{
+    padding: 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+}
+
+@media only screen and (max-width: 535px){
+  .sli-container{
+    width: 100%;
+  }
+
+  .sli-wrapper{
+    height: 100px;
+    width: 100%;
+  }
+  .caption{
+    display: none;
+  }
+  .sli-wrapper li img{
+  position: absolute;
+  max-width: 100%;
+  height: auto !important;
+  top: 0;
+  left: 0;
+ 
+}
+.cantidad-arreglo {
+    width: 50% !important;
+  }
+.modal-body{
+    width: 100% !important;
+    margin-left: 0px !important;
+    text-align: center !important;
+  }
+.modal-body h3{
+  font-size: 18px;
+}
+.modal{
+    padding: 0 0 !important;
+    margin-left: 0 !important;
+  }
+
+}
+@media only screen and (max-width : 320px) {
+  .sli-container{
+    padding-top: 5px;
+    width: 100%;
+    
+  }
+  .sli-wrapper{
+    height: 80px;
+    padding-bottom: 0px;
+  }
+  .saludo{
+    display: none;
+  }
+  .cantidad-arreglo {
+    width: 70% !important;
+  }
+  .modal-body{
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+  .modal{
+    padding: 0 0 !important;
+    margin-left: 0 !important;
+  }
+ 
+  
+}

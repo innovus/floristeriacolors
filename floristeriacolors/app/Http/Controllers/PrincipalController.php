@@ -272,4 +272,24 @@ class PrincipalController extends Controller
         
         return View('plantillas.destacados');
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function listadoClientes()
+    {
+        
+        return View('plantillas.listadoClientes');
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function ventas()
+    {
+        
+        return View('plantillas.ventas');
+    }
 }

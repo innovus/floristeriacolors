@@ -6,7 +6,7 @@
                         {!!Form::text('apellidos',null,['class'=>'form-control','placeholder'=>'Apellidos'])!!}
                         <div class="col-md-6 seccion-datos ">
                            <div class="form-group date-user jf-date">
-                            {!!Form::text('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
+                        {!!Form::text('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
                                
                            </div>
                         </div>

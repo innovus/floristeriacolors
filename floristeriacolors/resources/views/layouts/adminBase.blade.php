@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <script src="https://use.fontawesome.com/b5998af619.js"></script>
+    
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/css/animate.min.css" rel="stylesheet"/>
     <link href="/assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>    
@@ -36,6 +37,14 @@
                             <a href="/admin/datos">
                                 <i class="fa fa-address-card fa-1x"></i>
                                 MIS DATOS
+                            </a>
+                        </div>
+                    </li>
+                      <li>
+                        <div class="link linkito">
+                            <a href="/listadoClientes">
+                                <i class="fa fa-user-circle fa-1x"></i>
+                                CLIENTES
                             </a>
                         </div>
                     </li>
@@ -98,15 +107,11 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="#">
+                            <a href="/ventas">
                                 <i class="fa fa-line-chart fa-1x"></i>
                                 VENTAS
                             </a>
                         </div>
-                        <ul class="submenu2">
-                            <li>Nuevo</li>
-                            <li>listar</li>
-                        </ul>
                     </li>
                     <li>
                         <div class="link linkito">

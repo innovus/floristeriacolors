@@ -38,6 +38,8 @@ Route::get('nuevoPost/','PrincipalController@nuevoPost');
 Route::get('ocasiones/','PrincipalController@ocasiones');
 Route::get('moreVendidos/','PrincipalController@moreVendidos');
 Route::get('destacados/','PrincipalController@destacados');
+Route::get('listadoClientes/','PrincipalController@listadoClientes');
+Route::get('ventas/','PrincipalController@ventas');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');
