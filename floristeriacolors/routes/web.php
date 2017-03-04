@@ -29,9 +29,10 @@ Route::get('blog/','PrincipalController@blog');
 Route::get('misDatos/','PrincipalController@misDatos');
 //Route::get('misProductos/','PrincipalController@misProductos');
 //Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
-Route::get('misCategorias/','PrincipalController@misCategorias');
+//Route::get('misCategorias/','PrincipalController@misCategorias');
 Route::get('nuevoPrecio/','PrincipalController@nuevoPrecio');
 Route::get('misPrecios/','PrincipalController@misPrecios');
+
 Route::get('videos/','PrincipalController@videos');
 Route::get('adminBlog/','PrincipalController@adminBlog');
 Route::get('nuevoPost/','PrincipalController@nuevoPost');

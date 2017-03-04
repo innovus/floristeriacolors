@@ -7,6 +7,9 @@ use FloristeriaColors\Http\Requests;
 use FloristeriaColors\Price;
 use FloristeriaColors\Product;
 
+use Session;
+use Redirect;
+
 class PriceController extends Controller
 {
     /**
@@ -41,7 +44,7 @@ class PriceController extends Controller
     public function store(Request $request)
     {
         Price::create($request->all());
-        return redirect('/admin/precios')->with('message','store');
+        return redirect('/admin/precios')->with('message','Precio Guardado exitosamente');
     }
 
     /**
@@ -63,8 +66,9 @@ class PriceController extends Controller
      */
     public function edit($id)
     {
-         $precio = Price::find($id);
-        return view('price.edit',['Price'=>$precio]);
+        $precio = Price::find($id);
+        $products = Product::pluck('nombre','id');
+        return view('price.edit',['price'=>$precio,'products'=>$products]);
     }
 
     /**
@@ -76,7 +80,14 @@ class PriceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $precio = Price::find($id);
+        $precio->fill($request->all());
+        $precio->save();
+
+        Session::flash('message','Producto Editado correctamente');
+
+        return Redirect::to('/admin/precios');
+        
     }
 
     /**
@@ -87,6 +98,16 @@ class PriceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+                Price::destroy($id);
+                Session::flash('message','Precio eliminado correctamente');
+                return Redirect::to('/admin/precios');
+
+            } catch (\Illuminate\Database\QueryException $e) {
+                Session::flash('error','No se puede eliminar por que tiene precios');
+                return Redirect::to('/admin/precios');
+
+            } 
+        
     }
 }

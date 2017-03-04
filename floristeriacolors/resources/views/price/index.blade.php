@@ -1,5 +1,7 @@
-@extends('layouts.admin')
+@extends('layouts.adminBase')
 
+
+@section('content')
 
 @if(Session::has('message'))
 
@@ -10,33 +12,48 @@
 
 @endif
 
-@section('content')
-<table class="table">
-	<thead>
-		<th>Id</th>
-		<th>Producto</th>
-		<th>Tamaño</th>
-		<th>Precio</th>
-		
-	</thead>
-	@foreach($prices as $price)
-	<tbody>
-		<td>{{$price->id}}</td>
-		<td>{{$price->product->nombre}}</td>
-		<td>{{$price->tamaño}}</td>
-		<td>{{$price->precio}}</td>
 
-		<td>{!!link_to_route('precios.edit',$title = 'Editar',$parameters = $price->id,$attributes =['class'=>'btn btn-primary'])!!} 
-		 {!!Form::open(['route'=>['precios.destroy',$price->id],'method'=>'DELETE'])!!}
-		{!!Form::submit('Eliminar',['class'=>'btn btn-danger'])!!}
+<div class="col-md-8">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">MIS PRECIOS REGISTRADOS</h4>
+            <p class="category">www.floristeriaColors.com</p>
+        </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <th>Id</th>
+                    <th>Producto</th>
+                    <th>Tamaño</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </thead>
 
-	{!!Form::close()!!}
+                @foreach($prices as $price)
+				<tbody>
+					<tr>
+						<td>{{$price->id}}</td>
+						<td>{{$price->product->nombre}}</td>
+						<td>{{$price->tamaño}}</td>
+						<td>{{$price->precio}}</td>
+						<td>
+							<a href="/admin/precios/{{$price->id}}/edit" class="btn btn-success"><span class="fa fa-pencil fa-1x"></span></a>
 
-		</td>
+		 					{!!Form::open(['route'=>['precios.destroy',$price->id],'method'=>'DELETE'])!!}
+								<button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
 
-		
-		
-	</tbody>
-	@endforeach
-</table>
+							{!!Form::close()!!}
+
+						</td>
+						
+					</tr>
+				</tbody>
+
+				@endforeach
+
+            </table>
+
+        </div>
+    </div>
+</div>
 @stop

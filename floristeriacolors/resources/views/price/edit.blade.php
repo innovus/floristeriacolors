@@ -1,13 +1,24 @@
-@extends('layouts.admin')
+@extends('layouts.adminBase')
 
 @section('content')
 
-	{!!Form::model($category,['route'=>['categoria.update',$category->id],'method'=>'PUT'])!!}
-		@include('category.forms.formCategory')
+<div class="col-md-8">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">EDITAR PRECIO</h4>
+            <p class="category">www.floristeriaColors.com</p>
 
-		{!!Form::submit('Actualizar',['class'=>'btn btn-primary'])!!}
+        </div>
+        <div class="content">
+        	{!!Form::model($price,['route'=>['precios.update',$price->id],'method'=>'PUT'])!!}
+        		@include('price.forms.formPrice')
+                {!!Form::submit('Guardar',['class'=>'btn btn-info btn-fill pull-right'])!!}
+                <div class="clearfix"></div>
+            {!!Form::close()!!}
+        </div>
+    </div>
+</div>
 
-	{!!Form::close()!!}
 
 
 @stop
