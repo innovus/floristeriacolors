@@ -23,6 +23,7 @@
             <div class="col-md-5 img-arreglo-detalles">
                 <div class="col-md-12">
                   <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
+                  <input type="hidden" id="img" value="{{$producto->imagen}}" name="">
                 </div>
                 
               
@@ -59,6 +60,7 @@
 
             <div class="col-md-7">
                 <h2>{{$producto->nombre}}</h2>
+                <input type="hidden" value="{{$producto->nombre}}" id="nombreProducto" name="">
                 <p>
                     {{$producto->descripcion}}
                 </p>
@@ -98,8 +100,14 @@
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="detalle-desc">                                   
                                          <img src="/img/arreglos/29131.bmp" class="img-responsive">
+                                         <input type="hidden" value="/img/arreglos/29131.bmp" id="img4">
                                          <input type="hidden" id="4" value="70000" name="">
-                                          <h3>love!</h3>
+                                        <div class="cantidad-detalle">
+                                          <p>Cantidad:</p>
+                                          <input type="number" step="1" min="0"  id="cantidadDetalle4" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                                        </div>
+
+                                          <input type="hidden" value="love!" id="nombreDetalle4" name="">
                                           <h3><strong>COP 70.000</strong></h3>
                                           <button onclick="agregarDetalle(4)" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
@@ -109,7 +117,13 @@
                             <div class="col-md-3 .col-sm-6 wow fadeInLeft" data-wow-duration="500ms">                                                           
                                     <div class="detalle-desc">                           
                                          <img src="/img/arreglos/get-well11.jpg" class="img-responsive">
-                                          <h3>get well!</h3>
+                                         <input type="hidden" value="/img/arreglos/get-well11.jpg" id="img3">
+                                         
+                                          <div class="cantidad-detalle">
+                                            <p>Cantidad:</p>
+                                            <input type="number" step="1" min="0"  id="cantidadDetalle3" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                                          </div>
+                                          <input type="hidden" value="get well!" id="nombreDetalle3" name="">
                                           <input type="hidden" id="3" value="40000" name="">
                                           <h3><strong>COP 40.000</strong></h3>
                                           <button onclick="agregarDetalle(3)" class="btn btn-success form-control">AGREGAR</button>
@@ -121,8 +135,13 @@
                                     <div class="detalle-desc">
                                                                                
                                          <img src="/img/arreglos/its-a-girl.jpg" class="img-responsive">
-                                          <h3>girl!</h3>
+                                         <input type="hidden" value="/img/arreglos/its-a-girl.jpg" id="img2">
+                                          <div class="cantidad-detalle">
+                                            <p>Cantidad:</p>
+                                            <input type="number" step="1" min="0"  id="cantidadDetalle2" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                                          </div>
                                           <input type="hidden" id="2" value="60000" name="">
+                                          <input type="hidden" value="girl!" id="nombreDetalle2" name="">
                                           <h3><strong>COP 60.000</strong></h3>
                                           <button onclick="agregarDetalle(2)" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
@@ -133,7 +152,12 @@
                                                                                        
                                     <div class="detalle-desc">                           
                                          <img src="/img/arreglos/its-a-boy.jpg" class="img-responsive">
-                                          <h3>Boy!</h3>
+                                         <input type="hidden" value="/img/arreglos/its-a-boy.jpg" id="img1">
+                                          <div class="cantidad-detalle">
+                                            <p>Cantidad:</p>
+                                            <input type="number" step="1" min="0"  id="cantidadDetalle1" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                                          </div>
+                                          <input type="hidden" value="Boy" id="nombreDetalle1" name="">
                                           <input type="hidden" id="1" value="40000" name="">
                                           <h3><strong>COP 40.000</strong></h3>
                                           <button onclick="agregarDetalle(1)" class="btn btn-success form-control">AGREGAR</button>
@@ -171,24 +195,24 @@
   <div class="modal-body text-center">
     <div class="row text-center">
             <h3>MI CARRITO DE COMPRAS</h3>
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-6 col-md-offset-3 " id="canasta" name="canasta">
             <!-- un detalle-->
             <div class="row">
                 <div class="col-md-2 col-xs-2 text-center">
-                    <div class="cant"><h4>5</h4></div>
+                    <div class="cant"><h4 id="cantidadArreglo">0</h4></div>
                 </div>
-                <div class="col-md-4 col-xs-4">
-                    <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
+                <div class="col-md-4 col-xs-4" id="img-Producto">
+                    
                 </div>
-                <div class="col-md-4 ">
-                    <strong>{{$producto->nombre}}</strong>
-                    <h4>COP:27.000</h4>
+                <div class="col-md-4 " id="COP">
+                    
                 </div>
-                <div class="col-md-2">
-                    <button class="btn btn-danger">Quitar</button>
+                <div class="col-md-2" id="btn-quitar">
+                    
                 </div>
                 
             </div>
+
             <hr>
             <!--fin un detalle -->
                

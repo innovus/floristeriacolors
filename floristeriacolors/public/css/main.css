@@ -1322,6 +1322,9 @@ li.currento{
 .cantidad-arreglo {
     width: 50% !important;
   }
+.cantidad-datalle {
+    width: 100% !important;
+  }
 .modal-body{
     width: 100% !important;
     margin-left: 0px !important;
@@ -1441,7 +1444,7 @@ detalles de arreglos
 }
 .img-arreglo-detalles img{
   width: 100%;
-  height: 330px;
+  height: 410px;
   margin-bottom: 40px;
 }
 .cantidad-arreglo{
@@ -1453,7 +1456,21 @@ detalles de arreglos
   padding: 10px 10px;
   margin-top: 20px;
 }
+.cantidad-detalle{
+  background: #fff;
+  border: 1px solid #6B9400;
+  border-radius: 10px;
+  width: 100%;
+  height: 40px;
+  padding: 10px 5px;
+  margin-top: 20px;
+  color: #424242 !important;
+}
 .cantidad-arreglo p,input{
+  float: left;
+
+}
+.cantidad-detalle p,input{
   float: left;
 
 }
@@ -1465,9 +1482,22 @@ detalles de arreglos
   border: none;
   width: 40px;
 }
+.cantidad-detalle input{
+  margin-top: -3px !important;
+  margin-left: 10px;
+  color: #424242;
+  background-color: #fff;
+  border: none;
+  width: 30px;
+}
 .cantidad-arreglo p{
   color: #86ae00 ; /*#6B9400 */
   font-weight: bold;
+}
+.cantidad-detalle p{
+  color: #424242 !important; /*#6B9400 */
+  font-weight: bold;
+  font-size: 14px;
 }
 .detalles-arreglo{
   margin: 15px 0px;
@@ -1508,9 +1538,7 @@ detalles de arreglos
   margin-top: 0px;
 }
 
-.detalle-desc p{
-  color: red !important;
-}
+
 .arreglo-detalles ul li a{
   color: #212121 !important;
   font-weight: bold;
