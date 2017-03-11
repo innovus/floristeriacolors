@@ -62,7 +62,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/misCategorias">
+                            <a href="/admin/categorias">
                                 <i class="fa fa-table fa-1x"></i>
                                 CATEGORIAS
                             </a>
@@ -70,7 +70,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/ocasiones">
+                            <a href="/admin/ocasiones">
                                 <i class="fa fa-telegram fa-1x"></i>
                                 OCASIONES
                             </a>
