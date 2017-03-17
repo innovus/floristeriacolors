@@ -25,10 +25,11 @@
                                     </li>
                                     <li><div class="link">Ocasiones<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu">
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Amor</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Condolencias</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la Madre</a></li>
-                                            <li><a rel="nofollow" rel="noreferrer" href="#">Dia de la mujer</a></li>
+                                         @foreach($ocasiones as $ocasion)
+                                         <li><a rel="nofollow" rel="noreferrer" href="#">{{$ocasion->ocasion}}</a></li>
+
+                                         @endforeach
+
                                         </ul>
                                     </li>
                                       <li><div class="link">Con descuentos especiales<i class="fa fa-chevron-down"></i></div>

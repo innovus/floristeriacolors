@@ -36,4 +36,8 @@ class Product extends Model
     {
         return $this->hasMany('FloristeriaColors\Price');
     }
+
+    public function occasions(){
+        return $this->belongsToMany('FloristeriaColors\Occasion','product_occasions');
+    }
 }

@@ -4,6 +4,7 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Category;
+use FloristeriaColors\Occasion;
 use FloristeriaColors\Product;
 use FloristeriaColors\Data;
 
@@ -27,8 +28,10 @@ class PrincipalController extends Controller
     public function realizarArreglo()
     {
         $categories = Category::All();
+        $ocasiones = Occasion::All();
         $masVendidos = Product::limit(6)->get();
-        return View('plantillas.realizarArreglo',compact('categories','masVendidos'));
+
+        return View('plantillas.realizarArreglo',compact('categories','masVendidos','ocasiones'));
     }
     /**
      * Display a listing of the resource.
@@ -39,7 +42,8 @@ class PrincipalController extends Controller
     {
         $categories = Category::All();
         $categoria = Category::find($id);
-        return View('plantillas.categoriaSeleccionada',compact('categories','categoria'));
+        $ocasiones = Occasion::All();
+        return View('plantillas.categoriaSeleccionada',compact('categories','categoria','ocasiones'));
 
         
        // return View('plantillas.categoriaSeleccionada');

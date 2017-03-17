@@ -3,15 +3,14 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
-use FloristeriaColors\Occasion;
+use FloristeriaColors\ProductOccasion;
 use FloristeriaColors\Product;
 
-use Session;
-use Redirect;
 
-class OccasionController extends Controller
+class ProductOccasionController extends Controller
 {
-    /**
+
+	/**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,7 +24,15 @@ class OccasionController extends Controller
         
     }
 
-    /**
+
+     public function store(Request $request)
+    {
+        ProductOccasion::create($request->all());
+        return redirect('/admin/ocasiones')->with('message','Ocasion Guardada con exito');
+
+    }
+
+     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -35,18 +42,7 @@ class OccasionController extends Controller
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        Occasion::create($request->all());
-        return redirect('/admin/ocasiones')->with('message','Ocasion Guardada con exito');
 
-    }
 
     /**
      * Display the specified resource.
@@ -79,13 +75,7 @@ class OccasionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $ocasion = Occasion::find($id);
-        $ocasion->fill($request->all());
-        $ocasion->save();
 
-        Session::flash('message','Ocasion Editado correctamente');
-
-        return Redirect::to('/admin/ocasiones');
     }
 
     /**
@@ -96,15 +86,7 @@ class OccasionController extends Controller
      */
     public function destroy($id)
     {
-        try {
-                Ocassion::destroy($id);
-                Session::flash('message','Ocasion eliminado correctamente');
-                return Redirect::to('/admin/ocasiones');
 
-            } catch (\Illuminate\Database\QueryException $e) {
-                Session::flash('error','No se puede eliminar por que tiene productos');
-                return Redirect::to('/admin/ocasiones');
-
-            } 
     }
 }
+
