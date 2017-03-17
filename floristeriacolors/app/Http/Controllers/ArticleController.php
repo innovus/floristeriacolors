@@ -3,6 +3,10 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Article;
+
+use Session;
+use Redirect;
 
 class ArticleController extends Controller
 {
@@ -13,7 +17,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::All();
+        return view('article.index',compact('articles'));
     }
 
     /**
@@ -23,7 +28,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('article.create');
     }
 
     /**
@@ -34,7 +39,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Article::create($request->all());
+        return redirect('/admin/articulos')->with('message','store');
     }
 
     /**
@@ -56,7 +62,9 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::find($id);
+        
+        return view('article.edit',['article'=>$article]);
     }
 
     /**
@@ -68,7 +76,13 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article = Article::find($id);
+        $article->fill($request->all());
+        $article->save();
+
+        Session::flash('message','Articulo Editado correctamente');
+
+        return Redirect::to('/admin/articulos');
     }
 
     /**
@@ -79,6 +93,15 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+                Article::destroy($id);
+                Session::flash('message','Articulo eliminado correctamente');
+                return Redirect::to('/admin/articulos');
+
+            } catch (\Illuminate\Database\QueryException $e) {
+                Session::flash('error','No se puede eliminar ');
+                return Redirect::to('/admin/articulos');
+
+            } 
     }
 }

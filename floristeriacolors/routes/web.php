@@ -53,6 +53,7 @@ Route::resource('admin/clientes','ClientController');
 Route::resource('admin/datos','DataController');
 Route::resource('admin/ocasiones','OccasionController');
 Route::resource('admin/productosOcasiones','ProductOccasionController');
+Route::resource('admin/articulos','ArticleController');
 
 /*Route::get('/', function () {
     //return view('welcome');

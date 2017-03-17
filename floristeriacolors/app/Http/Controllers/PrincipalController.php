@@ -7,6 +7,7 @@ use FloristeriaColors\Category;
 use FloristeriaColors\Occasion;
 use FloristeriaColors\Product;
 use FloristeriaColors\Data;
+use FloristeriaColors\Article;
 
 class PrincipalController extends Controller
 {
@@ -150,8 +151,8 @@ class PrincipalController extends Controller
      */
     public function blog()
     {
-        
-        return View('plantillas.blog');
+        $articles = Article::All();
+        return View('plantillas.blog',compact('articles'));
     }
 
     /**
