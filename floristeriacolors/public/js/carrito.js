@@ -4,6 +4,14 @@ var cantidadArreglo=0;
 var arrayCarrito = new Array();
 var objeto = {"nombreObjeto": null,"idObjeto":null,"valorObjeto": null, "cantidadObjeto": null};
 var subTotal=0;
+function verCarrito(){
+    if(cantidadProductosEnCarrito==0){
+        document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
+    }else{
+
+        document.getElementById("mensajeVacio").innerHTML="";
+    }
+}
 function AgregarProducto(){
     //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
     var codigoArreglo=99;

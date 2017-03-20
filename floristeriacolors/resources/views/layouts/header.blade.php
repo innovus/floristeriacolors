@@ -21,12 +21,13 @@
                 <!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul  class="nav navbar-nav">
-                                               
-                        <li class="current"><a href="/conocenos">Conócenos</a></li>
+                        <li class="current"><a href="/blog">Nuestro Blog</a></li>
+                        <li class="current"><a href="/conocenos">Arboles memorales</a></li>  
+                         <li class="current"><a href="/conocenos">Conócenos</a></li>
                         <li><a href="/ayuda">Ayuda</a></li>
                         <li><a href="/contacto">Contáctanos</a></li>
                         <li><a href="/cuentaUsuario">Tu cuenta</a></li>
-                        <li><a><span class="fa fa-shopping-cart fa-2x"></span></a></li>
+                        <li><a data-toggle="modal" href="#responsive" ><span class="fa fa-shopping-cart fa-2x" onclick="verCarrito()"></span></a></li>
                         
                         
                        

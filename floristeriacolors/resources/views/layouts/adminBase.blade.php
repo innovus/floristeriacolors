@@ -101,8 +101,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                            <li><a href="/nuevoPrecio">  NUEVO</a></li>
-                            <li><a href="/misPrecios">  LISTAR</a></li>
+                            <li><a href="/admin/precios/create">  NUEVO</a></li>
+                            <li><a href="/admin/precios">  LISTAR</a></li>
                         </ul>
                     </li>
                     <li>
@@ -131,8 +131,8 @@
                             </a>
                         </div>
                         <ul class="submenu2">
-                             <li><a href="/nuevoPost">  NUEVO</a></li>
-                            <li><a href="/adminBlog">  LISTAR</a></li>
+                             <li><a href="/admin/articulos/create">  NUEVO</a></li>
+                            <li><a href="/admin/articulos">  LISTAR</a></li>
                         </ul>
                     </li>
             </ul>
