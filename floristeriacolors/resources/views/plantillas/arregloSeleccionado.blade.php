@@ -195,30 +195,31 @@
   <div class="modal-body text-center">
     <div class="row text-center">
             <h3>MI CARRITO DE COMPRAS</h3>
-          <div class="col-md-6 col-md-offset-3 " id="canasta" name="canasta">
-            <!-- un detalle-->
-            <div class="row">
-                <div class="col-md-2 col-xs-2 text-center">
-                    <div class="cant"><h4 id="cantidadArreglo">0</h4></div>
-                </div>
-                <div class="col-md-4 col-xs-4" id="img-Producto">
-                    
-                </div>
-                <div class="col-md-4 " id="COP">
-                    
-                </div>
-                <div class="col-md-2" id="btn-quitar">
-                    
-                </div>
-                
+        <!--inicio de formulario donde se cargaran los datos de carrito de compras-->
+            <form>
+              <div class="col-md-6 col-md-offset-3 " id="canasta" name="canasta">
+                  <!-- un detalle-->
+                  <div class="row">
+                      <div class="col-md-2 col-xs-2 text-center">
+                          <div class="cant"><h4 id="cantidadArreglo">0</h4></div>
+                      </div>
+                      <div class="col-md-4 col-xs-4" id="img-Producto">
+                          
+                      </div>
+                      <div class="col-md-4 " id="COP">
+                          
+                      </div>
+                      <div class="col-md-2" id="btn-quitar">
+                          
+                      </div>
+                      
+                  </div>
+
+                  <hr>
+                  <!--fin un detalle -->
             </div>
-
-            <hr>
-            <!--fin un detalle -->
-               
-         
-
-          </div>
+            </form>
+          <!-- fin formulario -->
           <div class="col-md-12 text-center">
               <h2>SUBTOTAL:<strong id="subtotalCarrito">0</strong></h2>
           </div>
