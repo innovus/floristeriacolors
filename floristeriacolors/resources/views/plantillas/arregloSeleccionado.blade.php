@@ -79,6 +79,14 @@
                     <h3>Si quieres sorprender en grande.. <strong>Agrega un detalle.!</strong></h3>
                   <!-- Nav tabs -->
                   <ul class="nav nav-tabs" role="tablist">
+
+                    @foreach($categories as $category)
+                    <li role="presentation" >
+                            <a href="#{{$category->name}}" aria-controls="{{$category->name}}" role="tab" data-toggle="tab">{{$category->name}}</a>
+                        </li>
+
+                    @endforeach
+                    <!--
                         <li role="presentation" class="active">
                             <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Globos</a>
                         </li>
@@ -90,88 +98,48 @@
                         </li>
                         <li role="presentation">
                             <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Vinos</a>
-                        </li>
+                        </li>-->
                   </ul>
-
                   <!-- Tab panes -->
                   <div class="tab-content">
-                    <div role="tabpanel" class="tab-pane active" id="home">
-                        <!-- un arreglo -->
+
+                  @foreach($categories as $category)
+                  
+                    <div role="tabpanel" class="tab-pane active" id="{{$category->name}}">
+
+                    @foreach($category->products as $product)
+                    <!-- un arreglo -->
                             <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="detalle-desc">                                   
-                                         <img src="/img/arreglos/29131.bmp" class="img-responsive">
-                                         <input type="hidden" value="/img/arreglos/29131.bmp" id="img4">
-                                         <input type="hidden" id="4" value="70000" name="">
+                                         <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
+                                         <input type="hidden" value="/img/arreglos/{{$product->imagen}}" id="img{{$product->id}}">
+                                         <input type="hidden" id="{{$product->id}}" value="{{$product->prices->first()->precio}}" name="">
                                         <div class="cantidad-detalle">
                                           <p>Cantidad:</p>
-                                          <input type="number" step="1" min="0"  id="cantidadDetalle4" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
+                                          <input type="number" step="1" min="0"  id="cantidadDetalle{{$product->id}}" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
                                         </div>
 
-                                          <input type="hidden" value="love!" id="nombreDetalle4" name="">
-                                          <h3><strong>COP 70.000</strong></h3>
-                                          <button onclick="agregarDetalle(4)" class="btn btn-success form-control">AGREGAR</button>
+                                          <input type="hidden" value="{{$product->nombre}}" id="nombreDetalle{{$product->id}}" name="">
+                                          <h3><strong>COP {{number_format($product->prices->first()->precio)}}</strong></h3>
+                                          <button onclick="agregarDetalle({{$product->id}})" class="btn btn-success form-control">AGREGAR</button>
                                 </div>
                             </div>
                             <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 .col-sm-6 wow fadeInLeft" data-wow-duration="500ms">                                                           
-                                    <div class="detalle-desc">                           
-                                         <img src="/img/arreglos/get-well11.jpg" class="img-responsive">
-                                         <input type="hidden" value="/img/arreglos/get-well11.jpg" id="img3">
-                                         
-                                          <div class="cantidad-detalle">
-                                            <p>Cantidad:</p>
-                                            <input type="number" step="1" min="0"  id="cantidadDetalle3" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
-                                          </div>
-                                          <input type="hidden" value="get well!" id="nombreDetalle3" name="">
-                                          <input type="hidden" id="3" value="40000" name="">
-                                          <h3><strong>COP 40.000</strong></h3>
-                                          <button onclick="agregarDetalle(3)" class="btn btn-success form-control">AGREGAR</button>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">                                                       
-                                    <div class="detalle-desc">
-                                                                               
-                                         <img src="/img/arreglos/its-a-girl.jpg" class="img-responsive">
-                                         <input type="hidden" value="/img/arreglos/its-a-girl.jpg" id="img2">
-                                          <div class="cantidad-detalle">
-                                            <p>Cantidad:</p>
-                                            <input type="number" step="1" min="0"  id="cantidadDetalle2" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
-                                          </div>
-                                          <input type="hidden" id="2" value="60000" name="">
-                                          <input type="hidden" value="girl!" id="nombreDetalle2" name="">
-                                          <h3><strong>COP 60.000</strong></h3>
-                                          <button onclick="agregarDetalle(2)" class="btn btn-success form-control">AGREGAR</button>
-                                </div>
-                            </div>
-                            <!-- fin un arreglo -->
-                            <!-- un arreglo -->
-                            <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">
-                                                                                       
-                                    <div class="detalle-desc">                           
-                                         <img src="/img/arreglos/its-a-boy.jpg" class="img-responsive">
-                                         <input type="hidden" value="/img/arreglos/its-a-boy.jpg" id="img1">
-                                          <div class="cantidad-detalle">
-                                            <p>Cantidad:</p>
-                                            <input type="number" step="1" min="0"  id="cantidadDetalle1" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
-                                          </div>
-                                          <input type="hidden" value="Boy" id="nombreDetalle1" name="">
-                                          <input type="hidden" id="1" value="40000" name="">
-                                          <h3><strong>COP 40.000</strong></h3>
-                                          <button onclick="agregarDetalle(1)" class="btn btn-success form-control">AGREGAR</button>
-                                    </div>
-                                
-                            </div>
-                            <!-- fin un arreglo -->
+
+
+                    @endforeach
+                        
+                            
 
 
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="profile">...</div>
-                    <div role="tabpanel" class="tab-pane" id="messages">ssss</div>
-                    <div role="tabpanel" class="tab-pane" id="settings">tttt</div>
-                  </div>
+
+                 
+
+
+                  @endforeach
+                   </div>
+
 
                 </div>
 

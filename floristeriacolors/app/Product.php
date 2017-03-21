@@ -40,4 +40,5 @@ class Product extends Model
     public function occasions(){
         return $this->belongsToMany('FloristeriaColors\Occasion','product_occasions');
     }
+    
 }

@@ -82,7 +82,8 @@ class PrincipalController extends Controller
     public function arregloSeleccionado($id)
     {
         $producto = Product::find($id);
-        return View('plantillas.arregloSeleccionado',compact('producto'));
+        $categories = Category::where('category_type_id', 2)->get();
+        return View('plantillas.arregloSeleccionado',compact('producto','categories'));
     }
 
     /**
