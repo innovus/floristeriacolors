@@ -7,8 +7,8 @@
                         <div class="footer-single">
                             <h6>Contáctanos</h6>
                             <ul>
-                                <li><a href="#">Chat Online..! Click AQUÍ.</a></li>
-                                <li>Nuestro email:<a href="#">Floristeriacolors@gmail.com</a></li>
+                                
+                                <li>Nuestro email: <a href="#">Floristeriacolors@gmail.com</a></li>
                                 <li>
                                     <a href="#" class="fb" > <span class="fa fa-facebook-official fa-3x"></span> </a>
                                     <a href="#" class="insta" > <span class="fa fa-instagram fa-3x"></span> </a>
@@ -24,10 +24,7 @@
                     <div class="col-md-3 col-sm-6 col-xs-12 wow fadeInUp animated" data-wow-duration="500ms" data-wow-delay="300ms">
                         <div class="footer-single">
                             <h6>Conócenos </h6>
-                            <!--<form action="#" class="subscribe">
-                                <input type="text" name="subscribe" id="subscribe" placeholder="Tu Correo electrónico">
-                                <input type="submit" value="&#8594;" id="subs">
-                            </form>-->
+                            
                              <ul>
                                 <li><a href="#">Nosotros</a></li>
                                 <li><a href="#">Garantías</a></li>

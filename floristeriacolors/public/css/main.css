@@ -775,7 +775,12 @@ formas de pago
   padding: 10px 5px;
   color: #fff;
 }
-
+.btn-en a{
+  color: #fff;
+}
+.btn-en a:hover{
+  color: #fff;
+}
 /*=========================================
  seccion 2
 ==========================================*/
@@ -1922,7 +1927,7 @@ PUNTOS
 }
 
 .info-puntosRedimir{
-  background-color: #8E24AA;
+  background-color: #EF5350;
 
 }
 .puntosRedimir-titulo h4{
@@ -2049,7 +2054,7 @@ puntosFLoristeria
 }
 
 .info-puntosRedimir2{
-  background-color: #8E24AA;
+  background-color: #EF5350;
 
 }
 .puntosRedimir-titulo2 h4{
