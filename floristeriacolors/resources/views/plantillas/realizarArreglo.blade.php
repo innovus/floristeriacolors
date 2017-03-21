@@ -20,7 +20,7 @@
                     <div class="sli-container">
                         <ul id="sli" class="sli-wrapper">
                             <li class="currento">
-                                <img src="img/parallax/rosas.jpg" class="img-responsive" alt="Slider Imagen 1">
+                                <img src="/img/parallax/rosas.jpg" class="img-responsive" alt="Slider Imagen 1">
                                 <div class="caption">
                                     <h3 class="caption-title">Amor y Amistad</h3>
                                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ratione, commodi, hic quas harum aliquam quos nostrum culpa totam quidem rerum!</p>
@@ -28,7 +28,7 @@
                                 </div>
                             </li>
                              <li>
-                                <img src="img/slider/banneri03_02.jpg" class="img-responsive" alt="">
+                                <img src="/img/slider/banneri03_02.jpg" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3 class="caption-title">Dia de la madre</h3>
                                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ratione, commodi, hic quas harum aliquam quos nostrum culpa totam quidem rerum!</p>
@@ -36,7 +36,7 @@
                                 </div>
                             </li> 
                              <li>
-                                <img src="img/slider/sanvalentin2016.jpg" class="img-responsive" alt="">
+                                <img src="/img/slider/sanvalentin2016.jpg" class="img-responsive" alt="">
                                 <div class="caption">
                                     <h3 class="caption-title">Dia de la mujer</h3>
                                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus ratione, commodi, hic quas harum aliquam quos nostrum culpa totam quidem rerum!</p>

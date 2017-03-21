@@ -33,7 +33,7 @@
                 <div class="col-md-4 text-center">
                     <div class="item-panel">
                        <span class="fa fa-list fa-3x"></span>
-                         <h4><a href="#responsive" data-toggle="modal">MIS COMPRAS</a></h4>
+                         <h4><a href="#responsivess" data-toggle="modal">MIS COMPRAS</a></h4>
                         <p>
                             Toda la información de tus compras
                             realizadas Aquí.
@@ -84,7 +84,7 @@
     
 </section>
 <!-- VENTANA MODAL MIS COMPRAS -->
-<div id="responsive" class="modal fade" tabindex="-1" data-width="760" style="display: none;">
+<div id="responsivess" class="modal fade" tabindex="-1" data-width="760" style="display: none;">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
     <span class="fa fa-close fa-2x"></span>
