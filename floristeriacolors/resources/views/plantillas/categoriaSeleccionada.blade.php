@@ -20,7 +20,7 @@
                     </div>
                     <div class="row ordenar-arreglos">
                         <div class="col-md-7">
-                            <h5><strong>Floristeria Colors</strong>/{{$categoria->name}}</h5>
+                            <h5><strong>Floristeria Colors</strong>/{{$nombre}}</h5>
                         </div>
                         <div class="col-md-5">
                             <h5><strong>Ordenar por: </strong><a href="">Todos</a>|<a href="">Menos precio</a>|<a href="">Mayor precio</a></h5>
@@ -31,7 +31,7 @@
 
                             <!-- un arreglo -->
 
-                            @foreach($categoria->products as $product)
+                            @foreach($products as $product)
                              <!-- un arreglo -->
                               <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
                                   <div class="service-desc">

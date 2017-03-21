@@ -12,7 +12,10 @@
 */
 Route::get('/','PrincipalController@index');
 Route::get('realizarArreglo/','PrincipalController@realizarArreglo');
-Route::get('categoriaSeleccionada/{id}','PrincipalController@categoriaSeleccionada');
+
+Route::get('arreglos/{filtro}/{id}','PrincipalController@filtro');
+
+//Route::get('categoriaSeleccionada/{id}','PrincipalController@categoriaSeleccionada');
 Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado');
 /*-----login----------*/
 Route::get('login/','PrincipalController@login');

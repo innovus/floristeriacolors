@@ -16,7 +16,7 @@
                                         <ul class="submenu">
                                         @foreach($categories as $category)
                                         
-                                        <li><a rel="nofollow" rel="noreferrer" href="/categoriaSeleccionada/{{$category->id}}">{{$category->name}}</a></li>
+                                        <li><a rel="nofollow" rel="noreferrer" href="/arreglos/categorias/{{$category->id}}">{{$category->name}}</a></li>
 
                                         
                                         @endforeach
@@ -26,7 +26,7 @@
                                     <li><div class="link">Ocasiones<i class="fa fa-chevron-down"></i></div>
                                         <ul class="submenu">
                                          @foreach($ocasiones as $ocasion)
-                                         <li><a rel="nofollow" rel="noreferrer" href="#">{{$ocasion->ocasion}}</a></li>
+                                         <li><a rel="nofollow" rel="noreferrer" href="/arreglos/ocasiones/{{$ocasion->id}}">{{$ocasion->ocasion}}</a></li>
 
                                          @endforeach
 

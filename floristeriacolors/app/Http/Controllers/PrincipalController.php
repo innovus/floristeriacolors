@@ -28,7 +28,7 @@ class PrincipalController extends Controller
      */
     public function realizarArreglo()
     {
-        $categories = Category::All();
+        $categories = Category::where('category_type_id', 1)->get();
         $ocasiones = Occasion::All();
         $masVendidos = Product::limit(6)->get();
 
@@ -45,6 +45,31 @@ class PrincipalController extends Controller
         $categoria = Category::find($id);
         $ocasiones = Occasion::All();
         return View('plantillas.categoriaSeleccionada',compact('categories','categoria','ocasiones'));
+
+        
+       // return View('plantillas.categoriaSeleccionada');
+    }
+    public function filtro($filtro,$id)
+    {
+        $categories = Category::where('category_type_id', 1)->get();
+        $ocasiones = Occasion::All();
+        if($filtro == 'categorias'){
+            
+            $categoria = Category::find($id);
+            $nombre = $categoria->name;
+            $products = $categoria->products;
+            
+
+        }else if ($filtro == 'ocasiones'){
+            
+            $ocasion = Occasion::find($id);
+            $products = $ocasion->products;
+            $nombre = $ocasion->ocasion;
+           
+
+
+        }
+        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre'));
 
         
        // return View('plantillas.categoriaSeleccionada');
