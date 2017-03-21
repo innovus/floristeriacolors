@@ -29,11 +29,11 @@ function AgregarProducto(){
     cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(cantidadProducto);
     cantidadArreglo=cantidadArreglo+parseInt(cantidadProducto);
     subTotal=subTotal+valorXcantidad;
-    document.getElementById("cantidadArreglo").innerHTML=cantidadArreglo;
+    document.getElementById("cantidadArreglo").innerHTML="<div class='cant' ><h4>"+cantidadArreglo+"</h4></div>";
     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-    document.getElementById("subtotalCarrito").innerHTML=subTotal;
+    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
     document.getElementById("img-Producto").innerHTML='<img src="/img/arreglos/'+img+'" class="img-responsive">';
-    document.getElementById("COP").innerHTML='<strong>'+nombreProducto+'</strong> <h4>COP: '+valorProducto+'</h4>';
+    document.getElementById("COP").innerHTML='<strong>'+nombreProducto+'</strong> <h4>'+valorProducto+'</h4>';
     document.getElementById("btn-quitar").innerHTML='<a class="btn btn-primary " onclick="quitarProducto()">quitar</a>';
     
     //datos del nuevo arreglo a registrar
@@ -78,7 +78,7 @@ function agregarDetalle(cod){
     var cantidadDetalle=document.getElementById("cantidadDetalle"+cod).value;
     cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(c);
     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-    document.getElementById("subtotalCarrito").innerHTML=subTotal;
+    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
     var nombreDetalle= document.getElementById("nombreDetalle"+cod).value;
 
     var urlimagen=document.getElementById("img"+cod).value;
@@ -91,7 +91,7 @@ function agregarDetalle(cod){
                             '<img src="'+urlimagen+'" class="img-responsive">'+
                         '</div>'+
                         '<div class="col-md-4 " id="COP">'+ 
-                           '<strong>'+nombreDetalle+'</strong> <h4>COP: '+valorDetalle+'</h4>'+   
+                           '<strong>'+nombreDetalle+'</strong> <h4>'+valorDetalle+'</h4>'+   
                         '</div>'+
                         '<div class="col-md-2" id="btn-quitar">'+
                         '<a class="btn btn-primary " onclick="quitarDetalle('+cod+')">quitar</a>'+
@@ -168,19 +168,21 @@ function quitarProducto(){
         document.getElementById("img-Producto").innerHTML='';
         document.getElementById("COP").innerHTML='';
         document.getElementById("btn-quitar").innerHTML='';
-        document.getElementById("cantidadArreglo").innerHTML=cantidadArreglo;
+        document.getElementById("cantidadArreglo").innerHTML="";
         cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
         document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
         subTotal=subTotal- parseInt(nuevaCadena);
-        document.getElementById("subtotalCarrito").innerHTML=subTotal;
+        document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+        document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
     }
     if (cantidadArreglo>0) {
         cantidadArreglo=cantidadArreglo-1;
-        document.getElementById("cantidadArreglo").innerHTML=cantidadArreglo;
+        document.getElementById("cantidadArreglo").innerHTML="<div class='cant' ><h4>"+cantidadArreglo+"</h4></div>";;
         cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
         document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
         subTotal=subTotal- parseInt(nuevaCadena);
         document.getElementById("subtotalCarrito").innerHTML=subTotal;
+        document.getElementById("mensajeVacio").innerHTML="";
     }
     /* codigo para eliminar un producto del arrayCarrito*/
    
@@ -212,7 +214,7 @@ function quitarDetalle(cod){
         cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
         document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
         subTotal=subTotal-parseInt(valorDetalle);
-        document.getElementById("subtotalCarrito").innerHTML=subTotal;
+        document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;;
 
     }
     if (cantDe>0) {

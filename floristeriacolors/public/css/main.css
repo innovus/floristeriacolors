@@ -2216,7 +2216,9 @@ blog
   color: #000;
   text-align: justify-all;
 }
-
+.subtotal-carrito h2{
+  padding: 10px;
+}
 /*=================================
 panelAdmin
 ==================================*/

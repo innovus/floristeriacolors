@@ -26,12 +26,11 @@
                             <h6>Conócenos </h6>
                             
                              <ul>
-                                <li><a href="#">Nosotros</a></li>
-                                <li><a href="#">Garantías</a></li>
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Programa de afiliados</a></li>
+                                <li><a href="/conocenos">Nosotros</a></li>
+                                <li><a href="https://www.facebook.com/Floristeria-Colors-826542960800106/?fref=ts">Facebook</a></li>
+                                <li><a href="/blog">Nuestro Blog</a></li>
                                 <li><a href="#">Políticas de Privacidad y Devolución</a></li>
-                                <li><a href="#">Recomendar</a></li>
+                                <li><a href="/contacto">Contactanos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -40,11 +39,9 @@
                         <div class="footer-single">
                             <h6>Tu cuenta</h6>
                             <ul>
-                                <li><a href="#">Mis datos</a></li>
-                                <li><a href="#">Mis pedidos</a></li>
-                                <li><a href="#">Puntos ganados</a></li>
-                                <li><a href="#">Información de Pago</a></li>
-                                <li><a href="#">Recordatorios automáticos</a></li>
+                                <li><a href="/cuentaUsuario">Mi cuenta</a></li>
+                                <li><a href="/arbol">Arbol memorales</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -53,12 +50,12 @@
                         <div class="footer-single">
                             <h6>Ayuda</h6>
                             <ul>
-                                <li><a href="#">¿Como Comprar?</a></li>
-                                <li><a href="#">¿Cuáles son las formas de pago?</a></li>
-                                <li><a href="#">¿Es segura la compra?</a></li>
-                                <li><a href="#">¿Como cuidar las flores?</a></li>
-                                <li><a href="#">Preguntas Frecuentes</a></li>
-                                <li><a href="#">Entregas en el mismo día</a></li>
+                                <li><a href="/ayuda">¿Como Comprar?</a></li>
+                                <li><a href="/ayuda">¿Cuáles son las formas de pago?</a></li>
+                                <li><a href="/ayuda">¿Es segura la compra?</a></li>
+                                <li><a href="/ayuda">¿Como cuidar las flores?</a></li>
+                                <li><a href="/ayuda">Preguntas Frecuentes</a></li>
+                                <li><a href="/ayuda">Entregas en el mismo día</a></li>
                             </ul>
                         </div>
                     </div>
@@ -83,8 +80,10 @@
                   <!-- un detalle-->
                   <div class="row">
                     <H4 id="mensajeVacio"></H4>
-                      <div class="col-md-2 col-xs-2 text-center">
-                          <div class="cant"><h4 id="cantidadArreglo">0</h4></div>
+                      <div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo">
+                          
+                              
+                         
                       </div>
                       <div class="col-md-4 col-xs-4" id="img-Producto">
                           
@@ -103,7 +102,8 @@
             </div>
             </form>
           <!-- fin formulario -->
-          <div class="col-md-12 text-center">
+          
+          <div class="col-md-12 text-center subtotal-carrito" >
               <h2>SUBTOTAL:<strong id="subtotalCarrito">0</strong></h2>
           </div>
      </div>
