@@ -117,7 +117,7 @@
                         <div class="link linkito">
                             <a href="/videos">
                                 <i class="fa fa-youtube-play fa-1x"></i>
-                                MIS VIDEOS
+                                MULTIMEDIA
                             </a>
                         </div>
                     </li>

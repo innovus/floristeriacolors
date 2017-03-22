@@ -34,7 +34,7 @@
 					<td>{{$product->nombre}}</td>
 					<td>{{$product->category->name}}</td>
 					<td>{{$product->descripcion}}</td>
-					<td><img class="img-responsive" style="width: 30%;" src="/img/arreglos/{{$product->imagen}}"></td>
+					<td><img class="img-responsive" style="width: 500px;" src="/img/arreglos/{{$product->imagen}}"></td>
 
 					<td>
 					<a href="/admin/productos/{{$product->id}}/edit" class="btn btn-success"><span class="fa fa-pencil fa-1x"></span></a>

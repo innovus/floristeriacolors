@@ -258,3 +258,44 @@ menu de acordeon Ayuda
  
   
 }
+
+/**/
+.multiselect {
+  width: 200px;
+
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+  border-radius: 5px;
+}
+
+#checkboxes label {
+  display: block;
+  border:none;
+  color: #000;
+  font-weight: bold;
+  padding: 5px 13px;
+}
+
+#checkboxes label:hover {
+  background-color: #e0e0e0;
+}
