@@ -12,7 +12,7 @@
 
 @section('content')
 
-<div class="col-md-12">
+<div class="col-md-10">
     <div class="card">
         <div class="header">
             <h4 class="title">MIS PRODUCTOS REGISTRADOS</h4>
