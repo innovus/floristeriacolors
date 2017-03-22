@@ -49,7 +49,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Dirección</label>
-                                                <input name="dirección" type="text" class="form-control" placeholder="Dirección" value="{{$data->direccion}}">
+                                                <input name="direccion" type="text" class="form-control" placeholder="Dirección" value="{{$data->direccion}}">
                                             </div>
                                         </div>
                                     </div>
@@ -89,12 +89,12 @@
                                     <img class="avatar border-gray" src="/img/logo.jpg" alt="..."/>
 
                                       <h4 class="title">Floristería Colors<br />
-                                         <small>Calle 19 #31 -19 Las Cuadras</small>
+                                         <small>{{$data->direccion}}</small>
                                       </h4>
                                     </a>
                                 </div>
-                                <p class="description text-center"> 7290041 <br>
-                                                    3183072264 <br>
+                                <p class="description text-center"> {{$data->telefono}} <br>
+                                                    {{$data->celular}} <br>
                                                     San Juan de Pasto 
                                 </p>
                             </div>
