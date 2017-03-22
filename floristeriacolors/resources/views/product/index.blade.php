@@ -18,7 +18,7 @@
             <h4 class="title">MIS PRODUCTOS REGISTRADOS</h4>
             <p class="category">www.floristeriaColors.com</p>
         </div>
-        <div class="content table-responsive table-full-width">
+        <div class="content table-responsive table-full-width ">
             <table class="table table-hover table-striped">
                 <thead>
                     <th>Nombre</th>
@@ -34,7 +34,7 @@
 					<td>{{$product->nombre}}</td>
 					<td>{{$product->category->name}}</td>
 					<td>{{$product->descripcion}}</td>
-					<td>{{$product->imagen}}</td>
+					<td><img class="img-responsive" style="width: 30%;" src="/img/arreglos/{{$product->imagen}}"></td>
 
 					<td>
 					<a href="/admin/productos/{{$product->id}}/edit" class="btn btn-success"><span class="fa fa-pencil fa-1x"></span></a>
