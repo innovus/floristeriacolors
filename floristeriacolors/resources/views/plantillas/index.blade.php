@@ -14,7 +14,7 @@
                             <h3>Somos la Floristeria más importante de <strong>Colombia</strog></h3>
                         </div><br><br><br>
                         <div class="col-md-6 col-md-offset-3 col-xs-12 text-center btn-en">
-                            <a href="/arreglos/categorias/1" class="btn-entrada text-center">REALIZA TU ARREGLO FLORAL!</a>
+                            <a href="/arreglos" class="btn-entrada text-center">REALIZA TU ARREGLO FLORAL!</a>
                         </div>   <br><br><br>
                         <div data-wow-duration="1000ms" class="wow slideInLeft animated col-md-6 col-md-offset-3 text-center">
                             <h3>

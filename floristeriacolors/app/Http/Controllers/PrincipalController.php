@@ -74,6 +74,22 @@ class PrincipalController extends Controller
         
        // return View('plantillas.categoriaSeleccionada');
     }
+
+    public function arreglos()
+    {
+        $categories = Category::where('category_type_id', 1)->get();
+        $ocasiones = Occasion::All();
+
+
+        $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
+            ->select('products.*')->where('category_type_id', 1)->get();
+        $nombre = "Arreglos";
+            
+        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre'));
+
+        
+       // return View('plantillas.categoriaSeleccionada');
+    }
     /**
      * Display a listing of the resource.
      *

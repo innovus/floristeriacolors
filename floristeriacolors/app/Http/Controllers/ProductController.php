@@ -40,8 +40,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        Product::create($request->all());
-        return redirect('/admin/productos')->with('message','store');
+       $product =  Product::create($request->all());
+        return redirect('/admin/precios/create')->with('id',$product->id);
     }
 
     /**

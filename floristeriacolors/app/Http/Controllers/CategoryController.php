@@ -38,7 +38,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('category.create');
+        $category_types = CategoryType::pluck('name','id');
+        return view('category.create',compact('category_types'));
     }
 
     /**
@@ -72,8 +73,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $categoria = Category::find($id);
-        return view('category.edit',['category'=>$categoria]);
+        $category_types = CategoryType::pluck('name','id');
+        return view('category.create',compact('category_types'));
         //
     }
 

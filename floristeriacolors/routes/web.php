@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +16,7 @@ Route::get('/','PrincipalController@index');
 Route::get('realizarArreglo/','PrincipalController@realizarArreglo');
 
 Route::get('arreglos/{filtro}/{id}','PrincipalController@filtro');
+Route::get('arreglos','PrincipalController@arreglos');
 
 //Route::get('categoriaSeleccionada/{id}','PrincipalController@categoriaSeleccionada');
 Route::get('arregloSeleccionado/{id}','PrincipalController@arregloSeleccionado');
@@ -71,4 +74,11 @@ Route::post('/logout','Auth\LoginController@logout');
 
 Route::get('/home', 'HomeController@index');
 Route::get('/cuentaUsuario', 'CuentaController@index');
+
+
+Route::get('dropdown', function(){
+	$id = Input::get('option');
+	$products = Occasion::find($id)->products;
+	return $products->lists('nombre', 'id');
+});
 

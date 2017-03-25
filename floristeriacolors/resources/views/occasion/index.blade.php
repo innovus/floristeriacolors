@@ -57,12 +57,16 @@
                                   <div class="overSelect"></div>
                                 </div>
                                 <div id="checkboxes">
-                                  <label for="one" class="form-control">
-                                    <input type="checkbox" id="" checked="" />rosas</label>
-                                  <label for="two" class="form-control">
-                                    <input type="checkbox" id="" />canastas</label>
-                                  <label for="three" class="form-control">
-                                    <input type="checkbox" id="t" />girasoles</label>
+                                @foreach($products as $product)
+
+
+                                    <label for="one" class="form-control">
+                                        <input type="checkbox" id="" checked="" />{{$product->nombre}}
+                                    </label>
+                                    
+
+                                @endforeach
+                                  
                                 </div>
                               </div>
                             </form>

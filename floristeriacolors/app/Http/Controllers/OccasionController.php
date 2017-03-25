@@ -20,7 +20,8 @@ class OccasionController extends Controller
     {
         $ocasiones = Occasion::All();
         $occasions = Occasion::pluck('ocasion','id');
-        $products = Product::pluck('nombre','id');
+        $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
+            ->select('products.*')->where('category_type_id', 1)->get();
         return view('occasion.index',compact('ocasiones','occasions','products'));
         
     }

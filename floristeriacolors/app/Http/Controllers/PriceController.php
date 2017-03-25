@@ -31,7 +31,17 @@ class PriceController extends Controller
      */
     public function create()
     {
-        $products = Product::pluck('nombre','id');
+         //$products = Product::pluck('nombre','id');
+         $id = 0;
+
+        if(Session::has('id')){
+            $id = Session::get('id');
+            $products = Product::where('id', $id)->get()->pluck('nombre','id');
+
+        }else{
+            $products = Product::pluck('nombre','id');
+        }
+       
         return view('price.create',compact('products'));
     }
 

@@ -62,11 +62,15 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/admin/categorias">
-                                <i class="fa fa-table fa-1x"></i>
+                            <a>
+                                <i class="fa fa-leaf fa-1x"></i>
                                 CATEGORIAS
                             </a>
                         </div>
+                        <ul class="submenu2">
+                            <li><a href="/admin/categorias/create">  NUEVO</a></li>
+                            <li><a href="/admin/categorias">  LISTAR</a></li>
+                        </ul>
                     </li>
                     <li>
                         <div class="link linkito">
