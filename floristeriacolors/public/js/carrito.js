@@ -1,24 +1,44 @@
 var cantidadProductosEnCarrito=0;
 var cantidadArreglo=0;
-
 var arrayCarrito = new Array();
-var objeto = {"nombreObjeto": null,"idObjeto":null,"valorObjeto": null, "cantidadObjeto": null};
+var arrayFinal={};
+var objeto = { "idObjeto":null, "nombreObjeto": null,"valorObjeto": null, "cantidadObjeto": null};
 var subTotal=0;
 function verCarrito(){
+    $("#addcirculo").fadeOut();
     if(cantidadProductosEnCarrito==0){
-        document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
+        //document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
+         document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
     }else{
 
-        document.getElementById("mensajeVacio").innerHTML="";
+       // document.getElementById("mensajeVacio").innerHTML="";
+        document.getElementById("canasta").innerHTML="";
+        for (var i =0;i< arrayFinal.length; i++) {
+              
+                var inserta='<div class="row">'+
+                      '<h4 id="mensajeVacio"></h4>'+
+                      '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
+                      '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
+                      '<div class="col-md-4 " id="COP"><strong>'+arrayFinal[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
+                      '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
+                      '</div><br>';
+
+                $( "#canasta" ).append(inserta);
+            }
+
     }
+
 }
 function AgregarProducto(){
+    var band=0;
     //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
-    var codigoArreglo=99;
+    var codigoArreglo=parseInt(document.getElementById("cc").value);
     var valorProducto=document.getElementById("valorProducto").value;
     var cantidadProducto=document.getElementById("cantidadProducto").value;
     var img=document.getElementById("img").value;
     var nombreProducto=document.getElementById("nombreProducto").value;
+    var selectBox = document.getElementById("selectTamaño");
+    var selectBox1 = selectBox.options[selectBox.selectedIndex].text;
     /* remplazamos las (,) de valorProducto por vacio */
     var patron = /,/g,
     nuevoValor    = "",
@@ -29,13 +49,9 @@ function AgregarProducto(){
     cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(cantidadProducto);
     cantidadArreglo=cantidadArreglo+parseInt(cantidadProducto);
     subTotal=subTotal+valorXcantidad;
-    document.getElementById("cantidadArreglo").innerHTML="<div class='cant' ><h4>"+cantidadArreglo+"</h4></div>";
     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
     document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
-    document.getElementById("img-Producto").innerHTML='<img src="/img/arreglos/'+img+'" class="img-responsive">';
-    document.getElementById("COP").innerHTML='<strong>'+nombreProducto+'</strong> <h4>'+valorProducto+'</h4>';
-    document.getElementById("btn-quitar").innerHTML='<a class="btn btn-primary " onclick="quitarProducto()">quitar</a>';
-    
+ 
     //datos del nuevo arreglo a registrar
     var idObjeto=codigoArreglo;
     var nombreObjeto = nombreProducto; 
@@ -47,88 +63,110 @@ function AgregarProducto(){
         //Insertamos objeto en Array:
         arrayCarrito.push(
 
-            {   "nombreObjeto": nombreObjeto,
+            {  
                 "idObjeto":idObjeto,
+                "nombreObjeto": nombreObjeto,
                 "valorObjeto": valorObjeto,
-                "cantidadObjeto": cano
+                "cantidadObjeto": cano,
+                "tamaño":selectBox1,
+                "imagen":img
             });  
     }
     else
     {
-        for (var i=0;i< arrayCarrito.length; i++){
+        if (arrayCarrito.length>0) {
+            
+            for (var i=0;i< arrayCarrito.length; i++){
 
-            if (arrayCarrito[i].idObjeto==codigoArreglo) {
-                var t=cano;
-                var k=arrayCarrito[i].cantidadObjeto;
-                arrayCarrito[i].cantidadObjeto=t+k;
-            }  
+            
+                if (arrayCarrito[i].tamaño==selectBox1) {
+                    var t=cano;
+                    var k=arrayCarrito[i].cantidadObjeto;
+                    arrayCarrito[i].cantidadObjeto=t+k;
+                    band=0;
+                }
+                else{
+                    
+                    band=band+1;
+                    //alert("bandera si no es igual:"+band)
+                }
+             
+            }
+            if (band>0) {
+
+                    //alert(selectBox1);
+                    var cantidadPro=document.getElementById("cantidadProducto").value;
+                    var tt=parseInt(cantidadPro);
+                    arrayCarrito.push(
+                    
+                    {  
+                        "idObjeto":idObjeto,
+                        "nombreObjeto": nombreObjeto,
+                        "valorObjeto": valorObjeto,
+                        "cantidadObjeto": tt,
+                        "tamaño":selectBox1,
+                        "imagen":img
+                    }); 
+
+                    band=0; 
+            }
+
+
         }
     }     
     console.log("Array despues de añadir este objeto: ");
-    console.log(arrayCarrito);    
+    arrayFinal=arrayCarrito;
+    console.log(arrayFinal);
+    mensaje();    
 }
-
+/*----------------------------------------------------------------------------------*/
 function agregarDetalle(cod){
+
+    var nombreDetalle= document.getElementById("nombreDetalle"+cod).value;
+    var tamaño=document.getElementById("tamDeta").value;
     var valorDetalle =document.getElementById(cod).value;
-    var c= document.getElementById("cantidadDetalle"+cod).value;
-    var valor =parseInt(valorDetalle)*parseInt(c);
+    var cantidadDetalle=document.getElementById("cantidadDetalle"+cod).value;
+    var urlimagen=document.getElementById("img"+cod).value;
+    var valor =parseInt(valorDetalle)*parseInt(cantidadDetalle);    
 
     subTotal=subTotal+parseInt(valor);
-
-    var cantidadDetalle=document.getElementById("cantidadDetalle"+cod).value;
-    cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(c);
-    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
     document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
-    var nombreDetalle= document.getElementById("nombreDetalle"+cod).value;
 
-    var urlimagen=document.getElementById("img"+cod).value;
-    var detalleHtml='<div class="row" id="detalle'+cod+'">'+
-                         '<div class="col-md-2 col-xs-2 text-center">'+
-                            '<div class="cant"><h4 id="ca'+cod+'">'+cantidadDetalle+'</h4></div>'+
-                            '<input type="hidden" id="cantDe'+cod+'" value="'+cantidadDetalle+'"/>'+
-                        '</div>'+
-                        '<div class="col-md-4 col-xs-4" id="img-Producto">'+ 
-                            '<img src="'+urlimagen+'" class="img-responsive">'+
-                        '</div>'+
-                        '<div class="col-md-4 " id="COP">'+ 
-                           '<strong>'+nombreDetalle+'</strong> <h4>'+valorDetalle+'</h4>'+   
-                        '</div>'+
-                        '<div class="col-md-2" id="btn-quitar">'+
-                        '<a class="btn btn-primary " onclick="quitarDetalle('+cod+')">quitar</a>'+
-                        '</div>'+
-                    '</div>';
-    $( "#canasta" ).append(detalleHtml);
+    cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(cantidadDetalle);
+    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
+
    //datos del nuevo arreglo a registrar
     var idObjeto=cod;
-    var nombreObjeto = nombreDetalle; 
-    var valorObjeto = parseInt(valorDetalle);
-    var cano = parseInt(c);   
+    var nombreObjeto= nombreDetalle; 
+    var valorObjeto= parseInt(valorDetalle);
+    var cantidadObjeto=parseInt(cantidadDetalle);
+    var tamaño= tamaño;
+    var imagen=urlimagen;
+     
     //averiguamos si ya hay un producto agregado
     
     if(arrayCarrito.length==0){
         //Insertamos objeto en Array:
         arrayCarrito.push(
 
-            {   "nombreObjeto": nombreObjeto,
-                "idObjeto":idObjeto,
+            {   "idObjeto":idObjeto,
+                "nombreObjeto": nombreObjeto,
                 "valorObjeto": valorObjeto,
-                "cantidadObjeto": cano
+                "cantidadObjeto":cantidadObjeto,
+                "tamaño":tamaño,
+                "imagen":imagen
             });  
     }
     else{
            if(arrayCarrito.length>0){
                 /**/
                 var bandera=0;
-                for(var i=0; i< arrayCarrito.length;i++){
-                
-                
+                for(var i=0; i< arrayCarrito.length;i++){                
                    /*primera comdicion*/
                         if (arrayCarrito[i].idObjeto ==cod) {
                             //si ya hay un arreglo con el mismo id entonces se agrega 
                             //la nueva cantidad a la cantidad que ya esta
-                            var t=cano;
-                            var k=arrayCarrito[i].cantidadObjeto;
-                            arrayCarrito[i].cantidadObjeto=t +k;
+                            arrayCarrito[i].cantidadObjeto=arrayCarrito[i].cantidadObjeto +cantidadObjeto ;
                             bandera=0;   
                         }
                         else{
@@ -139,10 +177,13 @@ function agregarDetalle(cod){
                 if (bandera>0) {
                     arrayCarrito.push(
 
-                    {   "nombreObjeto": nombreObjeto,
+                    {   
                         "idObjeto":idObjeto,
+                        "nombreObjeto": nombreObjeto,
                         "valorObjeto": valorObjeto,
-                        "cantidadObjeto": cano
+                        "cantidadObjeto": cantidadObjeto,
+                        "tamaño":tamaño,
+                        "imagen":imagen
                     });
                 }
                 
@@ -150,55 +191,43 @@ function agregarDetalle(cod){
 
     }
     console.log("Array despues de añadir este objeto: ");
-    console.log(arrayCarrito);  
+    arrayFinal=arrayCarrito;
+    console.log(arrayFinal);
+    mensaje();
 
 }
 
-function quitarProducto(){
-    //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
-    var codigoArreglo=99;
-    var valorProducto=document.getElementById("valorProducto").value;
-    /* remplazamos las (,) de valorProducto por vacio */
-    var patron = /,/g,
-    nuevoValor    = "",
-    nuevaCadena = valorProducto.replace(patron, nuevoValor);
-
-    if (cantidadArreglo==1){
-        cantidadArreglo=cantidadArreglo-1;
-        document.getElementById("img-Producto").innerHTML='';
-        document.getElementById("COP").innerHTML='';
-        document.getElementById("btn-quitar").innerHTML='';
-        document.getElementById("cantidadArreglo").innerHTML="";
-        cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
-        document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-        subTotal=subTotal- parseInt(nuevaCadena);
-        document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
-        document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
-    }
-    if (cantidadArreglo>0) {
-        cantidadArreglo=cantidadArreglo-1;
-        document.getElementById("cantidadArreglo").innerHTML="<div class='cant' ><h4>"+cantidadArreglo+"</h4></div>";;
-        cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
-        document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-        subTotal=subTotal- parseInt(nuevaCadena);
-        document.getElementById("subtotalCarrito").innerHTML=subTotal;
-        document.getElementById("mensajeVacio").innerHTML="";
-    }
-    /* codigo para eliminar un producto del arrayCarrito*/
+function quitarProducto(idOb,valors){
    
-    var codProducto= codigoArreglo;
-    for (var i = 0; i < arrayCarrito.length; i++) {
+    //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
+    var codigoArreglo=idOb;
+    var valorProducto=valors;
+    /* codigo para eliminar un producto del arrayCarrito*/
+    for (var i = 0; i < arrayFinal.length; i++) {
 
-      if (arrayCarrito[i].idObjeto == codProducto) {
+        if (arrayFinal[i].idObjeto==codigoArreglo) {
 
-            if(arrayCarrito[i].cantidadObjeto>1){
-                var k=arrayCarrito[i].cantidadObjeto;
-                arrayCarrito[i].cantidadObjeto=k-1;
+            if (arrayFinal[i].valorObjeto==valorProducto) {
+                if (arrayFinal[i].cantidadObjeto>1) {
+                    arrayFinal[i].cantidadObjeto=arrayFinal[i].cantidadObjeto-1
+                    cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
+                    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
+                    subTotal=subTotal- valorProducto;
+                    document.getElementById("subtotalCarrito").innerHTML=subTotal;
+                    verCarrito();
+                }
+                else{
+                    
+                    arrayFinal[i].cantidadObjeto=arrayFinal[i].cantidadObjeto-1
+                    cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
+                    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
+                    subTotal=subTotal- valorProducto;
+                    document.getElementById("subtotalCarrito").innerHTML=subTotal;
+                    arrayCarrito.splice(i,1);
+                    verCarrito();
+                }
             }
-            else{
-                arrayCarrito.splice(i,1);
-            }
-        }   
+        }  
     }
     console.log("Array despues de eliminar el prodcuto: ");
     console.log(arrayCarrito);
@@ -206,30 +235,9 @@ function quitarProducto(){
 }
 
 function quitarDetalle(cod){
+
     var valorDetalle =document.getElementById(cod).value;
-    var cantDe=document.getElementById("cantDe"+cod).value;
-    if (cantDe==1){
-        cantDe=cantDe-1;
-        document.getElementById("detalle"+cod).remove();
-        cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
-        document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-        subTotal=subTotal-parseInt(valorDetalle);
-        document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;;
-
-    }
-    if (cantDe>0) {
-        cantDe=cantDe-1;
-
-        document.getElementById("ca"+cod).innerHTML=cantDe;
-        document.getElementById("cantDe"+cod).value=cantDe;
-
-        cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
-        document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-        subTotal=subTotal-parseInt(valorDetalle);
-        document.getElementById("subtotalCarrito").innerHTML=subTotal;
-    }
-    /*------------------------------------*/
-    
+    var cantDe=document.getElementById("cantDe"+cod).value;  
     var codDeatlle= cod;
     for (var i = 0; i < arrayCarrito.length; i++) {
 
@@ -247,3 +255,23 @@ function quitarDetalle(cod){
     console.log("Array despues de eliminar el detalle: ");
     console.log(arrayCarrito);
 }
+
+
+/* script para colocar el precio de un arreglo segun el tamño*/
+function changeFunc() {
+    var selectBox = document.getElementById("selectTamaño");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    document.getElementById("valorProducto").value=selectedValue;
+    document.getElementById("precioT").innerHTML=selectedValue;
+    var selectBox1 = selectBox.options[selectBox.selectedIndex].text;
+    
+}
+
+/*js para el objeto que aparece y desaparece*/
+
+function mensaje(){
+    $("#addcirculo").fadeIn();
+    $("#addcirculo").fadeOut(1900);
+
+}
+    

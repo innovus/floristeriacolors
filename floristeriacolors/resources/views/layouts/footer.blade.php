@@ -80,21 +80,7 @@
                   <!-- un detalle-->
                   <div class="row">
                     <H4 id="mensajeVacio"></H4>
-                      <div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo">
-                          
-                              
-                         
-                      </div>
-                      <div class="col-md-4 col-xs-4" id="img-Producto">
-                          
-                      </div>
-                      <div class="col-md-4 " id="COP">
-                          
-                      </div>
-                      <div class="col-md-2" id="btn-quitar">
-                          
-                      </div>
-                      
+                                            
                   </div>
 
                   <hr>

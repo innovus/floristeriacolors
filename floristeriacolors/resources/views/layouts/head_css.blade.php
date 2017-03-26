@@ -4,6 +4,7 @@
         <script src="/js/jquery-1.11.1.min.js"></script>
         <script src="/js/bootstrap.js"></script>
         <script src="/js/bootstrap-modal.js"></script>
+        
          <script src="/js/bootstrap-modalmanager.js"></script>
         <script src="/js/bootstrap.min.js"></script>
         <script src='/js/modernizr-2.6.2.min.js'></script>

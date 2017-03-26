@@ -215,7 +215,7 @@ menu de acordeon Ayuda
  
 }
 .cantidad-arreglo {
-    width: 50% !important;
+    width: 80% !important;
   }
 .modal-body{
     width: 100% !important;
@@ -245,7 +245,7 @@ menu de acordeon Ayuda
     display: none;
   }
   .cantidad-arreglo {
-    width: 70% !important;
+    width: 100% !important;
   }
   .modal-body{
     width: 100% !important;

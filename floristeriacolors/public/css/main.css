@@ -1327,7 +1327,7 @@ li.currento{
  
 }
 .cantidad-arreglo {
-    width: 50% !important;
+    width: 80% !important;
   }
 .cantidad-datalle {
     width: 100% !important;
@@ -1360,7 +1360,7 @@ li.currento{
     display: none;
   }
   .cantidad-arreglo {
-    width: 70% !important;
+    width: 90% !important;
   }
   .modal-body{
     width: 100% !important;
@@ -1458,7 +1458,7 @@ detalles de arreglos
   background: #fff;
   border: 1px solid #6B9400;
   border-radius: 30px;
-  width: 25%;
+  width: 30%;
   height: 40px;
   padding: 10px 10px;
   margin-top: 20px;
@@ -2224,5 +2224,28 @@ blog
   padding: 10px;
 }
 /*=================================
-panelAdmin
 ==================================*/
+.tamaño-arreglo{
+  border:none;
+  width: 60%;
+  color:#0e0e0e;
+  padding: 0px 6px;
+  font-size: 16px;
+}
+/* circulo que aparece cuando se adiciona un producto*/
+.add-circulo{
+  width: 60%;
+  margin-left: 15%;
+  height: 200px;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  top: 400px;
+  position: absolute;
+  padding: 80px 0;
+  text-align: center;
+  display: none;
+}
+.add-circulo h2{
+  font-weight: 700;
+
+}
