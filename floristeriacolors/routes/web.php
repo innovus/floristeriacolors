@@ -1,5 +1,6 @@
 <?php
-
+use Illuminate\Support\Facades\Input;
+use FloristeriaColors\Occasion;
 
 
 /*
@@ -76,9 +77,6 @@ Route::get('/home', 'HomeController@index');
 Route::get('/cuentaUsuario', 'CuentaController@index');
 
 
-Route::get('dropdown', function(){
-	$id = Input::get('option');
-	$products = Occasion::find($id)->products;
-	return $products->lists('nombre', 'id');
-});
+Route::get('dropdown/{id}', 'PrincipalController@dropdown');
+Route::post('/carroVS', 'PrincipalController@cartVS');
 

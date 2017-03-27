@@ -2,6 +2,8 @@
 
 
 @section('content')
+
+
 <div class="col-md-6">
     <div class="card">
         <div class="header">
@@ -34,6 +36,19 @@
 
         </div>
         <div class="content">
+        <script>
+    $(document).ready(function(){
+        $('#empresa_id').change(function(){
+            $.get('/dropdown/'+$(this).val(),
+            function(data) {
+                $('#proceso_id').empty();
+                $.each(data, function(key, element) {
+                    $('#proceso_id').append("<option value='" + key + "'>" + element + "</option>");
+                });
+            });
+        });
+    });     
+</script>
 
              {!!Form::open(['route'=> 'productosOcasiones.store', 'method'=>'POST'])!!}
               
@@ -41,6 +56,19 @@
                     
                     <div class="col-md-12">
                         <div class="form-group">
+
+                        <h1>Listas vinculadas</h1>
+
+                        {{ Form::open() }}
+                        {!!Form::label('Ocasion','Escoge la ocasion:')!!}
+                            {!!Form::select('empresa_id',$occasions,null,['class'=>'form-control', 'id' =>'empresa_id' ])!!}  
+                        <br>
+                        <select id="proceso_id" name="proceso_id">
+                            <option>Debe escoger una empresa primero</option>
+                        </select>
+                        {{ Form::close()}}
+
+
                             {!!Form::label('Ocasion','Escoge la ocasion:')!!}
                             {!!Form::select('occasion_id',$occasions,null,['class'=>'form-control'])!!}
 

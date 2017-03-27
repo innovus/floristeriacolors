@@ -117,6 +117,7 @@ function AgregarProducto(){
     console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
     console.log(arrayFinal);
+    ActualizarVS()
     mensaje();    
 }
 /*----------------------------------------------------------------------------------*/
@@ -274,4 +275,21 @@ function mensaje(){
     $("#addcirculo").fadeOut(1900);
 
 }
+
+function ActualizarVS(){
+
+    $.ajax({
+        type: "POST",
+        url: "/carroVS",
+        data: arrayCarrito,
+        contentType: "json",
+        processData: false,
+        success:function(data) {
+            console.log(data);
+        
+        } 
+    });
+        
+}
+
     

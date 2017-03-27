@@ -8,6 +8,7 @@ use FloristeriaColors\Occasion;
 use FloristeriaColors\Product;
 use FloristeriaColors\Data;
 use FloristeriaColors\Article;
+use Session;
 
 class PrincipalController extends Controller
 {
@@ -65,14 +66,20 @@ class PrincipalController extends Controller
             $ocasion = Occasion::find($id);
             $products = $ocasion->products;
             $nombre = $ocasion->ocasion;
-           
-
 
         }
         return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre'));
 
         
        // return View('plantillas.categoriaSeleccionada');
+    } 
+
+    public function dropdown($id){
+
+        $ocasion = Occasion::find($id);
+        $products = $ocasion->products;
+        return $products->pluck('nombre','id');
+
     }
 
     public function arreglos()
@@ -339,4 +346,18 @@ class PrincipalController extends Controller
         
         return View('plantillas.ventas');
     }
+
+    //manejo de sessiones carrito
+
+    public function cartVS (Request $request)
+    {
+        parse_str(file_get_contents("php://input"), $_POST);
+
+
+        Session::put('cart',$request->json()->all());
+        return (Session::get('cart'));
+        
+
+    }
+
 }

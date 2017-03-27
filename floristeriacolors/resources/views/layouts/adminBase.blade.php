@@ -18,6 +18,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link rel="stylesheet" href='/css/style.css'>
+    <script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -205,7 +206,7 @@
 
     <!--   Core JS Files   -->
 
-    <script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
+    
     <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
     <script src='/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js'></script>
     <!--  Checkbox, Radio & Switch Plugins -->

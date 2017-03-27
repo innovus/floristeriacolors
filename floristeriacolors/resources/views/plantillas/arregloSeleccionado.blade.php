@@ -79,11 +79,15 @@
                 </div>
                  <div class="cantidad-arreglo">
                     <p class="text-cantidad">Tamaño:</p> 
+                    {!!Form::select('selectTamaño',$producto->prices->pluck('tamaño','id'),null,['class'=>'tamaño-arreglo','id'=>'selectTamaño', 'onchange'=> 'changeFunc();'])!!} 
+                    <!--
+
                     <select class="tamaño-arreglo"  id="selectTamaño" onchange="changeFunc();">
                         <option  value="120000">Grande</option>
                         <option  value="150000">mediano</option>
                         <option  value="170000">pequeño</option>
                     </select>
+                    -->
                 </div>
                 <div class="detalles-arreglo">
                     <h3>Si quieres sorprender en grande.. <strong>Agrega un detalle.!</strong></h3>
