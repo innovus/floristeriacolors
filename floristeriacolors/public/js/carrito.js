@@ -7,11 +7,11 @@ var subTotal=0;
 function verCarrito(){
     $("#addcirculo").fadeOut();
     if(cantidadProductosEnCarrito==0){
-        //document.getElementById("mensajeVacio").innerHTML="CARRITO DE COMPRAS VACIO";
+        
          document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
     }else{
 
-       // document.getElementById("mensajeVacio").innerHTML="";
+       
         document.getElementById("canasta").innerHTML="";
         for (var i =0;i< arrayFinal.length; i++) {
               
