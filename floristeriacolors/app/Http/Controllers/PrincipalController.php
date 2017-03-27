@@ -346,14 +346,17 @@ class PrincipalController extends Controller
         
         return View('plantillas.ventas');
     }
+    public function admin()
+    {
+        
+        return View('layouts.adminBase');
+    }
 
     //manejo de sessiones carrito
 
     public function cartVS (Request $request)
     {
         parse_str(file_get_contents("php://input"), $_POST);
-
-
         Session::put('cart',$request->json()->all());
         return (Session::get('cart'));
         

@@ -77,6 +77,9 @@ Route::get('/home', 'HomeController@index');
 Route::get('/cuentaUsuario', 'CuentaController@index');
 
 
-Route::get('dropdown/{id}', 'PrincipalController@dropdown');
+Route::get('/dropdown/{id}', 'PrincipalController@dropdown');
 Route::post('/carroVS', 'PrincipalController@cartVS');
+Route::get('/admin/login', 'AuthAdminController@showLogin');
+Route::post('/admin/login','AuthAdminController@login');
+Route::get('/admin','PrincipalController@admin');
 
