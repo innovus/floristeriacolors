@@ -16,6 +16,10 @@ class OccasionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct(){
+        $this->middleware('authAdmin');
+    }
     public function index()
     {
         $ocasiones = Occasion::All();

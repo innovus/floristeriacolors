@@ -9,6 +9,7 @@ use FloristeriaColors\Product;
 use FloristeriaColors\Data;
 use FloristeriaColors\Article;
 use Session;
+use Illuminate\Support\Facades\Auth;
 
 class PrincipalController extends Controller
 {
@@ -17,6 +18,7 @@ class PrincipalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $masVendidos = Product::limit(4)->get();
@@ -348,8 +350,21 @@ class PrincipalController extends Controller
     }
     public function admin()
     {
+        if(Auth::user()){
+            $usuario_actual = Auth::user();
+            if($usuario_actual->is_admin==0){
+                return redirect('/admin/login');
+            }else{
+                return View('layouts.adminBase');
+
+            }
+
+        }else{
+            return redirect('/admin/login');
+        }
+
         
-        return View('layouts.adminBase');
+        
     }
 
     //manejo de sessiones carrito
