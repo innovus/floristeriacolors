@@ -19,7 +19,7 @@ class PrincipalController extends Controller
      */
     public function index()
     {
-        $masVendidos = Product::limit(6)->get();
+        $masVendidos = Product::limit(4)->get();
         return View('plantillas.index',compact('categories','masVendidos'));
     }
     /**

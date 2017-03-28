@@ -29,9 +29,9 @@
 
       <!-- fin seccion 1-->
 
-      @include('layouts.categorias')
+@include('layouts.categorias')
 
-      @include('layouts.trespasos')
+@include('layouts.trespasos')
 
       <!-- formas de pago -->
         <section id="" class="formasPago">

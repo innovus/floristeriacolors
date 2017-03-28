@@ -8,13 +8,13 @@
                     </div>
                     <!-- un arreglo -->
                      @foreach($masVendidos as $producto)
-                     <div class="col-md-2 wow fadeInLeft" data-wow-duration="500ms">      
+                     <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
                         <div class="service-desc">
                            <img src="/img/arreglos/{{$producto->imagen}}" class="img-responsive">
-                              <h3>{{$producto->nombre}}</h3>
+                              <h3><strong>{{$producto->nombre}}</strong></h3>
 
                               @if($producto->prices->isEmpty())
-                                <h3>$40,000</h3>
+                                <h3>SIN PRECIO</h3>
                               @else
                                 <h3>${{number_format($producto->prices->first()->precio)}}</h3>
                               @endif  
@@ -32,12 +32,12 @@
                     
 
                      
-                     <!-- boton ver todas categorias                        <div class="col-md-4 col-md-offset-4">
+                          <div class="col-md-4 col-md-offset-4">
                             <div class="btn-categorias">
-                                <a href="">VER TODOS LOS ARREGLOS</a>
+                                <a href="/arreglos">VER TODOS LOS ARREGLOS</a>
                             </div>
                         </div>
-                      fin btn-->   
+                       
                     <div class="col-md-12 text-center">
                      <hr><h3>"Con Floristería Colors expresas tus sentimientos."</h3><hr>
                     </div>

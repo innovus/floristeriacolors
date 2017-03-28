@@ -3,7 +3,7 @@
                 <div class="container">
                     <div class="row titulo-pasos" >
                         <div class="col-md-8 col-md-offset-2">
-                            <h2>COMPRA TU ARREGLO FLORAL EN 3 SIMPLES PASOS:</h2><br>
+                            <h2>COMPRA TU ARREGLO DE UNA FORMA FÁCIL</h2><br>
                         </div>
                         <div class="col-md-4  trespasos-member text-center">
                             <div class="row">
