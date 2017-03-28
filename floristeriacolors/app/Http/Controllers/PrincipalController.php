@@ -35,6 +35,7 @@ class PrincipalController extends Controller
         $ocasiones = Occasion::All();
         $masVendidos = Product::limit(6)->get();
 
+
         return View('plantillas.realizarArreglo',compact('categories','masVendidos','ocasiones'));
     }
     /**
@@ -375,6 +376,11 @@ class PrincipalController extends Controller
         Session::put('cart',$request->json()->all());
         return (Session::get('cart'));
         
+
+    }
+    public function getCartVS ()
+    {  
+        return (Session::get('cart'));    
 
     }
 

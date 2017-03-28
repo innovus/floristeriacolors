@@ -4,6 +4,7 @@
 @section('content')
 
 @include('layouts.buscadorArreglos')
+
 <section class="menu-carrito">
     <div class="row">
         <div class="col-md-4 col-md-offset-2 col-sm-12 text-center">
@@ -12,7 +13,12 @@
         </div>
        
                 <div class="col-md-3 col-sm-12 text-left">
-                    <button class="demo btn  btn-lg" data-toggle="modal" id="LookCar" href="#responsive" onclick="verCarrito">VER CARRITO DE COMPRAS</button>
+                @if(Session::has('cart'))
+                {!!Form::button('VER CARRITO DE COMPRAS',['class'=>'demo btn  btn-lg', 'data-toggle'=>'modal','id'=>'LookCar', 'href'=>'#responsive','onclick'=>'verCarrito()'])!!}
+                   <button class="demo btn  btn-lg" data-toggle="modal" id="LookCar" href="#responsive" onclick="verCarrito()">VER CARRITO DE COMPRAS</button>
+                  @endif
+
+                   
                 </div>
     </div>
 
