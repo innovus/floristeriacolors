@@ -15,7 +15,6 @@ function verCarrito(){
     for(i=0;i<arrayFinal.length;i++){
         cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
     }
-    alert(cantidadProductosEnCarrito);
      $.ajax({
         type: "GET",
         url: "/carroVS",
@@ -27,8 +26,6 @@ function verCarrito(){
                     document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
                 }else{
                     console.log(arrayFinal)
-
-           
                     document.getElementById("canasta").innerHTML="";
                     for (var i =0;i< arrayFinal.length; i++) {
                   
@@ -43,16 +40,10 @@ function verCarrito(){
                             $( "#canasta" ).append(inserta);
                     }
                 } 
-        });
-   
 
-    //$("#LookCar").click(function(){
 
-        //$("#addcirculo").fadeOut();
-     
-
-//});
-
+        }
+    });
     
 
 }
