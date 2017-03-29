@@ -11,16 +11,21 @@ function init(){
 
 
 function verCarrito(){
-    var cantidadProductosEnCarrito=0;
-    for(i=0;i<arrayFinal.length;i++){
-        cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-    }
+    
+    console.log("antes de ajax")
      $.ajax({
         type: "GET",
         url: "/carroVS",
         success:function(data) {
+            console.log("despues de aajax")
              arrayCarrito = data;
              arrayFinal = arrayCarrito;
+             var cantidadProductosEnCarrito=0;
+            for(i=0;i<arrayFinal.length;i++){
+                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                console.log("array");
+            }
+             console.log(arrayCarrito)
                 if(cantidadProductosEnCarrito==0){
             
                     document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
