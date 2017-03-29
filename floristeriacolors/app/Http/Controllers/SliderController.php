@@ -3,27 +3,22 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
-use FloristeriaColors\Video;
 use FloristeriaColors\Slider;
 
 use Session;
 use Redirect;
 
-class VideoController extends Controller
+
+class SliderController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('authAdmin');
-    }
     public function index()
     {
-        $video = Video::where('ruta', 'ayuda')->first();
-        $sliders = Slider::all();
-        return view('plantillas.videos',compact('video','sliders'));
+        //
     }
 
     /**
@@ -78,15 +73,14 @@ class VideoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $video = Video::find($id);
-        $video->fill($request->all());
-        $video->save();
+        $slider = Slider::find($id);
+        $slider->fill($request->all());
+        $slider->save();
 
         Session::flash('message','Slider Editado correctamente');
 
         return Redirect::to('/admin/multimedia');
     }
-    
 
     /**
      * Remove the specified resource from storage.

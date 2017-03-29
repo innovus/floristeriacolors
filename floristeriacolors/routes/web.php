@@ -61,7 +61,8 @@ Route::resource('admin/datos','DataController');
 Route::resource('admin/ocasiones','OccasionController');
 Route::resource('admin/productosOcasiones','ProductOccasionController');
 Route::resource('admin/articulos','ArticleController');
-
+Route::resource('admin/multimedia','VideoController');
+Route::resource('admin/sliders','SliderController');
 /*Route::get('/', function () {
     //return view('welcome');
 });*/

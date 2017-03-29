@@ -100,7 +100,7 @@
             </div>
             <!--video promocional -->
             <div class="col-md-6 fq-video">
-                <iframe  height="315" src="https://www.youtube.com/embed/GxPwJa6IghY" frameborder="0" allowfullscreen></iframe>
+                <iframe  height="315" src="{{$video->link}}" frameborder="0" allowfullscreen></iframe>
                 
             </div>
             <!--fin video promocional -->

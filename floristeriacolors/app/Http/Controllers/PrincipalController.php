@@ -10,6 +10,8 @@ use FloristeriaColors\Data;
 use FloristeriaColors\Article;
 use Session;
 use Illuminate\Support\Facades\Auth;
+use FloristeriaColors\Video;
+use FloristeriaColors\Slider;
 
 class PrincipalController extends Controller
 {
@@ -34,9 +36,11 @@ class PrincipalController extends Controller
         $categories = Category::where('category_type_id', 1)->get();
         $ocasiones = Occasion::All();
         $masVendidos = Product::limit(6)->get();
+        $sliders = Slider::all();
+    
 
 
-        return View('plantillas.realizarArreglo',compact('categories','masVendidos','ocasiones'));
+        return View('plantillas.realizarArreglo',compact('categories','masVendidos','ocasiones','sliders'));
     }
     /**
      * Display a listing of the resource.
@@ -94,8 +98,9 @@ class PrincipalController extends Controller
         $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
             ->select('products.*')->where('category_type_id', 1)->get();
         $nombre = "Arreglos";
+        $sliders = Slider::all();
             
-        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre'));
+        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders'));
 
         
        // return View('plantillas.categoriaSeleccionada');
@@ -152,8 +157,9 @@ class PrincipalController extends Controller
      */
     public function ayuda()
     {
+        $video = Video::where('ruta', 'ayuda')->first();
+        return view('plantillas.ayuda',compact('video'));
         
-        return View('plantillas.ayuda');
     }
 
     /**
