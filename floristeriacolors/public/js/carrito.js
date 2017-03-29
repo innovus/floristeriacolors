@@ -85,6 +85,8 @@ function AgregarProducto(){
     var valorObjeto = parseInt(nuevaCadena);
     var cano = parseInt(cantidadProducto);  
     //averiguamos si ya hay un producto agregado
+
+    console.log(arrayCarrito);
     
     if(arrayCarrito.length==0){
         //Insertamos objeto en Array:
