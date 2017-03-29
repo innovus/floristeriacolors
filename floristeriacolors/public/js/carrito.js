@@ -9,6 +9,82 @@ function verCarrito(arrayCarrito){
 
     $("#LookCar").click(function(arrayCarrito){
         /*pa el subtotal*/
+       // alert("loca")
+                    var subTotal=0;
+                    for(i=0; i<arrayCarrito.length;i++){
+                        var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
+                        subTotal=subTotal+subt;
+                    }
+                    if (subTotal==0) {
+                       document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+                    }
+
+                    document.getElementById("canasta").innerHTML="";
+                    for (var i =0;i< arrayCarrito.length; i++) {
+                  
+                            var inserta='<div class="row">'+
+                                '<h4 id="mensajeVacio"></h4>'+
+                                '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
+                                '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
+                                '<div class="col-md-4 " id="COP"><strong>'+arrayCarrito[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
+                                '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
+                                '</div><br>';
+
+                            $( "#canasta" ).append(inserta);
+                    }
+
+
+                    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    /*fin subtotal*/
+
+        $.ajax({
+        type: "GET",
+        url: "/carroVS",
+        success:function(data) {
+            
+             arrayCarrito = data;
+             arrayFinal = arrayCarrito;
+             var cantidadProductosEnCarrito=0;
+                for(i=0;i<arrayFinal.length;i++){
+                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                console.log("array");
+                }
+            /*pa el subtotal*/
+            var subTotal=0;
+            for(i=0; i<arrayFinal.length;i++){
+                var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
+                subTotal=subTotal+subt;
+            }
+            document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+            /*fin subtotal*/
+             console.log(arrayCarrito)
+                if(cantidadProductosEnCarrito==0){
+            
+                    document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+                }else{
+                    console.log(arrayFinal)
+                    document.getElementById("canasta").innerHTML="";
+                    for (var i =0;i< arrayFinal.length; i++) {
+                  
+                            var inserta='<div class="row">'+
+                                '<h4 id="mensajeVacio"></h4>'+
+                                '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
+                                '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
+                                '<div class="col-md-4 " id="COP"><strong>'+arrayFinal[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
+                                '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
+                                '</div><br>';
+
+                            $( "#canasta" ).append(inserta);
+                    }
+                } 
+
+
+        }
+    });
+    });
+/*---------------------------------------------------*/
+$("#LookCar2").click(function(arrayCarrito){
+        /*pa el subtotal*/
         //alert("loca")
                     var subTotal=0;
                     for(i=0; i<arrayCarrito.length;i++){
@@ -331,6 +407,7 @@ function agregarDetalle(cod){
 }
 
 function quitarProducto(idOb,valors){
+    arrayFinal=arrayCarrito;
    var cantidadProductosEnCarrito=0;
         for(i=0;i<arrayFinal.length;i++){
             cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
@@ -385,7 +462,7 @@ function quitarProducto(idOb,valors){
 
                     arrayFinal[i].cantidadObjeto=arrayFinal[i].cantidadObjeto-1
                     cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
-                    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
+                   
                     arrayCarrito.splice(i,1);
 
                     /*pa el subtotal*/
@@ -414,6 +491,7 @@ function quitarProducto(idOb,valors){
 
 
                     document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
                     /*fin subtotal*/
 
                 }
@@ -542,6 +620,7 @@ $(document).ready(function(){
                 arrayCarrito = data;
                 arrayFinal = arrayCarrito;
                 verCarrito(arrayCarrito);
+                //alert("si hay")
                 console.log(arrayCarrito)
             }
             document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
