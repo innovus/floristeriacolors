@@ -1,9 +1,9 @@
-var cantidadProductosEnCarrito=0;
+
 var cantidadArreglo=0;
 var arrayCarrito = new Array();
 var arrayFinal={};
 var objeto = { "idObjeto":null, "nombreObjeto": null,"valorObjeto": null, "cantidadObjeto": null};
-var subTotal=0;
+
 
 function init(){
 
@@ -21,10 +21,18 @@ function verCarrito(){
              arrayCarrito = data;
              arrayFinal = arrayCarrito;
              var cantidadProductosEnCarrito=0;
-            for(i=0;i<arrayFinal.length;i++){
+                for(i=0;i<arrayFinal.length;i++){
                 cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
                 console.log("array");
+                }
+            /*pa el subtotal*/
+            var subTotal=0;
+            for(i=0; i<arrayFinal.length;i++){
+                var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
+                subTotal=subTotal+subt;
             }
+            document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+            /*fin subtotal*/
              console.log(arrayCarrito)
                 if(cantidadProductosEnCarrito==0){
             
@@ -53,6 +61,7 @@ function verCarrito(){
 
 }
 function AgregarProducto(){
+    
     var band=0;
     //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
     var codigoArreglo=parseInt(document.getElementById("cc").value);
@@ -69,11 +78,6 @@ function AgregarProducto(){
     
     /*aqui ya tengo el valor del arreglo x la cantidad seleccionada */
     var valorXcantidad=parseInt(nuevaCadena)*parseInt(cantidadProducto);
-    cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(cantidadProducto);
-    cantidadArreglo=cantidadArreglo+parseInt(cantidadProducto);
-    subTotal=subTotal+valorXcantidad;
-    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
  
     //datos del nuevo arreglo a registrar
     var idObjeto=codigoArreglo;
@@ -102,7 +106,7 @@ function AgregarProducto(){
             for (var i=0;i< arrayCarrito.length; i++){
 
             
-                if (arrayCarrito[i].tamaño==selectBox1) {
+                if (arrayCarrito[i].tamaño==selectBox1 && arrayCarrito[i].idObjeto==idObjeto) {
                     var t=cano;
                     var k=arrayCarrito[i].cantidadObjeto;
                     arrayCarrito[i].cantidadObjeto=t+k;
@@ -111,13 +115,13 @@ function AgregarProducto(){
                 else{
                     
                     band=band+1;
-                    //alert("bandera si no es igual:"+band)
+                    
                 }
              
             }
             if (band>0) {
 
-                    //alert(selectBox1);
+                    
                     var cantidadPro=document.getElementById("cantidadProducto").value;
                     var tt=parseInt(cantidadPro);
                     arrayCarrito.push(
@@ -141,23 +145,26 @@ function AgregarProducto(){
     arrayFinal=arrayCarrito;
     console.log(arrayFinal);
     ActualizarVS()
-    mensaje();    
+    
+    var cantidadProductosEnCarrito=0;
+        for(i=0;i<arrayFinal.length;i++){
+            cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+           
+
+        }
+   document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
+    mensaje(); 
 }
 /*----------------------------------------------------------------------------------*/
 function agregarDetalle(cod){
 
+    var band=0;
     var nombreDetalle= document.getElementById("nombreDetalle"+cod).value;
     var tamaño=document.getElementById("tamDeta").value;
     var valorDetalle =document.getElementById(cod).value;
     var cantidadDetalle=document.getElementById("cantidadDetalle"+cod).value;
     var urlimagen=document.getElementById("img"+cod).value;
     var valor =parseInt(valorDetalle)*parseInt(cantidadDetalle);    
-
-    subTotal=subTotal+parseInt(valor);
-    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
-
-    cantidadProductosEnCarrito= cantidadProductosEnCarrito+parseInt(cantidadDetalle);
-    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
 
    //datos del nuevo arreglo a registrar
     var idObjeto=cod;
@@ -173,87 +180,163 @@ function agregarDetalle(cod){
         //Insertamos objeto en Array:
         arrayCarrito.push(
 
-            {   "idObjeto":idObjeto,
+            {  
+                "idObjeto":idObjeto,
                 "nombreObjeto": nombreObjeto,
                 "valorObjeto": valorObjeto,
-                "cantidadObjeto":cantidadObjeto,
+                "cantidadObjeto": cantidadObjeto,
                 "tamaño":tamaño,
                 "imagen":imagen
             });  
     }
-    else{
-           if(arrayCarrito.length>0){
-                /**/
-                var bandera=0;
-                for(var i=0; i< arrayCarrito.length;i++){                
-                   /*primera comdicion*/
-                        if (arrayCarrito[i].idObjeto ==cod) {
-                            //si ya hay un arreglo con el mismo id entonces se agrega 
-                            //la nueva cantidad a la cantidad que ya esta
-                            arrayCarrito[i].cantidadObjeto=arrayCarrito[i].cantidadObjeto +cantidadObjeto ;
-                            bandera=0;   
-                        }
-                        else{
-                            bandera=bandera+1;
-                        }
-                }
-                /**/
-                if (bandera>0) {
-                    arrayCarrito.push(
+    else
+    {
+                   
+            for (var i=0;i< arrayCarrito.length; i++){
 
-                    {   
+            
+                if (arrayCarrito[i].idObjeto==idObjeto) {
+                    var t=cantidadObjeto;
+                    var k=arrayCarrito[i].cantidadObjeto;
+                    arrayCarrito[i].cantidadObjeto=t+k;
+                   band=0;
+                }
+                else{
+                    
+                    band=band+1;
+
+                    //alert("bandera si no es igual:"+band)
+                }
+             
+            }
+
+
+            if (band==arrayFinal.length) {
+
+                    //alert(selectBox1);
+                    var cantidadPro=document.getElementById("cantidadProducto").value;
+                    var tt=parseInt(cantidadPro);
+                    arrayCarrito.push(
+                    
+                    {  
                         "idObjeto":idObjeto,
                         "nombreObjeto": nombreObjeto,
                         "valorObjeto": valorObjeto,
                         "cantidadObjeto": cantidadObjeto,
                         "tamaño":tamaño,
                         "imagen":imagen
-                    });
-                }
-                
-            }
+                    }); 
 
-    }
+                    band=0; 
+            }
+    }     
     console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
     console.log(arrayFinal);
-    ActualizarVS();
-    mensaje();
+    ActualizarVS()
+    
+    var cantidadProductosEnCarrito=0;
+        for(i=0;i<arrayFinal.length;i++){
+            cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+            //console.log("array");
 
+        }
+   document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
+    mensaje(); 
 }
 
 function quitarProducto(idOb,valors){
-   
+   var cantidadProductosEnCarrito=0;
+        for(i=0;i<arrayFinal.length;i++){
+            cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+           
+        }
     //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
     var codigoArreglo=idOb;
     var valorProducto=valors;
     /* codigo para eliminar un producto del arrayCarrito*/
+
+    /*for*/
     for (var i = 0; i < arrayFinal.length; i++) {
 
+        /*primer if si el codigo del producto coincide*/
         if (arrayFinal[i].idObjeto==codigoArreglo) {
 
+            /*segundo if si el valor del producto coincide*/
             if (arrayFinal[i].valorObjeto==valorProducto) {
+
+                /*tecer if si esa cantidad es mayor que 1*/
                 if (arrayFinal[i].cantidadObjeto>1) {
+
                     arrayFinal[i].cantidadObjeto=arrayFinal[i].cantidadObjeto-1
                     cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
                     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-                    subTotal=subTotal- valorProducto;
-                    document.getElementById("subtotalCarrito").innerHTML=subTotal;
-                    verCarrito();
-                }
-                else{
+
+                    /*pa el subtotal*/
+                    var subTotal=0;
+                    for(i=0; i<arrayFinal.length;i++){
+                        var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
+                        subTotal=subTotal+subt;
+                    }
+
+                    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    /*fin subtotal*/
+                    document.getElementById("canasta").innerHTML="";
+                    for (var i =0;i< arrayFinal.length; i++) {
+                  
+                            var inserta='<div class="row">'+
+                                '<h4 id="mensajeVacio"></h4>'+
+                                '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
+                                '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
+                                '<div class="col-md-4 " id="COP"><strong>'+arrayFinal[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
+                                '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
+                                '</div><br>';
+
+                            $( "#canasta" ).append(inserta);
+                    }
                     
+                }/*end if si la cantidad es mayor que 1*/
+                else{
+
                     arrayFinal[i].cantidadObjeto=arrayFinal[i].cantidadObjeto-1
                     cantidadProductosEnCarrito=cantidadProductosEnCarrito-1;
                     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
-                    subTotal=subTotal- valorProducto;
-                    document.getElementById("subtotalCarrito").innerHTML=subTotal;
                     arrayCarrito.splice(i,1);
-                    verCarrito();
+
+                    /*pa el subtotal*/
+                    var subTotal=0;
+                    for(i=0; i<arrayFinal.length;i++){
+                        var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
+                        subTotal=subTotal+subt;
+                    }
+                    if (subTotal==0) {
+                       document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+                    }
+
+                    document.getElementById("canasta").innerHTML="";
+                    for (var i =0;i< arrayFinal.length; i++) {
+                  
+                            var inserta='<div class="row">'+
+                                '<h4 id="mensajeVacio"></h4>'+
+                                '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
+                                '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
+                                '<div class="col-md-4 " id="COP"><strong>'+arrayFinal[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
+                                '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
+                                '</div><br>';
+
+                            $( "#canasta" ).append(inserta);
+                    }
+
+
+                    document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    /*fin subtotal*/
+
                 }
-            }
-        }  
-    }
+            }/*end segundo if valor coincide*/
+            
+        } /*end si es igual al codigo */
+    }/*end for*/
+
     console.log("Array despues de eliminar el prodcuto: ");
     ActualizarVS()
     console.log(arrayCarrito);
@@ -261,7 +344,11 @@ function quitarProducto(idOb,valors){
 }
 
 function quitarDetalle(cod){
-
+    var cantidadProductosEnCarrito=0;
+                for(i=0;i<arrayFinal.length;i++){
+                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                console.log("array");
+                }
     var valorDetalle =document.getElementById(cod).value;
     var cantDe=document.getElementById("cantDe"+cod).value;  
     var codDeatlle= cod;
@@ -319,4 +406,20 @@ function ActualizarVS(){
         
 }
 
-    
+$(document).ready(function(){
+
+    $.ajax({
+        type: "GET",
+        url: "/carroVS",
+        success:function(data) {
+            console.log("despues de aajax")
+             arrayCarrito = data;
+             arrayFinal = arrayCarrito;
+             var cantidadProductosEnCarrito=0;
+                for(i=0;i<arrayCarrito.length;i++){
+                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayCarrito[i].cantidadObjeto;
+                }
+            document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
+        }
+    });
+});
