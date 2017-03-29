@@ -14,7 +14,6 @@ class AuthAdminController extends Controller
 
 	protected $redirectTo = '/admin';
 
-
 	
     public function showLogin()
     {

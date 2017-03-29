@@ -140,7 +140,7 @@ function AgregarProducto(){
     console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
     console.log(arrayFinal);
-    ActualizarVS()
+    ActualizarVS();
     mensaje();    
 }
 /*----------------------------------------------------------------------------------*/

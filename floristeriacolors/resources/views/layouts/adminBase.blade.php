@@ -166,11 +166,11 @@
                         <li >
 
                            <!--formulario cerrar sesión admin -->
-                           <form method="">
+                           <form action="/logout" method="POST"> 
+                           {{ csrf_field() }}
+                            <input type="submit" name="" class="btn btni"  value="CERRAR SESIÓN">
+                            </form>
 
-                               <input type="submit" name="" class="btn btni" value="CERRAR SESIÓN">
-
-                           </form>
 
                            <!--fin formulario cerrar sesión admin -->
                         </li>
