@@ -11,29 +11,35 @@
                             </div>
                             <div class="content">
 
-                            {!!Form::model($product,['route'=>['productos.update',$product->id],'method'=>'PUT'])!!}
+                            {!!Form::model($product,['route'=>['productos.update',$product->id],'method'=>'PUT', 'files'=>true])!!}
 
-                              <div class="row">                                      
-                                <div class="col-md-12">
-                                  <div class="form-group">
-                                    {!!Form::label('Nombre producto:')!!}
-                                    {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Nombre producto'])!!}
-                                 </div>
-                                </div>
-                                </div>
+                               <div class="row">                                      
+                                  <div class="col-md-12">
+                                      <div class="form-group">
+                                        {!!Form::label('Nombre producto:')!!}
+                                        {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Nombre producto'])!!}
+                                      </div>
+                                  </div>
+                              </div>
                                 <!-- para poner la imagen -->
+                                <div class="col-md-6">
+                                      <div class="form-group">
+                                        {!!Form::file('imagen',['class'=>'form-control'])!!}  
+                                    </div>
+                                            
+                                </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <!--<div class="col-md-6">
                                         <div class="form-group ">
                                             <input type="file" id="files" class="form-control" name="files[]" />
                                             
                                       
                                         </div>
                                                                           
-                                    </div>
+                                    </div>-->
                                     <div class="col-md-6">
                                       <div class="form-group text-center"  id="list">
-                                        <img src="/img/arreglos/10Alegria.jpg" style="width: 500px;" class="img-responsive">
+                                        <img src="/img/arreglos/{{$product->imagen}}" style="width: 500px;" class="img-responsive">
 
                                       </div>
                                     </div>
