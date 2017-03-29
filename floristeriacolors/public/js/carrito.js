@@ -11,7 +11,11 @@ function init(){
 
 
 function verCarrito(){
-
+    var cantidadProductosEnCarrito=0;
+    for(i=0;i<arrayFinal.length;i++){
+        cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+    }
+    alert(cantidadProductosEnCarrito);
      $.ajax({
         type: "GET",
         url: "/carroVS",
