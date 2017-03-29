@@ -13,10 +13,10 @@
         </div>
        
                 <div class="col-md-3 col-sm-12 text-left">
-                @if(Session::has('cart'))
+               
                 {!!Form::button('VER CARRITO DE COMPRAS',['class'=>'demo btn  btn-lg', 'data-toggle'=>'modal','id'=>'LookCar', 'href'=>'#responsive','onclick'=>'verCarrito()'])!!}
                    <button class="demo btn  btn-lg" data-toggle="modal" id="LookCar" href="#responsive" onclick="verCarrito()">VER CARRITO DE COMPRAS</button>
-                  @endif
+                  
 
                    
                 </div>
