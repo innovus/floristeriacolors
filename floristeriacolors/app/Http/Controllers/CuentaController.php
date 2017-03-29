@@ -28,6 +28,18 @@ class CuentaController extends Controller
     public function index()
     {
         $user = Auth::user();
-        return View('plantillas.cuentaUsuario',compact('user'));
+         if(Auth::user()){
+            $usuario_actual = Auth::user();
+            if($usuario_actual->is_admin==0){
+                return View('plantillas.cuentaUsuario',compact('user'));
+                
+            }else{
+                return redirect('/admin');
+
+            }
+
+        }
+
+        
     }
 }

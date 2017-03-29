@@ -144,6 +144,7 @@ function AgregarProducto(){
     console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
     console.log(arrayFinal);
+<<<<<<< HEAD
     ActualizarVS()
     
     var cantidadProductosEnCarrito=0;
@@ -153,7 +154,11 @@ function AgregarProducto(){
 
         }
    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
-    mensaje(); 
+   // mensaje(); 
+//=======
+    ActualizarVS();
+    mensaje();    
+//>>>>>>> origin/master
 }
 /*----------------------------------------------------------------------------------*/
 function agregarDetalle(cod){
