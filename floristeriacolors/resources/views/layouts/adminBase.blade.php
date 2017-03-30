@@ -43,7 +43,7 @@
                     </li>
                       <li>
                         <div class="link linkito">
-                            <a href="/listadoClientes">
+                            <a href="/admin/clientes">
                                 <i class="fa fa-user-circle fa-1x"></i>
                                 CLIENTES
                             </a>
@@ -83,7 +83,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/moreVendidos">
+                            <a href="/admin/mas_vendidos">
                                 <i class="fa fa-ravelry fa-1x"></i>
                                 MAS VENDIDOS
                             </a>
@@ -91,7 +91,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/destacados">
+                            <a href="/admin/destacados">
                                 <i class="fa fa-check fa-1x"></i>
                                 DESTACADOS
                             </a>
@@ -120,7 +120,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/videos">
+                            <a href="/admin/multimedia">
                                 <i class="fa fa-youtube-play fa-1x"></i>
                                 MULTIMEDIA
                             </a>

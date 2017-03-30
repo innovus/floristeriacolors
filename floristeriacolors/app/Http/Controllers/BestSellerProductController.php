@@ -3,28 +3,23 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
-use FloristeriaColors\Http\Requests;
-use FloristeriaColors\Price;
+use FloristeriaColors\BestSellerProduct;
 use FloristeriaColors\Product;
-
 use Session;
 use Redirect;
 
-class PriceController extends Controller
+class BestSellerProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('authAdmin');
-    }
     public function index()
     {
-        $prices = Price::orderBy('product_id','des')->get();
-        return view('price.index',compact('prices'));
-        //
+        $mas_vendidos = BestSellerProduct::All();
+        $productos = Product::leftJoin('best_seller_products','products.id','best_seller_products.product_id')->join('categories', 'categories.id', '=', 'products.category_id')->where('category_type_id', 1)->whereNull('best_seller_products.product_id')->pluck('nombre','products.id');
+            return view('plantillas.moreVendidos',compact('mas_vendidos','productos'));
     }
 
     /**
@@ -34,18 +29,7 @@ class PriceController extends Controller
      */
     public function create()
     {
-         //$products = Product::pluck('nombre','id');
-         $id = 0;
-
-        if(Session::has('id')){
-            $id = Session::get('id');
-            $products = Product::where('id', $id)->get()->pluck('nombre','id');
-
-        }else{
-            $products = Product::pluck('nombre','id');
-        }
-       
-        return view('price.create',compact('products'));
+        //
     }
 
     /**
@@ -56,8 +40,8 @@ class PriceController extends Controller
      */
     public function store(Request $request)
     {
-        Price::create($request->all());
-        return redirect('/admin/precios')->with('message','Precio Guardado exitosamente');
+         BestSellerProduct::create($request->all());
+        return redirect('/admin/mas_vendidos')->with('message','Guardado con exito');
     }
 
     /**
@@ -79,9 +63,7 @@ class PriceController extends Controller
      */
     public function edit($id)
     {
-        $precio = Price::find($id);
-        $products = Product::pluck('nombre','id');
-        return view('price.edit',['price'=>$precio,'products'=>$products]);
+        //
     }
 
     /**
@@ -93,14 +75,7 @@ class PriceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $precio = Price::find($id);
-        $precio->fill($request->all());
-        $precio->save();
-
-        Session::flash('message','Producto Editado correctamente');
-
-        return Redirect::to('/admin/precios');
-        
+        //
     }
 
     /**
@@ -112,15 +87,14 @@ class PriceController extends Controller
     public function destroy($id)
     {
         try {
-                Price::destroy($id);
-                Session::flash('message','Precio eliminado correctamente');
-                return Redirect::to('/admin/precios');
+                BestSellerProduct::destroy($id);
+                Session::flash('message','Producto eliminado correctamente');
+                return Redirect::to('/admin/mas_vendidos');
 
             } catch (\Illuminate\Database\QueryException $e) {
-                Session::flash('error','No se puede eliminar por que tiene precios');
-                return Redirect::to('/admin/precios');
+                Session::flash('error','No se puede eliminar ');
+                return Redirect::to('/admin/mas_vendidos');
 
             } 
-        
     }
 }

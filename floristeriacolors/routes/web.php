@@ -32,24 +32,6 @@ Route::get('resumenCompra/',['middleware' =>'auth','uses'=>'PrincipalController@
 Route::get('finalizarCompra/','PrincipalController@finalizarCompra');
 Route::get('blog/','PrincipalController@blog');
 
-
-Route::get('misDatos/','PrincipalController@misDatos');
-
-//Route::get('misProductos/','PrincipalController@misProductos');
-//Route::get('nuevoProducto/','PrincipalController@nuevoProducto');
-//Route::get('misCategorias/','PrincipalController@misCategorias');
-
-
-Route::get('nuevoPrecio/','PrincipalController@nuevoPrecio');
-Route::get('misPrecios/','PrincipalController@misPrecios');
-
-Route::get('videos/','PrincipalController@videos');
-Route::get('adminBlog/','PrincipalController@adminBlog');
-Route::get('nuevoPost/','PrincipalController@nuevoPost');
-Route::get('ocasiones/','PrincipalController@ocasiones');
-Route::get('moreVendidos/','PrincipalController@moreVendidos');
-Route::get('destacados/','PrincipalController@destacados');
-Route::get('listadoClientes/','PrincipalController@listadoClientes');
 Route::get('ventas/','PrincipalController@ventas');
 
 /*-------------------*/
@@ -64,6 +46,7 @@ Route::resource('admin/articulos','ArticleController');
 Route::resource('admin/multimedia','VideoController');
 Route::resource('admin/sliders','SliderController');
 Route::resource('admin/destacados','PopularProductController');
+Route::resource('admin/mas_vendidos','BestSellerProductController');
 Route::resource('mail','MailController');
 /*Route::get('/', function () {
     //return view('welcome');

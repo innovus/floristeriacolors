@@ -24,7 +24,14 @@ class PrincipalController extends Controller
 
     public function index()
     {
-        $masVendidos = Product::limit(4)->get();
+        //$masVendidos = Product::limit(4)->get();
+        $masVendidos = Product::join('best_seller_products','products.id','best_seller_products.product_id')->join('categories', 'categories.id', '=', 'products.category_id')
+                ->rightJoin('prices','products.id','prices.product_id')
+                ->select('products.*')
+                ->where('category_type_id', 1)->groupBy('products.id')->get()->random(4)->all();
+       /* $masVendidos = Product::rightJoin('prices','products.id','prices.product_id')
+            ->select('products.*')->where('category_id', $producto->category_id)->groupBy('products.id')->get()->random(4)->all();*/
+
         return View('plantillas.index',compact('categories','masVendidos'));
     }
     /**
@@ -124,7 +131,7 @@ class PrincipalController extends Controller
         $producto = Product::find($id);
         $categories = Category::where('category_type_id', 2)->get();
         $productosRandom = Product::rightJoin('prices','products.id','prices.product_id')
-            ->select('products.*')->where('category_id', $producto->category_id)->groupBy('products.id')->get()->random(4);
+            ->select('products.*')->where('category_id', $producto->category_id)->groupBy('products.id')->get()->random(4)->all();
         return View('plantillas.arregloSeleccionado',compact('producto','categories','productosRandom'));
     }
 
@@ -229,138 +236,8 @@ class PrincipalController extends Controller
         return View('plantillas.blog',compact('articles'));
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function misDatos()
-    {
-        
-        return View('plantillas.misDatos');
-    }
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function misProductos()
-    {
-        
-        return View('plantillas.misProductos');
-    }
 
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function nuevoProducto()
-    {
-        
-        return View('plantillas.nuevoProducto');
-    }
 
-     /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function misCategorias()
-    {
-        
-        return View('plantillas.misCategorias');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function nuevoPrecio()
-    {
-        
-        return View('plantillas.nuevoPrecio');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function misPrecios()
-    {
-        
-        return View('plantillas.misPrecios');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function videos()
-    {
-        
-        return View('plantillas.videos');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function adminBlog()
-    {
-        
-        return View('plantillas.adminBlog');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function nuevoPost()
-    {
-        
-        return View('plantillas.nuevoPost');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function ocasiones()
-    {
-        
-        return View('plantillas.ocasiones');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function moreVendidos()
-    {
-        
-        return View('plantillas.moreVendidos');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destacados()
-    {
-        
-        return View('plantillas.destacados');
-    }
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function listadoClientes()
-    {
-        
-        return View('plantillas.listadoClientes');
-    }
     /**
      * Display a listing of the resource.
      *

@@ -5,7 +5,7 @@
                                         <div class="link"><a rel="nofollow" rel="noreferrer" href="/arreglos">Todos los Arreglos</a></div>
                                     </li>
                                     <li>
-                                        <div class="link"><a rel="nofollow" rel="noreferrer" href="/arreglos">Los mas vistos</a></div>
+                                        <div class="link"><a rel="nofollow" rel="noreferrer" href="/arreglos/destacados/1">Los mas vistos</a></div>
                                     </li>
                                     
                                     <li>

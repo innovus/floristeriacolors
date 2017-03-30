@@ -14,7 +14,7 @@
                               <h3>{{$product->nombre}}</h3>
                               <h3>COP {{number_format($product->prices->first()->precio)}}</h3>
                             <div class="ver-boton">
-                              <a href="" class=" btn-ver form-control">VER</a>
+                              <a href="/arregloSeleccionado/{{$product->id}}" class=" btn-ver form-control">VER</a>
                             </div>  
                         </div>
                         

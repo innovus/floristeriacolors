@@ -22,7 +22,7 @@
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>Id</th>
+                    
                     <th>Producto</th>
                     <th>Tamaño</th>
                     <th>Precio</th>
@@ -32,7 +32,7 @@
                 @foreach($prices as $price)
 				<tbody>
 					<tr>
-						<td>{{$price->id}}</td>
+						
 						<td>{{$price->product->nombre}}</td>
 						<td>{{$price->tamaño}}</td>
 						<td>{{$price->precio}}</td>
