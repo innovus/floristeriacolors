@@ -76,6 +76,12 @@ class PrincipalController extends Controller
             $products = $ocasion->products_with_price();
             $nombre = $ocasion->ocasion;
 
+        } else if($filtro == 'destacados'){
+            $nombre = "Destacados";
+            $products = Product::join('popular_products','products.id','popular_products.product_id')->join('categories', 'categories.id', '=', 'products.category_id')
+                ->rightJoin('prices','products.id','prices.product_id')
+                ->select('products.*')
+                ->where('category_type_id', 1)->groupBy('products.id')->get();
         }
         return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders'));
 
