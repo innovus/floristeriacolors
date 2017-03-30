@@ -38,20 +38,28 @@
 
               <!-- ****************************************** --> 
                <div class="col-md-6 dates">
-                <form action="#" id="contact-form" name="contact-form">
+               {!!Form::open(['route'=> 'mail.store', 'method'=>'POST', 'id'=>'contact-form','name'=>'contact-form'])!!}
+                <!--<form action="#" id="contact-form" name="contact-form"> --> 
                     <div class="form-group">
-                        <input type="text" name="name" id="name" placeholder="Nombres:">
+                        <!--<input type="text" name="name" id="name" placeholder="Nombres:">
                     
                         <input type="email" name="email" id="email" placeholder="Correo electrónico:">
                         <input type="text" name="" class="" placeholder="Teléfono:">
                         <input type="text" name="" class="" placeholder="Ciudad:">
+                        <textarea  name="message" id="message" placeholder="Mensaje:"></textarea>-->
+                        {!!Form::text('nombres',null,['placeholder'=>'Nombres'])!!}
+                         {!!Form::email('email',null,['placeholder'=>'Correo electrónico'])!!}
+                         {!!Form::text('telefono',null,['placeholder'=>'Telefono'])!!}
+                        {!!Form::text('ciudad',null,['placeholder'=>'Ciudad'])!!}
+                        {!!Form::textarea('mensaje',null,['placeholder'=>'Mensaje: '])!!}
                                           
-                        <textarea  name="message" id="message" placeholder="Mensaje:"></textarea>
+                        
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="" class="btn-contact" id="form-submit"  value="Enviar Mensaje">
-                    </div>
-                    </form>
+                        {!!Form::submit('Enviar Mensaje',['class'=>'btn-contact','id'=>'form-submit'])!!}
+                        <!--<input type="submit" name="" class="btn-contact" id="form-submit"  value="Enviar Mensaje"> -->
+                      </div>
+                    {!!Form::close()!!}
                 </div>
                 <div class="col-md-6 date2" >
 
