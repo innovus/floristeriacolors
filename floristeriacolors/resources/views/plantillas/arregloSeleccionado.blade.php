@@ -72,20 +72,18 @@
                 <p>
                     {{$producto->descripcion}}
                 </p>
-                @if($producto->prices->isEmpty())
-                  <h2><strong>COP 0</strong></h2>
-                @else
+
                 <input type="hidden" name="" id="valorProducto" value="{{number_format($producto->prices->first()->precio)}}">
                   <h2 >$ <strong id="precioT"> {{number_format($producto->prices->first()->precio)}}</strong></h2>
             
-                @endif  
+                
                 <div class="cantidad-arreglo">
                     <p class="text-cantidad">Cantidad:</p> 
                     <input type="number" step="1" min="0"  id="cantidadProducto" name="quantity" value="1" title="Cantidad" class="input-text qty text" size="4" />
                 </div>
                  <div class="cantidad-arreglo">
                     <p class="text-cantidad">Tamaño:</p> 
-                    {!!Form::select('selectTamaño',$producto->prices->pluck('tamaño','id'),null,['class'=>'tamaño-arreglo','id'=>'selectTamaño', 'onchange'=> 'changeFunc();'])!!} 
+                    {!!Form::select('selectTamaño',$producto->prices->pluck('tamaño','precio'),null,['class'=>'tamaño-arreglo','id'=>'selectTamaño', 'onchange'=> 'changeFunc();'])!!} 
                     <!--
 
                     <select class="tamaño-arreglo"  id="selectTamaño" onchange="changeFunc();">

@@ -10,6 +10,7 @@ use FloristeriaColors\Data;
 use FloristeriaColors\Article;
 use Session;
 use Illuminate\Support\Facades\Auth;
+use FloristeriaColors\User;
 use FloristeriaColors\Video;
 use FloristeriaColors\Slider;
 
@@ -191,8 +192,13 @@ class PrincipalController extends Controller
      */
     public function resumenCompra()
     {
+        $auth = Auth::user();
+        $user = User::where('id',1)->first();
+        $cliente =$user->client;
+        $carrito = Session::get('cart'); 
+
         
-        return View('plantillas.resumenCompra');
+        return View('plantillas.resumenCompra',compact('cliente','cart'));
     }
     /**
      * Display a listing of the resource.

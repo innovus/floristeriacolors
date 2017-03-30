@@ -28,7 +28,7 @@ Route::get('contacto/','PrincipalController@contacto');
 Route::get('ayuda/','PrincipalController@ayuda');
 Route::get('conocenos/','PrincipalController@conocenos');
 Route::get('puntosFloristeria/','PrincipalController@puntosFloristeria');
-Route::get('resumenCompra/','PrincipalController@resumenCompra');
+Route::get('resumenCompra/',['middleware' =>'auth','uses'=>'PrincipalController@resumenCompra']);
 Route::get('finalizarCompra/','PrincipalController@finalizarCompra');
 Route::get('blog/','PrincipalController@blog');
 

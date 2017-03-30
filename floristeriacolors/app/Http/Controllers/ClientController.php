@@ -15,12 +15,14 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    /*
     public function __construct(){
         $this->middleware('authAdmin');
-    }
+    }*/
     public function index()
     {
-        //
+        $clientes = Client::All();   
+        return view('plantillas.listadoClientes',compact('clientes'));
     }
 
     /**

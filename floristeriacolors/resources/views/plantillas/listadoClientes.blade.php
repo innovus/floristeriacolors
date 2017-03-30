@@ -11,7 +11,7 @@
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">
                 <thead>
-                    <th>Id</th>
+                    
                     <th>Nombre</th>
                     <th>Apellidos</th>
                     <th>Fecha de Nacimiento</th>
@@ -20,26 +20,18 @@
                    
                 </thead>
                 <tbody>
-                <!--inicio un cliente-->
-                    <tr>
-                        <td>1</td>
-                        <td>Jhon Frey</td>
-                        <td>Diaz D</td>
-                        <td>10/10/1989</td>
-                        <td>calle 21 # 24-64</td>
-                        <td>3173187766</td>
-                    </tr>
-                <!-- finr un cliente -->
-                <!--inicio un cliente-->
-                    <tr>
-                        <td>2</td>
-                        <td>Juan Carlos</td>
-                        <td>Pantoja C</td>
-                        <td>10/10/1989</td>
-                        <td>calle 21 # 24-64</td>
-                        <td>3173187766</td>
-                    </tr>
-                <!-- finr un cliente -->
+                @foreach($clientes as $cliente)
+                <tr>
+                       
+                        <td>{{$cliente->nombres}}</td>
+                        <td>{{$cliente->apellidos}}</td>
+                        <td>{{$cliente->fecha_nacimiento}}</td>
+                        <td>{{$cliente->direccion}}</td>
+                        <td>{{$cliente->celular}}</td>
+                </tr>
+
+                @endforeach
+
                 
                 </tbody>
             </table>

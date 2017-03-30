@@ -20,7 +20,7 @@
                     <div class="sli-container">
                         <ul id="sli" class="sli-wrapper">
                             @foreach($sliders as $slider)
-                            @endforeach
+                            
                             <li class="currento">
                                 <img src="/img/slider/{{$slider->imagen}}" class="img-responsive" alt="Slider Imagen 1">
                                 <div class="caption">
@@ -28,7 +28,8 @@
                                     <p> {{$slider->descripcion}}</p>
                                     
                                 </div>
-                            </li>                            
+                            </li>  
+                            @endforeach                          
                         </ul>
                         <ul class="sli-controls" id="sli-controls">
                             

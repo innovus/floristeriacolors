@@ -11,15 +11,16 @@
             <!--datos comrador -->
                 <div class="date-comprador col-md-12">
                 <h4>1. Datos del comprador.</h4>
+                
                     <form>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Nombres Completos">
+                               <input type="text" name="nombres" class="form-control" placeholder="Nombres Completos" value="{{$cliente->nombres}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Apellidos">
+                               <input type="text" name="apellidos" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
@@ -29,7 +30,7 @@
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Teléfono">
+                               <input type="text" name="celular" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
                            </div> 
                         </div>
                         
