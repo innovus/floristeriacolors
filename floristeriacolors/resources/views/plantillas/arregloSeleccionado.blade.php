@@ -113,9 +113,9 @@
                   @foreach($categories as $category)
                   
                     <div role="tabpanel" class="tab-pane active" id="{{$category->name}}">
-
-                    @foreach($category->products as $product)
-                    <!-- un arreglo -->
+                  
+                  @foreach($category->products_with_price() as $product)
+                    
                             <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
                                 <div class="detalle-desc">                                   
                                          <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
@@ -133,10 +133,11 @@
                                           
                                 </div>
                             </div>
-                            <!-- fin un arreglo -->
+                             
 
                             
                     @endforeach
+                     
                     </div>
 
                   @endforeach
