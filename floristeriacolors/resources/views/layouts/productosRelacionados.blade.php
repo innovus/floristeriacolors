@@ -5,57 +5,23 @@
             <div class="container">
                 <div class="row">                                       
                    <div class="col-md-10 col-md-offset-1">
+                   @foreach($productosRandom as $product)
+
                       <!-- un arreglo -->
                     <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
                         <div class="service-desc">
-                           <img src="/img/arreglos/mi corazon.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
+                           <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
+                              <h3>{{$product->nombre}}</h3>
+                              <h3>COP {{number_format($product->prices->first()->precio)}}</h3>
                             <div class="ver-boton">
                               <a href="" class=" btn-ver form-control">VER</a>
                             </div>  
                         </div>
                         
                     </div>
+                    @endforeach
                   <!-- fin un arreglo -->
-                    <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/27MI-DETALLE.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/AMANECER2.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/48jarron importado.jpg" class="img-responsive">
-                              <h3>Rosas!</h3>
-                              <h3>COP 40.000</h3>
-                            <div class="ver-boton">
-                              <a href="" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
+                  
                   <!-- fin un arreglo -->
                    </div>
                 

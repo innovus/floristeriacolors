@@ -123,7 +123,9 @@ class PrincipalController extends Controller
     {
         $producto = Product::find($id);
         $categories = Category::where('category_type_id', 2)->get();
-        return View('plantillas.arregloSeleccionado',compact('producto','categories'));
+        $productosRandom = Product::rightJoin('prices','products.id','prices.product_id')
+            ->select('products.*')->where('category_id', $producto->category_id)->groupBy('products.id')->get()->random(4);
+        return View('plantillas.arregloSeleccionado',compact('producto','categories','productosRandom'));
     }
 
     /**
