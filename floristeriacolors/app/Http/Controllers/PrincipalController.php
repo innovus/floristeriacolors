@@ -108,7 +108,14 @@ class PrincipalController extends Controller
 
         $ocasion = Occasion::find($id);
         $products = $ocasion->products;
-        return $products->pluck('nombre','id');
+        return $products;
+
+    }
+    public function productos(){
+
+        $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
+            ->select('products.*')->where('category_type_id', 1)->get();
+        return $products;
 
     }
 

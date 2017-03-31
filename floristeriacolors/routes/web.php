@@ -64,6 +64,7 @@ Route::get('/cuentaUsuario', 'CuentaController@index');
 
 
 Route::get('/dropdown/{id}', 'PrincipalController@dropdown');
+Route::get('/productos', 'PrincipalController@productos');
 Route::post('/carroVS', 'PrincipalController@cartVS');
 Route::get('/carroVS', 'PrincipalController@getCartVS');
 Route::get('/admin/login', 'AuthAdminController@showLogin');

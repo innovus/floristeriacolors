@@ -41,13 +41,54 @@
         $('#empresa_id').change(function(){
             $.get('/dropdown/'+$(this).val(),
             function(data) {
-                $('#proceso_id').empty();
-                $.each(data, function(key, element) {
-                    $('#proceso_id').append("<option value='" + key + "'>" + element + "</option>");
-                });
-            });
+                console.log(data)
+                $.get('/productos',function(productos){
+                    $('#checkboxes').empty();
+                    $.each(productos, function(key, element) {
+                        if(BuscarProducto(data,element)) {
+                            console.log("encontrado")
+
+                            $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" id="" checked="" /> '+ element.nombre + '</label>');
+                            
+                          
+                        }
+                        else {
+                              $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" id="" /> '+ element.nombre + '</label>');
+                              console.log("no encontrado")
+                        }
+                    });
+
+                   /* $.each(data, function(key, element) {
+                    $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" id="" /> '+ element.nombre + '</label>');
+                    });*/
+
+
+
+                 });//cierra get Productos      
+                
+            });//ciera funcion y get dropdown
+        });//cierra funcion change
+    });  
+    function BuscarProducto(productos,producto){
+        var retorno = false;
+
+
+        productos.forEach(function (k, index, productos){
+            console.log("el k")
+            console.log(k.id)
+            console.log(producto.id)
+            
+            if(k.id == producto.id) {
+                console.log("lo encontro")
+                retorno = true;
+               
+            }
+
         });
-    });     
+        return retorno;
+
+
+    }   
 </script>
 
              {!!Form::open(['route'=> 'productosOcasiones.store', 'method'=>'POST'])!!}
@@ -89,7 +130,7 @@
 
 
                                     <label for="one" class="form-control">
-                                        <input type="checkbox" id="" checked="" />{{$product->nombre}}
+                                        <input type="checkbox" id="" />{{$product->nombre}}
                                     </label>
                                     
 
