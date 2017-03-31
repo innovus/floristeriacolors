@@ -10,24 +10,27 @@
                 <div class="col-md-12">
                    
                     <!--info comprador -->
+
+                    
+                    <p></p>
                     <div class="info-final col-md-6 col-sx-12">
                         <div class="col-md-12 info-final-titulo text-center">
                             <h4><strong>DATOS QUIEN RECIBE</strong></h4>
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Nombre:</strong>Estefania Santacruz</h5>  
+                          <h5> <strong>Nombre:</strong>{{$dataCart["nombresDestinatario"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Dirección:</strong>Calle 21 # 24-64</h5>  
+                          <h5> <strong>Dirección:</strong>{{$dataCart["direccionDestinatario"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Teléfono:</strong>3173187767</h5>  
+                          <h5> <strong>Teléfono:</strong>{{$dataCart["telefonoDestinatario"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Fecha:</strong>28/03/2017</h5>  
+                          <h5> <strong>Fecha:</strong>{{$dataCart["fechaEntrega"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Mensaje:</strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat nisi optio asperiores, sit tempora porro earum natus, aut dignissimos! Cupiditate recusandae maiores necessitatibus libero quia, facere doloremque reprehenderit aliquid ad?</h5>  
+                          <h5> <strong>Mensaje:</strong>{{$dataCart["mensaje"]}}</h5>  
                         </div>  
                     </div>
                     <!--fin info comprador -->
@@ -38,16 +41,16 @@
                             <h4><strong>DATOS QUIEN ENVÍA</strong></h4>
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Nombre:</strong>Jhon Frey Diaz</h5>  
+                          <h5> <strong>Nombre:</strong>{{$dataCart["nombresComprador"]}} {{$dataCart["apellidosComprador"]}}</h5>  
                         </div>
                         <div class="col-md-12">
                           <h5> <strong>Correo:</strong>sr_jhonf@hotmail.com</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Teléfono:</strong>3173187767</h5>  
+                          <h5> <strong>Teléfono:</strong>{{$dataCart["celularComprador"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Cédula:</strong>1122783249</h5>  
+                          <h5> <strong>Identificación:</strong>{{$dataCart["identificacionComprador"]}}</h5>  
                         </div>   
                     </div>
                     <!--fin info destinatario -->
@@ -68,17 +71,7 @@
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div class="radio">
-                        <h4>Tienes <strong>5500 puntos</strong> ¿Deseas utilizarlos? </h4>
-                    <label>
-                        <input type="radio" name="o1" value="" checked>
-                        <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-                        Si
-                    </label>
-                    <label>
-                        <input type="radio" name="o1" value="" >
-                        <span class="cr"><i class="cr-icon fa fa-check fa-2x"></i></span>
-                        No
-                    </label>
+                        <h4>Acumularas <strong>5500 puntos</strong> por esta Compra</h4>
                     </div>
                 </div>
                 <div class="col-md-12 text-center">
@@ -126,6 +119,16 @@
         type: "GET",
         url: "/carroVS",
         success:function(data) {
+
+            $.ajax({
+                type: "GET",
+                url: "/dataCart",
+                success:function(dataCart) {
+                    console.log("aqui fue")
+                    console.log(dataCart);
+
+                }
+            });
             console.log("carrito en el resumen")
              arrayCarrito = data;
              arrayFinal = arrayCarrito;

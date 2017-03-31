@@ -7,62 +7,64 @@
         <div class="row">
             <!--Datos comprador y destinatario -->
             <div class="col-md-7">
+            {!!Form::open(['route'=> 'dataCart', 'method'=>'POST'])!!}
             
             <!--datos comrador -->
                 <div class="date-comprador col-md-12">
                 <h4>1. Datos del comprador.</h4>
                 
-                    <form>
+                    
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="nombres" class="form-control" placeholder="Nombres Completos" value="{{$cliente->nombres}}">
+
+                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" value="{{$cliente->nombres}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="apellidos" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
+                               <input type="text" name="apellidosComprador" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="ID/C.c">
+                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="celular" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
+                               <input type="text" name="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
                            </div> 
                         </div>
                         
-                    </form>
+                    
                     
                 </div>
             <!--fin datos comrador -->
             <!--datos Destinatario -->
             
-            <form>
+            
                 <div class=" col-md-12 date-comprador">
                 <h4>2. Datos del destinatario.</h4>
                     
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Nombres Completos">
+                               <input type="text" name="nombresDestinatario" class="form-control" placeholder="Nombres Completos">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Dirección. ej: Calle 21 # 24-63 Centro">
+                               <input type="text" name="direccionDestinatario" class="form-control" placeholder="Dirección. ej: Calle 21 # 24-63 Centro">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="" class="form-control" placeholder="Teléfono">
+                               <input type="text" name="telefonoDestinatario" class="form-control" placeholder="Teléfono">
                            </div> 
                         </div>
                         
                         <div class="col-md-6 seccion-datos ">
                            <div class="form-group date-user jf-date">
-                               <input type="text" class="form-control" placeholder="Fecha de entrega">
+                               <input type="text" name="fechaEntrega" class="form-control" placeholder="Fecha de entrega">
                            </div>
                         </div>
                       
@@ -74,7 +76,7 @@
                 <div class="date-comprador col-md-12">
                 <h4>3. Escribe el mensaje para tu destinatario.</h4>
                      <div class="col-md-12">
-                        <textarea placeholder="Escribe aquí tu mensaje" id="texta" class="form-control">
+                        <textarea name = "mensaje" placeholder="Escribe aquí tu mensaje" id="texta" class="form-control">
                         </textarea>
                      </div>
                 </div>
@@ -103,9 +105,9 @@
                     </div>
                 </div>
                 <div class=" col-md-12" id="boton-final">
-                    
+                    <input  type='submit' class='btn btn-primary form-control'/>
                 </div>
-            </form>
+            {!!Form::close()!!}
                 
             </div>
             <!--fin Datos comprador y destinatario -->
@@ -825,7 +827,8 @@
                        document.getElementById("boton-final").innerHTML="<a href='/arreglos' class='btn btn-primary form-control'>REGRESAR</a>"
                     }else{
 
-                        document.getElementById("boton-final").innerHTML="<a href='/finalizarCompra' class='btn btn-primary form-control'>CONTINUAR CON LA COMPRA</a>"
+/*
+                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' />";*/
                     }
 
                     document.getElementById("canasta").innerHTML="";

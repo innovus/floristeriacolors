@@ -69,6 +69,8 @@ Route::get('/dropdown/{id}', 'PrincipalController@dropdown');
 Route::get('/productos', 'PrincipalController@productos');
 Route::post('/carroVS', 'PrincipalController@cartVS');
 Route::get('/carroVS', 'PrincipalController@getCartVS');
+Route::post('/dataCart', ['as'=> 'dataCart','uses' =>'PrincipalController@dataCart']);
+Route::get('/dataCart', 'PrincipalController@getDataCart');
 Route::get('/admin/login', 'AuthAdminController@showLogin');
 Route::post('/admin/login','AuthAdminController@login');
 Route::get('/admin','PrincipalController@admin');

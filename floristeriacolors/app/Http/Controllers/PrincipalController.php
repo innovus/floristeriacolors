@@ -322,6 +322,33 @@ class PrincipalController extends Controller
         return (Session::get('cart'));    
 
     }
+    public function dataCart(Request $request)
+    {
+        parse_str(file_get_contents("php://input"), $_POST);
+        Session::put('dataCart',$request->all());
+        $dataCart = Session::get('dataCart');
+        $dataCart = json_encode($dataCart);
+        $dataCart = json_decode($dataCart,true);
 
+        $nombre = $request->input('nombresDestinatario');
+        $array = ["nombresdestinatario" => $nombre];
+        $array = json_encode($array);
+        $array = json_decode($array,true);
+
+         //$dataCart =  Session::get('dataCart');
+         //$dataCart = json_encode($dataCart);
+         //$dataCart = json_decode($dataCart);
+        
+
+
+        //$cart = Session::get('cart');
+        return view('plantillas.finalizarCompra')->with('dataCart',$dataCart);
+        
+    }
+    public function getDataCart ()
+    {  
+        return (Session::get('dataCart'));    
+
+    }
 
 }
