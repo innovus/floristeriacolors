@@ -15,9 +15,7 @@ function verCarrito(arrayCarrito){
                         var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
                         subTotal=subTotal+subt;
                     }
-                    if (subTotal==0) {
-                       document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
-                    }
+                    
 
                     document.getElementById("canasta").innerHTML="";
                     for (var i =0;i< arrayCarrito.length; i++) {
@@ -81,7 +79,9 @@ function verCarrito(arrayCarrito){
 
         }
     });
-    });
+
+
+});
 /*---------------------------------------------------*/
 $("#LookCar2").click(function(arrayCarrito){
         /*pa el subtotal*/
@@ -155,63 +155,35 @@ $("#LookCar2").click(function(arrayCarrito){
                 } 
 
 
-        }
+             }
+        });
     });
-    });
-}
 
 
-
-function verCarritosS(){
-    
-  
-     $.ajax({
-        type: "GET",
-        url: "/carroVS",
-        success:function(data) {
-            
-             arrayCarrito = data;
-             arrayFinal = arrayCarrito;
-             var cantidadProductosEnCarrito=0;
-                for(i=0;i<arrayFinal.length;i++){
-                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-                console.log("array");
-                }
-            /*pa el subtotal*/
-            var subTotal=0;
-            for(i=0; i<arrayFinal.length;i++){
-                var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
-                subTotal=subTotal+subt;
-            }
-            document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
-            /*fin subtotal*/
-             console.log(arrayCarrito)
-                if(cantidadProductosEnCarrito==0){
-            
-                    document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
-                }else{
-                    console.log(arrayFinal)
-                    document.getElementById("canasta").innerHTML="";
-                    for (var i =0;i< arrayFinal.length; i++) {
-                  
-                            var inserta='<div class="row">'+
-                                '<h4 id="mensajeVacio"></h4>'+
-                                '<div class="col-md-2 col-xs-2 text-center" id="cantidadArreglo"><div class="cant"><h4>'+arrayFinal[i].cantidadObjeto+'</h4></div></div>'+
-                                '<div class="col-md-4 col-xs-4" id="img-Producto"><img src="/img/arreglos/'+arrayFinal[i].imagen+'" class="img-responsive"></div>'+
-                                '<div class="col-md-4 " id="COP"><strong>'+arrayFinal[i].nombreObjeto+'</strong> <h5>'+arrayFinal[i].valorObjeto+'</h5><h4>'+arrayFinal[i].tamaño+'</h4></div>'+
-                                '<div class="col-md-2" id="btn-quitar"><a class="btn btn-primary " onclick="quitarProducto('+arrayFinal[i].idObjeto+','+arrayFinal[i].valorObjeto+')">quitar</a></div>'+
-                                '</div><br>';
-
-                            $( "#canasta" ).append(inserta);
+/*--------------------------*/
+var subTotal=0;
+                    for(i=0; i<arrayCarrito.length;i++){
+                        var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
+                        subTotal=subTotal+subt;
                     }
-                } 
 
+  if (subTotal==0) {
+        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+        document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>';
+       
+    }else{
+        document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>'+
+            '<a href="/resumenCompra" class="btn btn-primary">Confirmar Compra</a>';
+       
 
-        }
-    });
-    
-
+        
+    }
+/*--------------------------*/
 }
+
+
+
+
 function AgregarProducto(){
     
     var band=0;
@@ -242,7 +214,7 @@ function AgregarProducto(){
 
     //averiguamos si ya hay un producto agregado
 
-    console.log(arrayCarrito);
+   // console.log(arrayCarrito);
     
     if(arrayCarrito.length==0){
         //Insertamos objeto en Array:
@@ -303,9 +275,9 @@ function AgregarProducto(){
 
 
     /*--------------------------------------------------------*/     
-    console.log("Array despues de añadir este objeto: ");
+    //console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
-    console.log(arrayFinal);
+    //console.log(arrayFinal);
 
     ActualizarVS()
     var cantidadProductosEnCarrito=0;
@@ -314,6 +286,20 @@ function AgregarProducto(){
         }
     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
     mensaje();    
+
+
+  if (cantidadProductosEnCarrito==0) {
+        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+        document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>';
+       
+    }else{
+        document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>'+
+            '<a href="/resumenCompra" class="btn btn-primary">Confirmar Compra</a>';
+       
+
+        
+    }
+       
 
 }
 /*----------------------------------------------------------------------------------*/
@@ -404,6 +390,9 @@ function agregarDetalle(cod){
         }
    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
     mensaje(); 
+    document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>'+
+            '<a href="/resumenCompra" class="btn btn-primary">Confirmar Compra</a>';
+       
 }
 
 function quitarProducto(idOb,valors){
@@ -524,6 +513,9 @@ function quitarProducto(idOb,valors){
                     }
                     if (subTotal==0) {
                        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+                       document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>'+
+            '';
+      
                     }
 
 
@@ -533,6 +525,7 @@ function quitarProducto(idOb,valors){
     console.log("Array despues de eliminar el prodcuto: ");
     ActualizarVS()
     console.log(arrayCarrito);
+    activarBoton(cantidadProductosEnCarrito);
 
 }
 
@@ -561,6 +554,7 @@ function quitarDetalle(cod){
     console.log("Array despues de eliminar el detalle: ");
     ActualizarVS()
     console.log(arrayCarrito);
+    activarBoton(cantidadProductosEnCarrito);
 }
 
 
@@ -605,7 +599,7 @@ $(document).ready(function(){
         type: "GET",
         url: "/carroVS",
         success:function(data) {
-            console.log("despues de aajax")
+            console.log("despues de aaaaajax")
              arrayCarrito = data;
              arrayFinal = arrayCarrito;
              var cantidadProductosEnCarrito=0;
@@ -629,3 +623,14 @@ $(document).ready(function(){
     });
 
 });
+function activarBoton(cantidadProductosEnCarrito){
+
+    if (cantidadProductosEnCarrito==0) {
+        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
+        document.getElementById("boton-final").innerHTML="<a href='/arreglos' class='btn btn-primary form-control'>REGRESAR</a>"
+        }else{
+
+        document.getElementById("boton-final").innerHTML="<a href='/finalizarCompra' class='btn btn-primary form-control'>CONTINUAR CON LA COMPRA</a>"
+        }
+
+}

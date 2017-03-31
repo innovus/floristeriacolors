@@ -93,9 +93,10 @@
               <h2>SUBTOTAL:<strong id="subtotalCarrito">0</strong></h2>
           </div>
      </div>
-        <div class="modal-footer">
-            <button type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
-            <button type="button" class="btn btn-primary">Confirmar Compra</button>
+        <div class="modal-footer" id="btn-modales">
+            
+            
+           
         </div>
   </div>
  

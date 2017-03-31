@@ -11,8 +11,8 @@
                     <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
                         <div class="service-desc">
                            <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
-                              <h3>{{$product->nombre}}</h3>
-                              <h3>COP {{number_format($product->prices->first()->precio)}}</h3>
+                              <h3><strong>{{$product->nombre}}</strong></h3>
+                              <h3>{{number_format($product->prices->first()->precio)}}</h3>
                             <div class="ver-boton">
                               <a href="/arregloSeleccionado/{{$product->id}}" class=" btn-ver form-control">VER</a>
                             </div>  
