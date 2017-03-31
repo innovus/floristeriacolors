@@ -30,7 +30,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <div class="link"><a rel="nofollow" rel="noreferrer" href="/arreglos">Los mas vendidos</a></div>
+                                        <div class="link"><a rel="nofollow" rel="noreferrer" href="/arreglos/mas_vendidos/1">Los mas vendidos</a></div>
                                     </li>
 
                                 </ul>

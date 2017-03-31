@@ -89,6 +89,14 @@ class PrincipalController extends Controller
                 ->rightJoin('prices','products.id','prices.product_id')
                 ->select('products.*')
                 ->where('category_type_id', 1)->groupBy('products.id')->get();
+        } else if($filtro == 'mas_vendidos'){
+            $nombre = "Mas Vendidos";
+            $products = Product::join('best_seller_products','products.id','best_seller_products.product_id')->join('categories', 'categories.id', '=', 'products.category_id')
+                ->rightJoin('prices','products.id','prices.product_id')
+                ->select('products.*')
+                ->where('category_type_id', 1)->groupBy('products.id')->get();
+
+
         }
         return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders'));
 
@@ -208,7 +216,7 @@ class PrincipalController extends Controller
     public function resumenCompra()
     {
         $auth = Auth::user();
-        $user = User::where('id',1)->first();
+        $user = User::where('id',$auth->id)->first();
         $cliente =$user->client;
         $carrito = Session::get('cart'); 
 
