@@ -2249,3 +2249,20 @@ blog
   font-weight: 700;
 
 }
+.titulo-memoral{
+  padding: 20px 5px;
+}
+.titulo-memoral h3{
+  color: #6B9400;
+  font-weight: 700;
+  font-size: 40px;
+}
+.texto-memoral p{
+  color: #000;
+  font-size: 18px;
+  text-align: justify;
+  padding: 10px 0;
+}
+.conta{
+  display: none;
+}
