@@ -12,9 +12,8 @@
             <!--datos comrador -->
                 <div class="date-comprador col-md-12">
                 <h4>1. Datos del comprador.</h4>
-                
-                    
-                        <div class="col-md-6 seccion-datos">
+                @if($cliente)
+                    <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
 
                                <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" value="{{$cliente->nombres}}">
@@ -27,7 +26,7 @@
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c">
+                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}>
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
@@ -35,6 +34,32 @@
                                <input type="text" name="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
                            </div> 
                         </div>
+                @else
+                <div class="col-md-6 seccion-datos">
+                           <div class="form-group date-user">
+
+                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" value="">
+                           </div> 
+                        </div>
+                        <div class="col-md-6 seccion-datos">
+                           <div class="form-group date-user">
+                               <input type="text" name="apellidosComprador" class="form-control" placeholder="Apellidos" value="">
+                           </div> 
+                        </div>
+                        <div class="col-md-6 seccion-datos">
+                           <div class="form-group date-user">
+                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c">
+                           </div> 
+                        </div>
+                        <div class="col-md-6 seccion-datos">
+                           <div class="form-group date-user">
+                               <input type="text" name="celularComprador" class="form-control" placeholder="Teléfono" value="">
+                           </div> 
+                        </div>
+                @endif
+                
+                    
+                        
                         
                     
                     
