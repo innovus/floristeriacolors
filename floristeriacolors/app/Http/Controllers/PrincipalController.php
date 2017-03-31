@@ -205,6 +205,31 @@ class PrincipalController extends Controller
         
         return View('plantillas.conocenos');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function arbolesMemorales()
+    {
+        
+        return View('plantillas.arbolesMemorales');
+    }
+
+      /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function politicas()
+    {
+        
+        return View('plantillas.politicas');
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *
