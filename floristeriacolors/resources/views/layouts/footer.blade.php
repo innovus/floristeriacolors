@@ -32,7 +32,7 @@
                                 <li><a href="#">Políticas de Privacidad y Devolución</a></li>
                                 <li><a href="/contacto">Contactanos</a></li>
 
-                                <strong id="cantidad" class="conta">0</strong>
+                                <strong id="cantidad" class="">0</strong>
                             </ul>
                         </div>
                     </div>

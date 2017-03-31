@@ -84,14 +84,7 @@
                  <div class="cantidad-arreglo">
                     <p class="text-cantidad">Tamaño:</p> 
                     {!!Form::select('selectTamaño',$producto->prices->pluck('tamaño','precio'),null,['class'=>'tamaño-arreglo','id'=>'selectTamaño', 'onchange'=> 'changeFunc();'])!!} 
-                    <!--
-
-                    <select class="tamaño-arreglo"  id="selectTamaño" onchange="changeFunc();">
-                        <option  value="120000">Grande</option>
-                        <option  value="150000">mediano</option>
-                        <option  value="170000">pequeño</option>
-                    </select>
-                    -->
+                    
                 </div>
                 <div class="detalles-arreglo">
                     <h3>Si quieres sorprender en grande.. <strong>Agrega un detalle.!</strong></h3>
@@ -115,7 +108,7 @@
                   @foreach($category->products_with_price() as $product)
                     
                             <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
-                                <div class="detalle-desc">                                   
+                                <div class="detalle-desc text-center">                                   
                                          <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
                                          <input type="hidden" value="{{$product->imagen}}" id="img{{$product->id}}">
                                          <input type="hidden" value="sinTamaño" id="tamDeta">
@@ -126,7 +119,9 @@
                                         </div>
 
                                           <input type="hidden" value="{{$product->nombre}}" id="nombreDetalle{{$product->id}}" name="">
+                                          <h5>{{$product->nombre}}</h5>
                                           <h3><strong> {{number_format($product->prices->first()->precio)}}</strong></h3>
+
                                           <button onclick="agregarDetalle({{$product->id}})" class="btn btn-success form-control">AGREGAR</button>
                                           
                                 </div>
