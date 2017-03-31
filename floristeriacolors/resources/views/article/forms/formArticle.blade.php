@@ -23,7 +23,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group ">
                                         {!!Form::label('Escoge una imagen')!!}
-                                            <input type="file" id="files" class="form-control" name="files[]" />
+                                           {!!Form::file('imagen',['class'=>'form-control'])!!} 
                                             
                                       
                                         </div>
@@ -31,7 +31,7 @@
                                     </div>
                                     <div class="col-md-6">
                                       <div class="form-group text-center"  id="list">
-                                        <img src="/img/arreglos/10Alegria.jpg" style="width: 500px;" class="img-responsive">
+                                        <img src="/img/arreglos/{{$article->imagen}}" style="width: 500px;" class="img-responsive">
 
                                       </div>
                                     </div>
