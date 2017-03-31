@@ -70,6 +70,10 @@ class PrincipalController extends Controller
         $categories = Category::where('category_type_id', 1)->get();
         $ocasiones = Occasion::All();
         $sliders = Slider::all();
+        $productosRandom = Product::join('categories', 'categories.id', '=', 'products.category_id')
+                ->rightJoin('prices','products.id','prices.product_id')
+                ->select('products.*')
+                ->where('category_type_id', 1)->groupBy('products.id')->get()->random(4)->all(); 
         if($filtro == 'categorias'){
             
             $categoria = Category::find($id);
@@ -98,7 +102,7 @@ class PrincipalController extends Controller
 
 
         }
-        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders'));
+        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders','productosRandom'));
 
         
        // return View('plantillas.categoriaSeleccionada');
@@ -123,6 +127,10 @@ class PrincipalController extends Controller
     {
         $categories = Category::where('category_type_id', 1)->get();
         $ocasiones = Occasion::All();
+         $productosRandom = Product::join('categories', 'categories.id', '=', 'products.category_id')
+                ->rightJoin('prices','products.id','prices.product_id')
+                ->select('products.*')
+                ->where('category_type_id', 1)->groupBy('products.id')->get()->random(4)->all(); 
 
 
         $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
@@ -131,7 +139,7 @@ class PrincipalController extends Controller
         $nombre = "Arreglos";
         $sliders = Slider::all();
             
-        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders'));
+        return View('plantillas.categoriaSeleccionada',compact('categories','ocasiones','products','nombre','sliders','productosRandom'));
 
         
        // return View('plantillas.categoriaSeleccionada');

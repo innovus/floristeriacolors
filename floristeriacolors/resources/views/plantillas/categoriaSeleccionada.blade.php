@@ -53,9 +53,11 @@
                             <div class="col-md-7">
                                 <h5><strong>Floristeria Colors</strong>/{{$nombre}}</h5>
                             </div>
+                            <!--
                             <div class="col-md-5">
                                 <h5><strong>Ordenar por: </strong><a href="">Todos</a>|<a href="">Menos precio</a>|<a href="">Mayor precio</a></h5>
                             </div>
+                            -->
                             
                           </div>
                      </div>
@@ -120,58 +122,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                  <!-- un arreglo -->
+                @foreach($productosRandom as $productoRandom)
+                 <!-- un arreglo -->
                     <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
                         <div class="service-desc">
-                           <img src="/img/arreglos/mi corazon.jpg" class="img-responsive">
-                              <h3><strong>Rosas!</strong></h3>
-                              <h4>$40.000</h4>
+                           <img src="/img/arreglos/{{$productoRandom->imagen}}" class="img-responsive">
+                              <h3><strong>{{$productoRandom->nombre}}</strong></h3>
+                              <h4>${{number_format($productoRandom->prices->first()->precio)}}</h4>
                             <div class="ver-boton">
-                              <a href="/arregloSeleccionado/2" class=" btn-ver form-control">VER</a>
+                              <a href="/arregloSeleccionado/{{$productoRandom->id}}" class=" btn-ver form-control">VER</a>
                             </div>  
                         </div>
                         
                     </div>
                   <!-- fin un arreglo -->
-                    <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/27MI-DETALLE.jpg" class="img-responsive">
-                              <h3><strong>Rosas!</strong></h3>
-                              <h4>$40.000</h4>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/1" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                      <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/AMANECER2.jpg" class="img-responsive">
-                              <h3><strong>Rosas!</strong></h3>
-                              <h4>$40.000</h4>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/3" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
-                  <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
-                        <div class="service-desc">
-                           <img src="/img/arreglos/AMANECER2.jpg" class="img-responsive">
-                              <h3><strong>Rosas!</strong></h3>
-                              <h4>$40.000</h4>
-                            <div class="ver-boton">
-                              <a href="/arregloSeleccionado/3" class=" btn-ver form-control">VER</a>
-                            </div>  
-                        </div>
-                        
-                    </div>
-                  <!-- fin un arreglo -->
+                @endforeach
+                 
+                   
                                          
                 </div>
             </div>
