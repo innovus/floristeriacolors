@@ -2,15 +2,12 @@
                     <h3>MI INFORMACIÓN</h3>
                     <div class="col-md-6 col-md-offset-3 date-user">
                     <!-- datos-->
+                        {!!Form::text('identificacion',null,['class'=>'form-control','placeholder'=>'Número de identificacion'])!!}
+
                         {!!Form::text('nombres',null,['class'=>'form-control','placeholder'=>'Nombres'])!!}
                         {!!Form::text('apellidos',null,['class'=>'form-control','placeholder'=>'Apellidos'])!!}
-                        <div class="col-md-6 seccion-datos ">
-                           <div class="form-group date-user jf-date">
-                        {!!Form::text('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha de Nacimiento'])!!}
-                               
-                           </div>
-                        </div>
-                       
+                        {!!Form::date('fecha_nacimiento',null,['class'=>'form-control','placeholder'=>'Fecha nacimiento 1989-04-18'])!!}
+                                               
                         {!!Form::text('celular',null,['class'=>'form-control','placeholder'=>'Celular'])!!}
                         {!!Form::text('direccion',null,['class'=>'form-control','placeholder'=>'Direccion'])!!}
                         {!!Form::hidden('user_id',$user->id)!!}

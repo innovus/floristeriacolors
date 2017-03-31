@@ -14,7 +14,7 @@
 
 @endif
 
-<div class="col-md-10">
+<div class="col-md-10 col-md-offset-1">
     <div class="card">
         <div class="header">
             <h4 class="title">MIS PRODUCTOS REGISTRADOS</h4>
@@ -36,7 +36,8 @@
 					<td>{{$product->nombre}}</td>
 					<td>{{$product->category->name}}</td>
 					<td>{{$product->descripcion}}</td>
-					<td><img class="img-responsive" style="width: 500px;" src="/img/arreglos/{{$product->imagen}}"></td>
+					<td><img class="img-responsive" src="/img/arreglos/{{$product->imagen}}">
+                    </td>
 
 					<td>
 					<a href="/admin/productos/{{$product->id}}/edit" class="btn btn-success"><span class="fa fa-pencil fa-1x"></span></a>

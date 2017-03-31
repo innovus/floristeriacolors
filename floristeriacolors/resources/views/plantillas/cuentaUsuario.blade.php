@@ -22,7 +22,7 @@
                 <div class="col-md-4  text-center">
                     <div class="item-panel">                      
                         <span class="fa fa-plus fa-3x"></span>
-                        <h4><a href="/realizarArreglo">NUEVA COMPRA</a></h4>
+                        <h4><a href="/arreglos">NUEVA COMPRA</a></h4>
                         <p>
                             Regala felicidad a una persona Hoy.!
                             Ven y escoge el mejor regalo.

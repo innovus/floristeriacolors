@@ -13,7 +13,7 @@
 @endif
 
 
-<div class="col-md-8">
+<div class="col-md-8 col-md-offset-2">
     <div class="card">
         <div class="header">
             <h4 class="title">MIS PRECIOS REGISTRADOS</h4>
