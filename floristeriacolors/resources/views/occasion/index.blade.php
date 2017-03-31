@@ -38,7 +38,7 @@
         <div class="content">
         <script>
     $(document).ready(function(){
-        $('#empresa_id').change(function(){
+        $('#occasion_id').change(function(){
             $.get('/dropdown/'+$(this).val(),
             function(data) {
                 console.log(data)
@@ -102,19 +102,12 @@
 
                         {{ Form::open() }}
                         {!!Form::label('Ocasion','Escoge la ocasion:')!!}
-                            {!!Form::select('empresa_id',$occasions,null,['class'=>'form-control', 'id' =>'empresa_id' ])!!}  
+                            {!!Form::select('occasion_id',$occasions,null,['class'=>'form-control', 'id' =>'occasion_id' ])!!}  
                         <br>
-                        <select id="proceso_id" name="proceso_id">
-                            <option>Debe escoger una empresa primero</option>
-                        </select>
                         {{ Form::close()}}
 
 
-                            {!!Form::label('Ocasion','Escoge la ocasion:')!!}
-                            {!!Form::select('occasion_id',$occasions,null,['class'=>'form-control'])!!}
-
-                         <!--   {!!Form::label('Product','Escoge el producto:')!!}
-                            {!!Form::select('product_id',$products,null,['class'=>'form-control'])!!}-->
+                          
                         </div>
                         <div class="form-group">
                             <form>
@@ -126,15 +119,6 @@
                                   <div class="overSelect"></div>
                                 </div>
                                 <div id="checkboxes">
-                                @foreach($products as $product)
-
-
-                                    <label for="one" class="form-control">
-                                        <input type="checkbox" id="" />{{$product->nombre}}
-                                    </label>
-                                    
-
-                                @endforeach
                                   
                                 </div>
                               </div>
