@@ -38,17 +38,17 @@
             <div class="container">
                 <div class="row" >
 
-                    <div class="col-md-7">
+                    <div class="col-md-6 col-md-offset-3">
                         <img src="img/medios.png" class="img-responsive">
                     </div>
-                    <div class="col-md-5 newsletter">
+                    <!--<div class="col-md-5 newsletter">
                         <h3>NEWSLETTER</h3>
                         <p>
                             Suscribete a nuestro newsletter y recibe importantes descuentos!
                         </p><br>
                         <input type="text" name="" placeholder="Tu correo electrónico">
                         <button class="btnsusc">Suscribirse</button>
-                    </div>
+                    </div>-->
                 </div>
             </div>
 

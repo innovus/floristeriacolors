@@ -103,7 +103,7 @@
 
                   @foreach($categories as $category)
                   
-                    <div role="tabpanel" class="tab-pane active" id="{{$category->name}}">
+                    <div role="tabpanel" class="tab-panel active" id="{{$category->name}}">
                   
                   @foreach($category->products_with_price() as $product)
                     

@@ -29,10 +29,10 @@
                                 <li><a href="/conocenos">Nosotros</a></li>
                                 <li><a href="https://www.facebook.com/Floristeria-Colors-826542960800106/?fref=ts">Facebook</a></li>
                                 <li><a href="/blog">Nuestro Blog</a></li>
-                                <li><a href="#">Políticas de Privacidad y Devolución</a></li>
+                                <li><a href="/politicas">Términos y condiciones</a></li>
                                 <li><a href="/contacto">Contactanos</a></li>
 
-                                <strong id="cantidad" class="">0</strong>
+                                <strong id="cantidad" class="conta">0</strong>
                             </ul>
                         </div>
                     </div>
