@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->sub}}">
+                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
