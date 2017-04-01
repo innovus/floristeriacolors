@@ -26,7 +26,7 @@
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}>
+                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->sub}}>
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
@@ -130,7 +130,7 @@
                     </div>
                 </div>
                 <div class=" col-md-12" id="boton-final">
-                    <input  type='submit' class='btn btn-primary form-control'/>
+        
                 </div>
             {!!Form::close()!!}
                 
@@ -851,9 +851,7 @@
                        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
                        document.getElementById("boton-final").innerHTML="<a href='/arreglos' class='btn btn-primary form-control'>REGRESAR</a>"
                     }else{
-
-/*
-                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' />";*/
+                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' />";
                     }
 
                     document.getElementById("canasta").innerHTML="";
