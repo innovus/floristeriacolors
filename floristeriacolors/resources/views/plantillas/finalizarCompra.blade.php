@@ -44,7 +44,7 @@
                           <h5> <strong>Nombre:</strong>{{$dataCart["nombresComprador"]}} {{$dataCart["apellidosComprador"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Correo:</strong>sr_jhonf@hotmail.com</h5>  
+                          <h5> <strong>Correo:</strong>{{$correo}}</h5>  
                         </div>
                         <div class="col-md-12">
                           <h5> <strong>Teléfono:</strong>{{$dataCart["celularComprador"]}}</h5>  

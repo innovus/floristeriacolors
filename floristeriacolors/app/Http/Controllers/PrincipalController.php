@@ -337,6 +337,7 @@ class PrincipalController extends Controller
         $dataCart = Session::get('dataCart');
         $dataCart = json_encode($dataCart);
         $dataCart = json_decode($dataCart,true);
+        $correo = Auth::user()->email;
 
         $nombre = $request->input('nombresDestinatario');
         $array = ["nombresdestinatario" => $nombre];
@@ -350,7 +351,7 @@ class PrincipalController extends Controller
 
 
         //$cart = Session::get('cart');
-        return view('plantillas.finalizarCompra')->with('dataCart',$dataCart);
+        return view('plantillas.finalizarCompra',compact('dataCart','correo'));
         
     }
     public function getDataCart ()
