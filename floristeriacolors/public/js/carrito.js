@@ -42,11 +42,15 @@ function verCarrito(arrayCarrito){
             
              arrayCarrito = data;
              arrayFinal = arrayCarrito;
-             var cantidadProductosEnCarrito=0;
+            var cantidadProductosEnCarrito=0;
+            var puntosr=0;
                 for(i=0;i<arrayFinal.length;i++){
-                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-                console.log("array");
+                     cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                    puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
+
                 }
+            var puntos = puntosr/100;
+            document.getElementById("puntos").innerHTML=puntos;
             /*pa el subtotal*/
             var subTotal=0;
             for(i=0; i<arrayFinal.length;i++){
@@ -118,13 +122,18 @@ $("#LookCar2").click(function(arrayCarrito){
         url: "/carroVS",
         success:function(data) {
             
-             arrayCarrito = data;
-             arrayFinal = arrayCarrito;
-             var cantidadProductosEnCarrito=0;
+            arrayCarrito = data;
+            arrayFinal = arrayCarrito;
+            var cantidadProductosEnCarrito=0;
+            var puntosr=0;
                 for(i=0;i<arrayFinal.length;i++){
-                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-                console.log("array");
+                     cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                    puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
+
                 }
+            var puntos = puntosr/100;
+            document.getElementById("puntos").innerHTML=puntos;
+
             /*pa el subtotal*/
             var subTotal=0;
             for(i=0; i<arrayFinal.length;i++){
@@ -161,11 +170,11 @@ $("#LookCar2").click(function(arrayCarrito){
 
 
 /*--------------------------*/
-var subTotal=0;
-                    for(i=0; i<arrayCarrito.length;i++){
-                        var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
-                        subTotal=subTotal+subt;
-                    }
+    var subTotal=0;
+        for(i=0; i<arrayCarrito.length;i++){
+            var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
+            subTotal=subTotal+subt;
+        }
 
   if (subTotal==0) {
         document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
@@ -209,13 +218,7 @@ function AgregarProducto(){
     var valorObjeto = parseInt(nuevaCadena);
     var cano = parseInt(cantidadProducto);  
 
-
-
-
-    //averiguamos si ya hay un producto agregado
-
-   // console.log(arrayCarrito);
-    
+   //averiguamos si ya hay un producto agregado    
     if(arrayCarrito.length==0){
         //Insertamos objeto en Array:
         arrayCarrito.push(
@@ -275,15 +278,17 @@ function AgregarProducto(){
 
 
     /*--------------------------------------------------------*/     
-    //console.log("Array despues de añadir este objeto: ");
     arrayFinal=arrayCarrito;
-    //console.log(arrayFinal);
-
-    ActualizarVS()
+    ActualizarVS();
     var cantidadProductosEnCarrito=0;
+    var puntosr=0;
         for(i=0;i<arrayFinal.length;i++){
             cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+            puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
+
         }
+    var puntos = puntosr/100;
+    document.getElementById("puntos").innerHTML=puntos;
     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
     mensaje();    
 
@@ -383,12 +388,15 @@ function agregarDetalle(cod){
     ActualizarVS()
     
     var cantidadProductosEnCarrito=0;
+    var puntosr=0;
         for(i=0;i<arrayFinal.length;i++){
             cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-            //console.log("array");
+            puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
 
         }
-   document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
+    var puntos = puntosr/100;
+    document.getElementById("puntos").innerHTML=puntos;
+    document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;  
     mensaje(); 
     document.getElementById("btn-modales").innerHTML='<a href="" class="btn btn-default" data-dismiss="modal">Cancelar</a>'+
             '<a href="/resumenCompra" class="btn btn-primary">Confirmar Compra</a>';
@@ -397,11 +405,12 @@ function agregarDetalle(cod){
 
 function quitarProducto(idOb,valors){
     arrayFinal=arrayCarrito;
-   var cantidadProductosEnCarrito=0;
+    var cantidadProductosEnCarrito=0;
         for(i=0;i<arrayFinal.length;i++){
             cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
            
         }
+
     //aqui en codigo arreglo esta estatico faltaria ir por el codigo real 
     var codigoArreglo=idOb;
     var valorProducto=valors;
@@ -455,6 +464,7 @@ function quitarProducto(idOb,valors){
                     arrayCarrito.splice(i,1);
 
                     /*pa el subtotal*/
+
                     var subTotal=0;
                     for(i=0; i<arrayFinal.length;i++){
                         var subt=(arrayFinal[i].cantidadObjeto)*arrayFinal[i].valorObjeto;
@@ -480,6 +490,8 @@ function quitarProducto(idOb,valors){
 
 
                     document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    var puntos = subTotal/100;
+                    document.getElementById("puntos").innerHTML=puntos;
                     document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
                     /*fin subtotal*/
 
@@ -490,7 +502,7 @@ function quitarProducto(idOb,valors){
     }/*end for*/
     
     /*pa el subtotal*/
-        //alert("loca")
+    
                     var subTotal=0;
                     for(i=0; i<arrayCarrito.length;i++){
                         var subt=(arrayCarrito[i].cantidadObjeto)*arrayCarrito[i].valorObjeto;
@@ -520,6 +532,8 @@ function quitarProducto(idOb,valors){
 
 
                     document.getElementById("subtotalCarrito").innerHTML="$ "+subTotal;
+                    var puntos = subTotal/100;
+                    document.getElementById("puntos").innerHTML=puntos;
                     /*fin subtotal*/
 
     console.log("Array despues de eliminar el prodcuto: ");
@@ -531,10 +545,9 @@ function quitarProducto(idOb,valors){
 
 function quitarDetalle(cod){
     var cantidadProductosEnCarrito=0;
-                for(i=0;i<arrayFinal.length;i++){
-                cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
-                console.log("array");
-                }
+    
+
+
     var valorDetalle =document.getElementById(cod).value;
     var cantDe=document.getElementById("cantDe"+cod).value;  
     var codDeatlle= cod;
@@ -553,8 +566,15 @@ function quitarDetalle(cod){
     }
     console.log("Array despues de eliminar el detalle: ");
     ActualizarVS()
-    console.log(arrayCarrito);
+      var puntosr=0;
+        for(i=0;i<arrayCarrito.length;i++){
+            
+            puntosr=puntosr+(arrayCarrito[i].cantidadObjeto*arrayCarrito[i].valorObjeto);
+        }
+    var puntos = puntosr/100;
+    document.getElementById("puntos").innerHTML=puntos;
     activarBoton(cantidadProductosEnCarrito);
+
 }
 
 
@@ -615,7 +635,16 @@ $(document).ready(function(){
                 arrayFinal = arrayCarrito;
                 verCarrito(arrayCarrito);
                 //alert("si hay")
-                console.log(arrayCarrito)
+                //console.log(arrayCarrito)
+                 var cantidadProductosEnCarrito=0;
+            var puntosr=0;
+                for(i=0;i<arrayFinal.length;i++){
+                     cantidadProductosEnCarrito=cantidadProductosEnCarrito+arrayFinal[i].cantidadObjeto;
+                    puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
+
+                }
+            var puntos = puntosr/100;
+            document.getElementById("puntos").innerHTML=puntos;
             }
             document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
             //console.log(arrayFinal);

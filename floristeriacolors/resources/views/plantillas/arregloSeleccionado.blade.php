@@ -38,7 +38,7 @@
             <div class="col-md-12 ">
                 <div class="row puntosGanados">
                     <div class="col-md-4 col-sm-6 cuadro text-center">
-                        <p><h5>PUNTOS POR COMPRA <strong>1995</strong></h5></p>
+                        <p><h5>PUNTOS POR COMPRA <strong id="puntos">0</strong></h5></p>
                         
 
                     </div>
