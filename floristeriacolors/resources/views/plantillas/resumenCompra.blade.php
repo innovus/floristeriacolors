@@ -16,44 +16,44 @@
                     <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
 
-                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" value="{{$cliente->nombres}}">
+                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" id="nombresComprador" value="{{$cliente->nombres}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="apellidosComprador" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
+                               <input type="text" name="apellidosComprador" id="apellidosComprador" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}">
+                               <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
+                               <input type="text" name="celularComprador"  id="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
                            </div> 
                         </div>
                 @else
                 <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
 
-                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" value="">
+                               <input type="text" name="nombresComprador"  id="nombresComprador"class="form-control" placeholder="Nombres Completos" value="">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="apellidosComprador" class="form-control" placeholder="Apellidos" value="">
+                               <input type="text" name="apellidosComprador" id="apellidosComprador" class="form-control" placeholder="Apellidos" value="">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" class="form-control" placeholder="ID/C.c">
+                               <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="celularComprador" class="form-control" placeholder="Teléfono" value="">
+                               <input type="text" name="celularComprador" id="celularComprador" class="form-control" placeholder="Teléfono" value="">
                            </div> 
                         </div>
                 @endif
@@ -73,23 +73,23 @@
                     
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="nombresDestinatario" class="form-control" placeholder="Nombres Completos">
+                               <input type="text" name="nombresDestinatario" id="nombresDestinatario" class="form-control" placeholder="Nombres Completos">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="direccionDestinatario" class="form-control" placeholder="Dirección. ej: Calle 21 # 24-63 Centro">
+                               <input type="text" name="direccionDestinatario" id="direccionDestinatario" class="form-control" placeholder="Dirección. ej: Calle 21 # 24-63 Centro">
                            </div> 
                         </div>
                         <div class="col-md-6 seccion-datos">
                            <div class="form-group date-user">
-                               <input type="text" name="telefonoDestinatario" class="form-control" placeholder="Teléfono">
+                               <input type="text" name="telefonoDestinatario" class="form-control" id="telefonoDestinatario" placeholder="Teléfono">
                            </div> 
                         </div>
                         
                         <div class="col-md-6 seccion-datos ">
                            <div class="form-group date-user jf-date">
-                               <input type="text" name="fechaEntrega" class="form-control" placeholder="Fecha de entrega">
+                               <input type="text" name="fechaEntrega" id="fechaEntrega" class="form-control" placeholder="Fecha de entrega">
                            </div>
                         </div>
                       
@@ -102,6 +102,13 @@
                 <h4>3. Escribe el mensaje para tu destinatario.</h4>
                      <div class="col-md-12">
                         <textarea name = "mensaje" placeholder="Escribe aquí tu mensaje" id="texta" class="form-control">
+                        </textarea>
+                     </div>
+                </div>
+                <div class="date-comprador col-md-12">
+                    <h4>3. Escribe una observación a tu compra.</h4>
+                     <div class="col-md-12">
+                        <textarea name = "mensaje" placeholder="hora de entrega, si deseas que tu entrega se haga con remitente anónimo, sugerencia  tu arreglo, etc." id="textObservacion" class="form-control">
                         </textarea>
                      </div>
                 </div>
@@ -128,10 +135,9 @@
                     <div class="col-md-3">
                     <a href="#Graduaion" data-toggle="modal"><span class="fa fa-tag fa-1x"></span> <strong>Graduaión</strong></a>
                     </div>
+                    
                 </div>
-                <div class=" col-md-12" id="boton-final">
-        
-                </div>
+                
             {!!Form::close()!!}
                 
             </div>
@@ -159,6 +165,12 @@
             </div>
 
             <!--fin carrito de compras -->
+        </div>
+        <div class="row">
+            <div class=" col-md-12" id="boton-final">
+        
+            </div>
+            
         </div>
         
     </div>
@@ -851,7 +863,7 @@
                        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
                        document.getElementById("boton-final").innerHTML="<a href='/arreglos' class='btn btn-primary form-control'>REGRESAR</a>"
                     }else{
-                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' />";
+                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' onclick='verificarDatos()' />";
                     }
 
                     document.getElementById("canasta").innerHTML="";
@@ -921,5 +933,55 @@
 
 document.getElementById("car").innerHTML="";
 }
+
+function verificarDatos(){
+
+
+    var nombresComprador = document.getElementById("nombresComprador").value;
+    var apellidosComprador = document.getElementById("apellidosComprador").value;
+    var identificacionComprador = document.getElementById("identificacionComprador").value;
+    var celularComprador = document.getElementById("celularComprador").value;
+    
+
+    var nombresDestinatario = document.getElementById("nombresDestinatario").value;
+    var direccionDestinatario = document.getElementById("direccionDestinatario").value;
+    var telefonoDestinatario = document.getElementById("telefonoDestinatario").value;
+    var fechaEntrega = document.getElementById("fechaEntrega").value;
+    var texta = document.getElementById("texta").value;
+    var textObservacion = document.getElementById("textObservacion").value;
+
+    if (nombresComprador=="" || apellidosComprador=="" || identificacionComprador=="" || celularComprador=="") {
+
+        
+            mensajeDatos();
+    }else{
+        if (nombresDestinatario=="" || direccionDestinatario=="" || telefonoDestinatario=="" || fechaEntrega=="" || texta=="" || textObservacion=="" ) {
+            
+            mensajeDatos();
+        }else{
+            $("#alerta").fadeOut(1900);
+            alert("esta lito para confirmar")
+        }
+    }
+
+
+}
+
+function mensajeDatos(){
+
+  $("#alerta").fadeIn();   
+}
+function cerrarAlerta(){
+    $("#alerta").fadeOut(1900);
+}
+
 </script>
+<div class="add-circulo2" id="alerta">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <h2>Faltan datos por llenar, por favor completalos.</h2>
+            <input type="button" value="cerrar" class="btn btn-danger form-control" onclick="cerrarAlerta()" >
+        </div>
+    </div>        
+</div>
 @stop
