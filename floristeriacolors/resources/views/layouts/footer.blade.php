@@ -13,7 +13,7 @@
                                     <a href="#" class="fb" > <span class="fa fa-facebook-official fa-3x"></span> </a>
                                     <a href="#" class="insta" > <span class="fa fa-instagram fa-3x"></span> </a>
                                     <a href="#" class="tw" > <span class="fa fa-twitter-square fa-3x"></span> </a>
-                                    <a href="#" class="youtube"> <span class="fa fa-youtube-square fa-3x"></span> </a>
+                                    <a href="#" class="youtube"> <span class="fa fa-pinterest-square fa-3x"></span> </a>
 
                                 </li>
                                 

@@ -101,15 +101,16 @@
                 <div class="date-comprador col-md-12">
                 <h4>3. Escribe el mensaje para tu destinatario.</h4>
                      <div class="col-md-12">
-                        <textarea name = "mensaje" placeholder="Escribe aquí tu mensaje" id="texta" class="form-control">
-                        </textarea>
+                        <div class="form-group">
+                            <textarea name = "mensaje" placeholder="Escribe aquí tu mensaje" id="texta" class="form-control" ></textarea>
+                        </div>
+                        
                      </div>
                 </div>
                 <div class="date-comprador col-md-12">
                     <h4>3. Escribe una observación a tu compra.</h4>
                      <div class="col-md-12">
-                        <textarea name = "mensaje" placeholder="hora de entrega, si deseas que tu entrega se haga con remitente anónimo, sugerencia  tu arreglo, etc." id="textObservacion" class="form-control">
-                        </textarea>
+                        <textarea name = "mensaje" placeholder="hora de entrega, si deseas que tu entrega se haga con remitente anónimo, sugerencia  tu arreglo, etc." id="textObservacion" class="form-control"></textarea>
                      </div>
                 </div>
                 <div class="col-md-12">
