@@ -11,7 +11,7 @@
         </div>
     </div>
 </div>
-<div class="col-md-4">
+<div class="col-md-8 col-md-offset-2">
     <div class="card">
         <div class="header">
             <h4 class="title">MI VIDEO EN LA PAGINA AYUDA</h4> 
@@ -37,94 +37,7 @@
         </div>
     </div>
 </div>
-<!--link para facebook -->
-<div class="col-md-4">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">FACEBOOK</h4>
-           
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label>Link Facebook</label>
-                        <input type="tetxt" class="form-control" placeholder="link facebook" name="">
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--fin link para facebook -->
-<!--link para instagram -->
-<div class="col-md-4">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">INSTAGRAM</h4>
-           
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label>Link Instagram</label>
-                        <input type="tetxt" class="form-control" placeholder="link Instagram" name="">
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--fin link para instagram -->
-<!--link para skype -->
-<div class="col-md-4">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">SKYPE</h4>
-           
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label>Link Skype</label>
-                        <input type="tetxt" class="form-control" placeholder="link Skype" name="">
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--fin link para Skype -->
-<!--link para Pinterest -->
-<div class="col-md-4">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">PINTEREST</h4>
-           
-        </div>
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label>Link Pinterest</label>
-                        <input type="tetxt" class="form-control" placeholder="link Pinterest" name="">
-                    </div>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<!--fin link para Pinterest -->
+
  @foreach($sliders as $slider)
   <div class="col-md-8 col-md-offset-2">
     <div class="card">
