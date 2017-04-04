@@ -131,8 +131,7 @@ $("#LookCar2").click(function(arrayCarrito){
                     puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
 
                 }
-            var puntos = puntosr/100;
-            document.getElementById("puntos").innerHTML=puntos;
+     
 
             /*pa el subtotal*/
             var subTotal=0;
@@ -642,8 +641,7 @@ $(document).ready(function(){
                     puntosr=puntosr+(arrayFinal[i].cantidadObjeto*arrayFinal[i].valorObjeto);
 
                 }
-            var puntos = puntosr/100;
-            document.getElementById("puntos").innerHTML=puntos;
+            
             }
             document.getElementById("cantidad").innerHTML=cantidadProductosEnCarrito;
             //console.log(arrayFinal);
