@@ -536,9 +536,9 @@ function quitarProducto(idOb,valors){
                     document.getElementById("puntos").innerHTML=puntos;
                     /*fin subtotal*/
 
-    console.log("Array despues de eliminar el prodcuto: ");
+    //console.log("Array despues de eliminar el prodcuto: ");
     ActualizarVS()
-    console.log(arrayCarrito);
+    //console.log(arrayCarrito);
     activarBoton(cantidadProductosEnCarrito);
 
 }
@@ -597,7 +597,7 @@ function mensaje(){
 }
 
 function ActualizarVS(){
-    console.log(JSON.stringify(arrayCarrito));
+    //console.log(JSON.stringify(arrayCarrito));
 
     $.ajax({
         type: "POST",
@@ -606,8 +606,7 @@ function ActualizarVS(){
         contentType: "json",
         processData: false,
         success:function(data) {
-            console.log(data);
-        
+             
         } 
     });
         
@@ -619,7 +618,7 @@ $(document).ready(function(){
         type: "GET",
         url: "/carroVS",
         success:function(data) {
-            console.log("despues de aaaaajax")
+           
              arrayCarrito = data;
              arrayFinal = arrayCarrito;
              var cantidadProductosEnCarrito=0;

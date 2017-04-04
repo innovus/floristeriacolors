@@ -4,95 +4,122 @@
 
 <section class="resumenCarrito">
     <div class="container"><br><br><br><br><br>
+    {!!Form::open(['route'=> 'dataCart', 'onsubmit'=>'return verificarDatos()', 'method'=>'POST'])!!}
         <div class="row">
             <!--Datos comprador y destinatario -->
             <div class="col-md-7">
-            {!!Form::open(['route'=> 'dataCart', 'method'=>'POST'])!!}
+            
             
             <!--datos comrador -->
                 <div class="date-comprador col-md-12">
                 <h4>1. Datos del comprador.</h4>
                 @if($cliente)
-                    <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
 
-                               <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" id="nombresComprador" value="{{$cliente->nombres}}">
+                            <input type="text" name="nombresComprador" class="form-control" placeholder="Nombres Completos" id="nombresComprador" value="{{$cliente->nombres}}">
+                        </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
+                            <input type="text" name="apellidosComprador" id="apellidosComprador" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
+                              <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}">
                            </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
-                               <input type="text" name="apellidosComprador" id="apellidosComprador" class="form-control" placeholder="Apellidos" value="{{$cliente->apellidos}}">
-                           </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c" value="{{$cliente->identificacion}}">
-                           </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
-                               <input type="text" name="celularComprador"  id="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
-                           </div> 
-                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
+                            <input type="text" name="celularComprador"  id="celularComprador" class="form-control" placeholder="Teléfono" value="{{$cliente->celular}}">
+                        </div> 
+                    </div>
+                </div>
+                    
+                       
+                        
+                      
                 @else
-                <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
 
-                               <input type="text" name="nombresComprador"  id="nombresComprador"class="form-control" placeholder="Nombres Completos" value="">
-                           </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
+                            <input type="text" name="nombresComprador"  id="nombresComprador" class="form-control" placeholder="Nombres Completos" value="">
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
                                <input type="text" name="apellidosComprador" id="apellidosComprador" class="form-control" placeholder="Apellidos" value="">
-                           </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
-                               <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c">
-                           </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
-                           <div class="form-group date-user">
-                               <input type="text" name="celularComprador" id="celularComprador" class="form-control" placeholder="Teléfono" value="">
-                           </div> 
-                        </div>
-                @endif
+                        </div> 
+                    </div>
+                </div>
                 
-                    
-                        
-                        
-                    
-                    
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
+                            <input type="text" name="identificacionComprador" id="identificacionComprador" class="form-control" placeholder="ID/C.c">
+                        </div> 
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group date-user">
+                               <input type="text" name="celularComprador" id="celularComprador" class="form-control" placeholder="Teléfono" value="">
+                        </div> 
+                    </div>   
+                </div>                    
+                @endif   
                 </div>
             <!--fin datos comrador -->
             <!--datos Destinatario -->
-            
-            
                 <div class=" col-md-12 date-comprador">
-                <h4>2. Datos del destinatario.</h4>
-                    
-                        <div class="col-md-6 seccion-datos">
+                    <div class="row">
+                        <h4>2. Datos del destinatario.</h4>
+                    </div>
+                        
+                    <div class="row">
+                        <div class="col-md-12 ">
                            <div class="form-group date-user">
                                <input type="text" name="nombresDestinatario" id="nombresDestinatario" class="form-control" placeholder="Nombres Completos">
                            </div> 
                         </div>
-                        <div class="col-md-6 seccion-datos">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12 ">
                            <div class="form-group date-user">
                                <input type="text" name="direccionDestinatario" id="direccionDestinatario" class="form-control" placeholder="Dirección. ej: Calle 21 # 24-63 Centro">
                            </div> 
-                        </div>
-                        <div class="col-md-6 seccion-datos">
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 ">
                            <div class="form-group date-user">
                                <input type="text" name="telefonoDestinatario" class="form-control" id="telefonoDestinatario" placeholder="Teléfono">
                            </div> 
                         </div>
-                        
-                        <div class="col-md-6 seccion-datos ">
+                    </div>
+                    <div class="row">
+                       <div class="col-md-12 ">
                            <div class="form-group date-user jf-date">
                                <input type="text" name="fechaEntrega" id="fechaEntrega" class="form-control" placeholder="Fecha de entrega">
                            </div>
-                        </div>
-                      
+                        </div> 
+                    </div>                       
                        
                     
                 </div>
@@ -139,7 +166,7 @@
                     
                 </div>
                 
-            {!!Form::close()!!}
+            
                 
             </div>
             <!--fin Datos comprador y destinatario -->
@@ -168,12 +195,12 @@
             <!--fin carrito de compras -->
         </div>
         <div class="row">
-            <div class=" col-md-12" id="boton-final">
+            <div class=" col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1" id="boton-final">
         
             </div>
             
         </div>
-        
+        {!!Form::close()!!}
     </div>
 </section>
 <!--ventanas modales de mensajes -->
@@ -864,7 +891,7 @@
                        document.getElementById("canasta").innerHTML="CARRITO DE COMPRAS VACIO";
                        document.getElementById("boton-final").innerHTML="<a href='/arreglos' class='btn btn-primary form-control'>REGRESAR</a>"
                     }else{
-                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra' onclick='verificarDatos()' />";
+                        document.getElementById("boton-final").innerHTML="<input  type='submit' class='btn btn-primary form-control' value='continuar con la compra'/>";
                     }
 
                     document.getElementById("canasta").innerHTML="";
@@ -936,7 +963,8 @@ document.getElementById("car").innerHTML="";
 }
 
 function verificarDatos(){
-
+    var ok = true;
+    var msg = "faltan datos por escribir. Completalos:\n";
 
     var nombresComprador = document.getElementById("nombresComprador").value;
     var apellidosComprador = document.getElementById("apellidosComprador").value;
@@ -954,16 +982,19 @@ function verificarDatos(){
     if (nombresComprador=="" || apellidosComprador=="" || identificacionComprador=="" || celularComprador=="") {
 
         
-            mensajeDatos();
-    }else{
-        if (nombresDestinatario=="" || direccionDestinatario=="" || telefonoDestinatario=="" || fechaEntrega=="" || texta=="" || textObservacion=="" ) {
-            
-            mensajeDatos();
-        }else{
-            $("#alerta").fadeOut(1900);
-            alert("esta lito para confirmar")
-        }
+           // mensajeDatos();
+           ok = false;
     }
+    if (nombresDestinatario=="" || direccionDestinatario=="" || telefonoDestinatario=="" || fechaEntrega=="" || texta=="" || textObservacion=="" ) {
+            
+            ok = false;
+            //mensajeDatos();
+    }
+
+    if(ok == false)
+    alert(msg);
+    return ok;
+    
 
 
 }
