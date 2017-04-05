@@ -14,7 +14,6 @@
                     
                     <th>Nombre</th>
                     <th>Apellidos</th>
-                    <th>Fecha de Nacimiento</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
                    
@@ -25,7 +24,6 @@
                        
                         <td>{{$cliente->nombres}}</td>
                         <td>{{$cliente->apellidos}}</td>
-                        <td>{{$cliente->fecha_nacimiento}}</td>
                         <td>{{$cliente->direccion}}</td>
                         <td>{{$cliente->celular}}</td>
                 </tr>
@@ -55,19 +53,25 @@
                 </thead>
                 <tbody>
                 <!--inicio un cliente-->
-                    <tr>
-                        <td>Jhon Frey</td>
-                        <td>10/10/1989</td>
-                        <td>3173187766</td>
-                    </tr>
+                @foreach($cumples as $cliente)
+                <tr>
+                        <td>{{$cliente->nombres}} {{$cliente->apellidos}}</td>
+                        <td>
+                        @php
+                        
+                        $fecha = DateTime::createFromFormat('Y-m-d', $cliente->cumpleanos);
+                        echo $fecha->format('d/m');
+                        @endphp
+                       
+                        </td>
+                        <td>{{$cliente->celular}}</td>
+                </tr>
+
+                @endforeach
+                    
                 <!-- finr un cliente -->
                 <!--inicio un cliente-->
-                    <tr>
-                       
-                        <td>Juan Carlos</td>
-                        <td>10/10/1989</td>
-                        <td>3173187766</td>
-                    </tr>
+                   
                 <!-- finr un cliente -->
                 
                 </tbody>

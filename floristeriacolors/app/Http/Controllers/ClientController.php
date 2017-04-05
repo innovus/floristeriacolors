@@ -4,6 +4,7 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Client;
+use Illuminate\Support\Facades\DB;
 
 use Session;
 use Redirect;
@@ -22,7 +23,18 @@ class ClientController extends Controller
     public function index()
     {
         $clientes = Client::All();   
-        return view('plantillas.listadoClientes',compact('clientes'));
+        $cumples = $movies = DB::select(
+            'select nombres, apellidos, celular, fecha_nacimiento, fecha_nacimiento + 
+            INTERVAL(YEAR(CURRENT_TIMESTAMP) - YEAR(fecha_nacimiento)) + 0 YEAR AS cumpleanos,
+            fecha_nacimiento + INTERVAL(YEAR(CURRENT_TIMESTAMP) - YEAR(fecha_nacimiento)) + 1 YEAR AS nextcumpleanos
+            FROM clients
+            where fecha_nacimiento is not null
+            ORDER BY CASE
+                WHEN cumpleanos >= CURRENT_TIMESTAMP THEN cumpleanos
+                ELSE nextcumpleanos
+            END');
+            
+        return view('plantillas.listadoClientes',compact('clientes', 'cumples'));
     }
 
     /**
