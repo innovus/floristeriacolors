@@ -92,8 +92,9 @@
                   <ul class="nav nav-tabs" role="tablist">
 
                     @foreach($categories as $category)
-                    <li role="presentation" >
-                            <a href="#{{$category->name}}" aria-controls="{{$category->name}}" role="tab" data-toggle="tab">{{$category->name}}</a>
+                        
+                        <li role="presentation">
+                            <a href="#{{$category->name}}"  aria-controls="{{$category->name}}" role="tab" data-toggle="tab">{{$category->name}}</a>
                         </li>
 
                     @endforeach
@@ -102,12 +103,17 @@
                   <div class="tab-content">
 
                   @foreach($categories as $category)
+                  @if ($category->name ==="Osos")
+                      <div role="tabpanel" class="tab-pane fade in active" id="{{$category->name}}">
+                  @else
+                       <div role="tabpanel" class="tab-pane" id="{{$category->name}}">
+                  @endif
                   
-                    <div role="tabpanel" class="tab-panel active" id="{{$category->name}}">
+                   
                   
-                  @foreach($category->products_with_price() as $product)
+                        @foreach($category->products_with_price() as $product)
                     
-                            <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms">
+                            <div class="col-md-4" data-wow-duration="500ms">
                                 <div class="detalle-desc text-center">                                   
                                          <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
                                          <input type="hidden" value="{{$product->imagen}}" id="img{{$product->id}}">
@@ -125,14 +131,9 @@
                                           <button onclick="agregarDetalle({{$product->id}})" class="btn btn-success form-control">AGREGAR</button>
                                           
                                 </div>
-                            </div>
-                             
-
-                            
+                            </div>       
                     @endforeach
-                     
                     </div>
-
                   @endforeach
                    </div>
 

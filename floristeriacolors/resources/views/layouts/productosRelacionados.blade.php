@@ -8,7 +8,7 @@
                    @foreach($productosRandom as $product)
 
                       <!-- un arreglo -->
-                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="500ms">      
+                    <div class="col-md-3 wow fadeInLeft" data-wow-duration="100ms">      
                         <div class="service-desc">
                            <img src="/img/arreglos/{{$product->imagen}}" class="img-responsive">
                               <h3><strong>{{$product->nombre}}</strong></h3>
