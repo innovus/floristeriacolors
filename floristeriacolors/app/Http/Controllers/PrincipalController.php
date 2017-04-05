@@ -339,11 +339,6 @@ class PrincipalController extends Controller
         $dataCart = json_decode($dataCart,true);
         $correo = Auth::user()->email;
 
-        $nombre = $request->input('nombresDestinatario');
-        $array = ["nombresdestinatario" => $nombre];
-        $array = json_encode($array);
-        $array = json_decode($array,true);
-
          //$dataCart =  Session::get('dataCart');
          //$dataCart = json_encode($dataCart);
          //$dataCart = json_decode($dataCart);

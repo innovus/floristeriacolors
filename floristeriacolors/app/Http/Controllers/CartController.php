@@ -3,6 +3,13 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Cart;
+use FloristeriaColors\Client;
+use FloristeriaColors\Detail;
+use FloristeriaColors\User;
+use Illuminate\Support\Facades\Auth;
+use Session;
+use Redirect;
 
 class CartController extends Controller
 {
@@ -34,6 +41,87 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
+
+        $dataCart = Session::get('dataCart');
+        $dataCart = json_encode($dataCart);
+        $dataCart = json_decode($dataCart,true);
+
+        $auth = Auth::user();
+        $user = User::where('id',$auth->id)->first();
+
+
+        $cart = new Cart;
+       // $cart->client_id = $request->input('cliente_id');
+        
+
+        $time = strtotime($dataCart["fechaEntrega"]);
+        $newformat = date('Y-m-d',$time);
+
+        $cart->fecha_compra=  new \DateTime();
+        $cart->fecha_entrega= $newformat;
+        $cart->mensaje= $dataCart["mensaje"];
+        $cart->observacion= $dataCart["observacion"];
+        $cart->de= $dataCart["nombresComprador"];
+        $cart->para= $dataCart["nombresDestinatario"];
+        $cart->direccion= $dataCart["direccionDestinatario"];
+        //$cart->observacion= $request->input('observacion');
+
+        $cliente = $this->getCliente($user,$dataCart);
+        $cliente->save();
+        $cart->client_id = $cliente->id;
+        $cart->save();
+
+        //empezamos a trabajar con los detalles
+
+        $details = Session::get('cart');
+        $details = json_encode($details);
+        $details = json_decode($details,true);
+
+        for ($i = 0; $i < count($details); $i++) {
+            //'cantidad','product_id','tamano','precio','cart_id'
+            $detail = new Detail;
+            $detail->cantidad =  $details[$i]["cantidadObjeto"];
+            $detail->product_id =  $details[$i]["idObjeto"];
+            $detail->tamano =  $details[$i]["tamaño"];
+            $detail->precio =  $details[$i]["valorObjeto"];
+            $detail->cart_id =  $cart->id;
+            $detail->save();
+
+            
+        }
+
+
+                            
+        
+        
+
+        Session::forget('cart');
+        Session::forget('dataCart');
+        return Redirect::to('/');
+
+
+      /*  if($user->client){
+            //existe el cliente
+
+            $cliente = Client::find($user->client->id);
+            $cliente->
+            $cliente->fill($request->all());
+            $cliente->save();
+
+        }else{
+            // no existe el cliente
+            
+            $cliente = new Client;
+            $cliente->nombres = $dataCart["nombresComprador"];
+            $cliente->apellidos =$dataCart["apellidosComprador"];
+            $cliente->celular =$dataCart["celularComprador"];
+            $cliente->identificacion =$dataCart["identificacionComprador"];
+            $cliente->user_id = $auth->id;
+           
+        }
+           
+        $cart->save();*/
+
         
     }
 
@@ -80,5 +168,33 @@ class CartController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getCliente(User $user, Array $dataCart){
+
+         if($user->client){
+            //existe el cliente
+
+            $cliente = Client::find($user->client->id);
+            $cliente->nombres = $dataCart["nombresComprador"];
+            $cliente->apellidos =$dataCart["apellidosComprador"];
+            $cliente->celular =$dataCart["celularComprador"];
+            $cliente->identificacion =$dataCart["identificacionComprador"];
+            return $cliente; 
+        
+
+        }else{
+            // no existe el cliente
+            
+            $cliente = new Client;
+            $cliente->nombres = $dataCart["nombresComprador"];
+            $cliente->apellidos =$dataCart["apellidosComprador"];
+            $cliente->celular =$dataCart["celularComprador"];
+            $cliente->identificacion =$dataCart["identificacionComprador"];
+            $cliente->user_id = $user->id;  
+            return $cliente;    
+
+        }
+
+
     }
 }

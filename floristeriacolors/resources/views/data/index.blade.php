@@ -1,9 +1,7 @@
 @extends('layouts.adminBase')
 
 @section('content')
-
-    <div class="col-md-8">
-    @if(Session::has('message'))
+@if(Session::has('message'))
 
 <div class="alert alert-success alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -11,6 +9,9 @@
   {{Session::get('message')}}</div>
 
 @endif
+
+    <div class="col-md-8">
+    
 
                         <div class="card">
                             <div class="header">
@@ -115,16 +116,18 @@
            
         </div>
         <div class="content">
+        {!!Form::model($data,['route'=>['datos.update',$data->id],'method'=>'PUT'])!!}
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Link Facebook</label>
-                        <input type="tetxt" class="form-control" placeholder="link facebook" name="">
+                        <input type="tetxt" class="form-control" placeholder="link facebook" name="facebook" value="{{$data->facebook}}">
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
             <div class="clearfix"></div>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>
@@ -137,16 +140,18 @@
            
         </div>
         <div class="content">
+        {!!Form::model($data,['route'=>['datos.update',$data->id],'method'=>'PUT'])!!}
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Link Instagram</label>
-                        <input type="tetxt" class="form-control" placeholder="link Instagram" name="">
+                        <input type="tetxt" class="form-control" placeholder="link Instagram" name="instagram" value="{{$data->instagram}}">
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
             <div class="clearfix"></div>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>
@@ -159,16 +164,18 @@
            
         </div>
         <div class="content">
+        {!!Form::model($data,['route'=>['datos.update',$data->id],'method'=>'PUT'])!!}
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Link Skype</label>
-                        <input type="tetxt" class="form-control" placeholder="link Skype" name="">
+                        <input type="tetxt" class="form-control" placeholder="link Skype" name="youtube" value="{{$data->youtube}}" >
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
             <div class="clearfix"></div>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>
@@ -181,16 +188,18 @@
            
         </div>
         <div class="content">
+        {!!Form::model($data,['route'=>['datos.update',$data->id],'method'=>'PUT'])!!}
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Link Pinterest</label>
-                        <input type="tetxt" class="form-control" placeholder="link Pinterest" name="">
+                        <input type="tetxt" class="form-control" placeholder="link Pinterest" name="pinterest" value="{{$data->pinterest}}">
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-info btn-fill pull-right">ACTUALIZAR</button>
             <div class="clearfix"></div>
+            {!!Form::close()!!}
         </div>
     </div>
 </div>

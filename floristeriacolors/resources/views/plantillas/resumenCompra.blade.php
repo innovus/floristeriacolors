@@ -137,7 +137,7 @@
                 <div class="date-comprador col-md-12">
                     <h4>3. Escribe una observación a tu compra.</h4>
                      <div class="col-md-12">
-                        <textarea name = "mensaje" placeholder="hora de entrega, si deseas que tu entrega se haga con remitente anónimo, sugerencia  tu arreglo, etc." id="textObservacion" class="form-control"></textarea>
+                        <textarea name = "observacion" placeholder="hora de entrega, si deseas que tu entrega se haga con remitente anónimo, sugerencia  tu arreglo, etc." id="textObservacion" class="form-control"></textarea>
                      </div>
                 </div>
                 <div class="col-md-12">

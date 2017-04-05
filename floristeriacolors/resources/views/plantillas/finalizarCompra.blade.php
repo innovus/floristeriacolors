@@ -7,6 +7,7 @@
         <div class="row">
             <!--Datos comprador y destinatario -->
             <div class="col-md-7">
+             {!!Form::open(['route'=> 'cart', 'method'=>'POST'])!!}
                 <div class="col-md-12">
                    
                     <!--info comprador -->
@@ -50,7 +51,7 @@
                           <h5> <strong>Teléfono:</strong>{{$dataCart["celularComprador"]}}</h5>  
                         </div>
                         <div class="col-md-12">
-                          <h5> <strong>Identificación:</strong>{{$dataCart["identificacionComprador"]}}</h5>  
+                         
                         </div>   
                     </div>
                     <!--fin info destinatario -->
@@ -80,11 +81,20 @@
                 <div class="col-md-10 col-md-offset-1 text-center">
                    
                     <img src="\img\pasgos.png" class="img-responsive">
-                </div>      
+                </div> 
+                @php 
+               // $time = strtotime($dataCart["fechaEntrega"]);
+               // $newformat = date('Y-m-d',$time);
+              //  echo $dataCart["fechaEntrega"];
+               // echo $newformat;
+              //  echo $time;
+
+                @endphp     
                              
                 <div class=" col-md-12">
                     <input type="submit" name="" class="btn btn-primary form-control" value="PAGAR AHORA">
-                </div>               
+                </div> 
+                 {!!Form::close()!!}              
             </div>
             <!--*********************************************-->
 
@@ -109,6 +119,7 @@
             </div>
             <!--fin carrito de compras -->
         </div>
+
         
     </div>
 </section>
