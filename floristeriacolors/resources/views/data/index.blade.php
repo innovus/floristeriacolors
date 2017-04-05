@@ -160,7 +160,7 @@
 <div class="col-md-4">
     <div class="card">
         <div class="header">
-            <h4 class="title">SKYPE</h4>
+            <h4 class="title">TWITTER</h4>
            
         </div>
         <div class="content">
@@ -168,8 +168,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label>Link Skype</label>
-                        <input type="tetxt" class="form-control" placeholder="link Skype" name="youtube" value="{{$data->youtube}}" >
+                        <label>Link Twitter</label>
+                        <input type="tetxt" class="form-control" placeholder="link Twitter" name="youtube" value="{{$data->youtube}}" >
                     </div>
                 </div>
             </div>

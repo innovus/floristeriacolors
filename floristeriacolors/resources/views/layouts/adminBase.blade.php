@@ -110,6 +110,7 @@
                             <li><a href="/admin/precios">  LISTAR</a></li>
                         </ul>
                     </li>
+                    <!-- -->
                     <li>
                         <div class="link linkito">
                             <a href="/ventas">
@@ -118,6 +119,7 @@
                             </a>
                         </div>
                     </li>
+                    <!-- -->
                     <li>
                         <div class="link linkito">
                             <a href="/admin/multimedia">
