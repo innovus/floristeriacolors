@@ -50,6 +50,7 @@ Route::resource('admin/sliders','SliderController');
 Route::resource('admin/destacados','PopularProductController');
 Route::resource('admin/mas_vendidos','BestSellerProductController');
 Route::resource('mail','MailController');
+Route::get('admin/carritos', ['as'=> 'carritos','uses' =>'CartController@index']);
 Route::post('cart', ['as'=> 'cart','uses' =>'CartController@store']);
 /*Route::get('/', function () {
     //return view('welcome');

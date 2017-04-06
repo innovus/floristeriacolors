@@ -22,41 +22,31 @@
                 </thead>
                 <tbody>
                 <!--inicio un movimiento-->
+                @foreach($carts as $cart) 
                     <tr>
-                        <td>10/04/2017</td>
-                        <td>13</td>
-                        <td>Jhon Frey Diaz</td>
-                        <td>23000</td>
-                        <td>atendido</td>
+                        <td>{{$cart->fecha_compra}}</td>
+                        <td>{{$cart->id}}</td>
+                        <td>{{$cart->client->nombres}} {{$cart->client->apellidos}}</td>
+                        <td>{{number_format($cart->total_carrito())}}</td>
                         <td>
+                        @if($cart->client->was_payed)
+                            Cancelado
+                        @else
+                         No Cancelado
+
+                        @endif
+
+                        </td>
+                        <td>
+                        
                             <a href="#info" data-type="zoomin" id="btn-ver1" onclick="verbtn(1)" class="btn btn-danger">ver</a>
                             
                         </td>
                     </tr>
+                @endforeach
                    
                 <!-- finr un movimiento -->   
-                <!--inicio un movimiento-->
-                    <tr>
-                        <td>10/04/2017</td>
-                        <td>14</td>
-                        <td>Ana Maria lopez</td>
-                        <td>23000</td>
-                        <td>Sin atender</td>
-                        <td><a href="#info3" data-type="zoomin" id="btn-ver2" onclick="verbtn(2)" class="btn btn-success">ver</a></td>
-                    </tr>
-                   
-                <!-- finr un movimiento -->  
-                <!--inicio un movimiento-->
-                    <tr>
-                        <td>10/04/2017</td>
-                        <td>15</td>
-                         <td>Pedro Acosta</td>
-                        <td>23000</td>
-                        <td>atendido</td>
-                        <td><a href="#info2" data-type="zoomin" id="btn-ver3" onclick="verbtn(3)" class="btn btn-danger">ver</a></td>
-                    </tr>
-                   
-                <!-- finr un movimiento -->              
+          
                 
                 </tbody>
             </table>
