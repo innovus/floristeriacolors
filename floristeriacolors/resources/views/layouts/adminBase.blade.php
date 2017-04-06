@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width" />
 
     <script src="https://use.fontawesome.com/b5998af619.js"></script>
-    
+    <link rel="stylesheet" href="/assets/css/demop.css">
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/assets/css/animate.min.css" rel="stylesheet"/>
     <link href="/assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>    
@@ -110,7 +110,6 @@
                             <li><a href="/admin/precios">  LISTAR</a></li>
                         </ul>
                     </li>
-                    <!-- -->
                     <li>
                         <div class="link linkito">
                             <a href="/ventas">
@@ -119,7 +118,6 @@
                             </a>
                         </div>
                     </li>
-                    <!-- -->
                     <li>
                         <div class="link linkito">
                             <a href="/admin/multimedia">
@@ -227,7 +225,7 @@
     <script src="/assets/js/light-bootstrap-dashboard.js"></script>
 
     <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
-    <script src="/assets/js/demo.js"></script>
+    <script src="/assets/js/demop.js"></script>
     <script type="text/javascript" src="/js/menu.js"></script>
 
 
