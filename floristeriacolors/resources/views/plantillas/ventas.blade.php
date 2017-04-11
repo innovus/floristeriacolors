@@ -46,7 +46,7 @@
                 @endforeach
                    
                 <!-- finr un movimiento -->   
-<<<<<<< HEAD
+
                 <!--inicio un movimiento-->
                     <tr>
                         <td>10/04/2017</td>
@@ -58,9 +58,7 @@
                     </tr>
                    
                 <!-- finr un movimiento -->               
-=======
-          
->>>>>>> origin/master
+
                 
                 </tbody>
             </table>
