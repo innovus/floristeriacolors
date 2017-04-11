@@ -18,7 +18,6 @@
                     <th>Valor</th>
                     <th>Estado</th>
                     <th>Acción</th>
-                   
                 </thead>
                 <tbody>
                 <!--inicio un movimiento-->
@@ -45,21 +44,7 @@
                     </tr>
                 @endforeach
                    
-                <!-- finr un movimiento -->   
-
-                <!--inicio un movimiento-->
-                    <tr>
-                        <td>10/04/2017</td>
-                        <td>14</td>
-                        <td>Ana Maria lopez</td>
-                        <td>23000</td>
-                        <td>Sin atender</td>
-                        <td><a href="#info3" data-type="zoomin" id="btn-ver2" onclick="verbtn(2)" class="btn btn-success">ver</a></td>
-                    </tr>
-                   
-                <!-- finr un movimiento -->               
-
-                
+                <!-- finr un movimiento -->      
                 </tbody>
             </table>
 
