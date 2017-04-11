@@ -20,7 +20,8 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $carts = Cart::orderBy('id', 'desc')->get();
+        return view('plantillas.ventas',compact('carts'));
     }
 
     /**

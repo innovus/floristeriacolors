@@ -14,4 +14,9 @@ class Detail extends Model
     {
         return $this->belongsTo('FloristeriaColors\Product');
     }
+
+    public function client()
+    {
+        return $this->belongsTo('FloristeriaColors\Cart');
+    }
 }

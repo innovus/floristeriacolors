@@ -59,6 +59,7 @@
                         <td>
                         @php
                         
+                        
                         $fecha = DateTime::createFromFormat('Y-m-d', $cliente->cumpleanos);
                         echo $fecha->format('d/m');
                         @endphp
