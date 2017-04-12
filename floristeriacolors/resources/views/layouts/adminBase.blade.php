@@ -112,7 +112,7 @@
                     </li>
                     <li>
                         <div class="link linkito">
-                            <a href="/ventas">
+                            <a href="/admin/carritos">
                                 <i class="fa fa-line-chart fa-1x"></i>
                                 VENTAS
                             </a>

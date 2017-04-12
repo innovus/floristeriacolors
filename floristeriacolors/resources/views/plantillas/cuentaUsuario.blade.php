@@ -94,25 +94,40 @@
   <div class="modal-body text-center">
     <div class="row text-center">
             <h3>MIS COMPRAS REALIZADAS</h3>
-          <div class="col-md-6 col-md-offset-3">
+          <div class="col-md-10 col-md-offset-1">
             <!-- un detalle-->
             <div class="row">
-                <div class="col-md-2 col-xs-2 text-center">
-                    <div class="cant"><h4>5</h4></div>
-                </div>
-                <div class="col-md-4 col-xs-4">
-                    <img src="/img/cesta.jpg" class="img-responsive">
-                </div>
-                <div class="col-md-4 ">
-                    <strong>Cesta Rosas</strong>
-                    <h4>COP:27.000</h4>
-                </div>
-                <div class="col-md-2">
-                    <button class="btn btn-success">Volver a pedir</button>
-                </div>
-                
-            </div>
             <hr>
+                <div class="col-md-3">
+                    <h5>10/04/2015</h5>
+                </div>
+                <div class="col-md-4">
+                    <h5>$132.000</h5>
+                </div>
+                <div class="col-md-5">
+                    <h5>Para: Jhon Frey Diaz</h5>
+                </div>
+        
+            <hr>
+            </div>
+            
+            <!--fin un detalle -->
+            <!-- un detalle-->
+            <div class="row">
+            <hr>
+                <div class="col-md-3">
+                    <h5>10/04/2015</h5>
+                </div>
+                <div class="col-md-4">
+                    <h5>$132.000</h5>
+                </div>
+                <div class="col-md-5">
+                    <h5>Para: Jhon Frey Diaz</h5>
+                </div>
+        
+            <hr>
+            </div>
+            
             <!--fin un detalle -->
 
           </div>
