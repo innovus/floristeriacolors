@@ -7,6 +7,7 @@ use FloristeriaColors\Cart;
 use FloristeriaColors\Client;
 use FloristeriaColors\Detail;
 use FloristeriaColors\User;
+use FloristeriaColors\Point;
 use Illuminate\Support\Facades\Auth;
 use Session;
 use Redirect;
@@ -160,6 +161,15 @@ class CartController extends Controller
         $cart = Cart::find($id);
         $cart->fill($request->all());
         $cart->save();
+
+        $point = new Point;
+        $point->client_id = $cart->client_id;
+        $point->cart_id = $cart->id;
+        $point->puntos = ($cart->total_carrito()/1000);
+        
+        $point->save();
+
+
 
         Session::flash('message','Carrito Confirmado correctamente');
 

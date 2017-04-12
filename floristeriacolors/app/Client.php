@@ -20,5 +20,10 @@ class Client extends Model
     {
         return $this->hasMany('FloristeriaColors\Cart');
     }
+
+    public function points()
+    {
+        return $this->hasMany('FloristeriaColors\Point');
+    }
     
 }
