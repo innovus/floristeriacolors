@@ -96,37 +96,36 @@
             <h3>MIS COMPRAS REALIZADAS</h3>
           <div class="col-md-10 col-md-offset-1">
             <!-- un detalle-->
-            <div class="row">
-            <hr>
-                <div class="col-md-3">
-                    <h5>10/04/2015</h5>
-                </div>
-                <div class="col-md-4">
-                    <h5>$132.000</h5>
-                </div>
-                <div class="col-md-5">
-                    <h5>Para: Jhon Frey Diaz</h5>
-                </div>
+            @if($user->client)
+              @foreach($user->client->carts as $carrito)
+
+                @foreach($carrito->details as $detail)
+                    <div class="row">
+                        <hr>
+                            <div class="col-md-3">
+                                <h5>{{$carrito->fecha_compra}}</h5>
+                            </div>
+                            <div class="col-md-4">
+                                <h5>{{$detail->product->nombre}}</h5>
+                            </div>
+                            <div class="col-md-5">
+                                <h5>{{$detail->precio}}</h5>
+                            </div>
         
-            <hr>
-            </div>
+                        <hr>
+                    </div>
+                @endforeach
+              @endforeach
+            @endif
+
+          
+
+
+          
             
             <!--fin un detalle -->
             <!-- un detalle-->
-            <div class="row">
-            <hr>
-                <div class="col-md-3">
-                    <h5>10/04/2015</h5>
-                </div>
-                <div class="col-md-4">
-                    <h5>$132.000</h5>
-                </div>
-                <div class="col-md-5">
-                    <h5>Para: Jhon Frey Diaz</h5>
-                </div>
-        
-            <hr>
-            </div>
+
             
             <!--fin un detalle -->
 
@@ -218,7 +217,7 @@
          </div>
      </div>
      <div class="col-md-12 puntosRedimir-titulo">
-         <h4>Tienes <strong>10.300 puntos</strong>, que esquivale a <strong>10.300 pesos.</strong></h4>
+         <h4>Tienes <strong>10.300 puntos</strong></h4>
      </div>
      
         <div class="modal-footer">
