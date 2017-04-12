@@ -157,7 +157,13 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cart = Cart::find($id);
+        $cart->fill($request->all());
+        $cart->save();
+
+        Session::flash('message','Carrito Confirmado correctamente');
+
+        return Redirect::to('/admin/carritos');
     }
 
     /**
