@@ -5,6 +5,8 @@
 
 
 <div class="col-md-6">
+<div class="col-md-12">
+
     <div class="card">
         <div class="header">
             <h4 class="title">REGISTRAR OCASIÓN</h4>
@@ -28,6 +30,42 @@
         </div>
     </div>
 </div>
+<div class="col-md-12">
+    <div class="">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">OCASIONES REGISTRADAS</h4>
+                    </div>
+        <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                    
+                </thead>
+                <tbody>
+
+                <!--inicio una categoria -->
+                @foreach($ocasiones as $ocasion)
+                 <tr>
+                        <td>{{$ocasion->ocasion}}</td>
+                        <td>
+                            <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
+                            <button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
+                        </td>
+                    </tr>
+                @endforeach
+                   
+                <!-- fin una categoria-->
+                    
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
 
 <div class="col-md-6">
     <div class="card">
@@ -48,12 +86,12 @@
                         if(BuscarProducto(data,element)) {
                             console.log("encontrado")
 
-                            $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" id="" checked="" /> '+ element.nombre + '</label>');
+                            $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="" checked="" /> '+ element.nombre + '</label>');
                             
                           
                         }
                         else {
-                              $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" id="" /> '+ element.nombre + '</label>');
+                              $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="" /> '+ element.nombre + '</label>');
                               console.log("no encontrado")
                         }
                     });
@@ -96,19 +134,17 @@
                 <div class="row">
                     
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="form-group text-center">
 
-                        <h1>Listas vinculadas</h1>
+                        <h3>Listas vinculadas</h3>
 
                         {{ Form::open() }}
                         {!!Form::label('Ocasion','Escoge la ocasion:')!!}
                             {!!Form::select('occasion_id',$occasions,null,['class'=>'form-control', 'id' =>'occasion_id' ])!!}  
                         <br>
                         {{ Form::close()}}
-
-
-                          
                         </div>
+
                         <div class="form-group">
                             <form>
                               <div class="multiselect">
@@ -128,45 +164,13 @@
                      
                 </div>
 
-                <button type="submit" class="btn btn-info btn-fill pull-right">ADICIONAR</button>
+                <!--<button type="submit" class="btn btn-info btn-fill pull-right">ADICIONAR</button>-->
                 <div class="clearfix"></div>
             {!!Form::close()!!}
         </div>
     </div>
 </div>
-<div class="col-md-8 col-md-offset-2">
-    <div class="card">
-        <div class="header">
-            <h4 class="title">OCASIONES REGISTRADAS</h4>
-                    </div>
-        <div class="content table-responsive table-full-width">
-            <table class="table table-hover table-striped">
-                <thead>
-                    <th>Nombre</th>
-                    <th>Acciones</th>
-                    
-                </thead>
-                <tbody>
 
-                <!--inicio una categoria -->
-                @foreach($ocasiones as $ocasion)
-                 <tr>
-                        <td>{{$ocasion->ocasion}}</td>
-                        <td>
-                            <button type="submit" class="btn btn-success" ><span class="fa fa-pencil fa-1x"></span></button>
-                            <button type="submit" class="btn btn-danger" ><span class="fa fa-trash fa-1x"></span></button>
-                        </td>
-                    </tr>
-                @endforeach
-                   
-                <!-- fin una categoria-->
-                    
-                </tbody>
-            </table>
-
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
     var expanded = false;
 
@@ -179,6 +183,14 @@ function showCheckboxes() {
     checkboxes.style.display = "none";
     expanded = false;
   }
+}
+
+function validar(obj){
+    if(obj.checked==true){
+        alert("si");
+    }else{
+        alert("no");
+    }
 }
 </script>
 @stop
