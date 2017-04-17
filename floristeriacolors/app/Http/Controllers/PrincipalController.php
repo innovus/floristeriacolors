@@ -354,5 +354,14 @@ class PrincipalController extends Controller
         return (Session::get('dataCart'));    
 
     }
+    public function guardar(Request $request){
+        return $request;
+
+        //parse_str(file_get_contents("php://input"), $_POST);
+       // return "que";
+      /*  $json = $request->json()->all();
+        return $json;*/
+
+    }
 
 }

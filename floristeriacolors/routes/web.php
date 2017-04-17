@@ -43,7 +43,7 @@ Route::resource('admin/precios','PriceController');
 Route::resource('admin/clientes','ClientController');
 Route::resource('admin/datos','DataController');
 Route::resource('admin/ocasiones','OccasionController');
-Route::resource('admin/productosOcasiones','ProductOccasionController');
+//Route::resource('admin/productosOcasiones','ProductOccasionController');
 Route::resource('admin/articulos','ArticleController');
 Route::resource('admin/multimedia','VideoController');
 Route::resource('admin/sliders','SliderController');
@@ -75,6 +75,7 @@ Route::get('/productos', 'PrincipalController@productos');
 Route::post('/carroVS', 'PrincipalController@cartVS');
 Route::get('/carroVS', 'PrincipalController@getCartVS');
 Route::post('/dataCart', ['as'=> 'dataCart','uses' =>'PrincipalController@dataCart']);
+Route::post('/ocasionproducto', 'ProductOccasionController@guardar');
 
 Route::get('/dataCart', 'PrincipalController@getDataCart');
 

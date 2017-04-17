@@ -86,12 +86,12 @@
                         if(BuscarProducto(data,element)) {
                             console.log("encontrado")
 
-                            $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="" checked="" /> '+ element.nombre + '</label>');
+                            $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="'+element.id+'" checked="" /> '+ element.nombre + '</label>');
                             
                           
                         }
                         else {
-                              $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="" /> '+ element.nombre + '</label>');
+                              $('#checkboxes').append(' <label for="one" class="form-control"> <input type="checkbox" onclick="javascript:validar(this);" id="'+element.id+'" /> '+ element.nombre + '</label>');
                               console.log("no encontrado")
                         }
                     });
@@ -129,7 +129,7 @@
     }   
 </script>
 
-             {!!Form::open(['route'=> 'productosOcasiones.store', 'method'=>'POST'])!!}
+             
               
                 <div class="row">
                     
@@ -166,7 +166,7 @@
 
                 <!--<button type="submit" class="btn btn-info btn-fill pull-right">ADICIONAR</button>-->
                 <div class="clearfix"></div>
-            {!!Form::close()!!}
+            
         </div>
     </div>
 </div>
@@ -187,8 +187,31 @@ function showCheckboxes() {
 
 function validar(obj){
     if(obj.checked==true){
+        var array = {"product_id":parseInt(obj.id),"occasion_id":parseInt($( "#occasion_id" ).val())}
+        console.log(obj.id);
+        console.log($( "#occasion_id" ).val());
+        console.log(array);
+        console.log(JSON.stringify(array))
+        
+
+        $.ajax({
+            type: "POST",
+            url: "/ocasionproducto",
+            data: JSON.stringify(array),
+            contentType: "json",
+            processData: false,
+            success:function(data) {
+                console.log(data);
+            },
+            error: function(error){
+                console.log(error);
+
+            }
+        });
+
         alert("si");
     }else{
+        //elimina
         alert("no");
     }
 }

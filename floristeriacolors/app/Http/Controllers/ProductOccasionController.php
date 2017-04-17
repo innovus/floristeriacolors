@@ -15,9 +15,9 @@ class ProductOccasionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
+   /* public function __construct(){
         $this->middleware('authAdmin');
-    }
+    }*/
     public function index()
     {
         $ocasiones = Occasion::All();
@@ -29,9 +29,27 @@ class ProductOccasionController extends Controller
 
 
      public function store(Request $request)
-    {
+    {   
         ProductOccasion::create($request->all());
-        return redirect('/admin/ocasiones')->with('message','Ocasion Guardada con exito');
+        return "error";
+       // return redirect('/admin/ocasiones')->with('message','Ocasion Guardada con exito');
+
+    }
+    public function guardar(Request $request){
+        //return $request;
+
+        parse_str(file_get_contents("php://input"), $_POST);
+       // return "que";
+        $json = $request->json()->all();
+       /* $json = json_encode($json);
+        $json = json_decode($json,true);*/
+        $productoOcasion = new ProductOccasion;
+        $productoOcasion->product_id = $json["product_id"];
+        $productoOcasion->occasion_id =$json["occasion_id"];
+        $productoOcasion->save();
+
+
+        return $productoOcasion;
 
     }
 
@@ -89,6 +107,18 @@ class ProductOccasionController extends Controller
      */
     public function destroy($id)
     {
+        try {
+                ProductOccasion::destroy($id);
+                return "exito";
+               // Session::flash('message','Producto eliminado correctamente');
+                //return Redirect::to('/admin/productos');
+
+            } catch (\Illuminate\Database\QueryException $e) {
+              //  Session::flash('error','No se puede eliminar por que tiene precios');
+              //  return Redirect::to('/admin/productos');
+                return "error";
+
+            } 
 
     }
 }
