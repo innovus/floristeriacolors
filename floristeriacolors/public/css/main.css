@@ -835,6 +835,7 @@ formas de pago
 .contact {
 	padding-bottom: 0;
   background-color: #85a559;
+
 }
 
 .contact-address h3 {
@@ -1727,7 +1728,15 @@ LOGIN
 form contacto
 ========================*/
 .contacto{
-  background-color: #689F38;
+  background-image: url("../assets/img/sidebar-5.jpg");
+  border-top:10px solid #6B9400;/*#b4494f;*/
+  border-bottom:10px solid #6B9400;/*#b4494f;*/
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  padding: 0;
 }
 .titulo-contacto h3{
   font-size: 35px;
@@ -1757,7 +1766,7 @@ form contacto
   padding: 0 0; 
 }
 .dates{
-  background-color: #689F38;
+  
   margin-top: 2px;
   padding: 10px 0;
 }
@@ -2175,7 +2184,11 @@ blog
 }
 
 .parallax-overlays {
-  background-color: rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,.5);
+  padding: 100px 0;
+}
+.parallax-overlayss {
+  background-color: rgba(0,0,0,.1);
   padding: 100px 0;
 }
 .parallax-overlays h3{
@@ -2270,9 +2283,14 @@ blog
   padding: 20px 5px;
 }
 .titulo-memoral h3{
-  color: #6B9400;
+  color: #eee;
   font-weight: 700;
   font-size: 40px;
+}
+.texto-memoral{
+  background: #eee;
+  border-radius: 5px;
+  padding: 15px 10px;
 }
 .texto-memoral p{
   color: #000;
@@ -2280,6 +2298,24 @@ blog
   text-align: justify;
   padding: 0 0;
 }
+.texto-memoral strong{
+  color: #f49c0b;
+  font-size: 16px;
+  font-weight: bold;
+
+}
 .conta{
   display: none;
+}
+.arbol{
+  background-image: url("../img/florescolors.png");
+  border-top:10px solid #6B9400;/*#b4494f;*/
+  border-bottom:10px solid #6B9400;/*#b4494f;*/
+  background-color: rgba(254,254,254,0.1);
+  background-attachment: fixed !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  padding: 0;
 }
