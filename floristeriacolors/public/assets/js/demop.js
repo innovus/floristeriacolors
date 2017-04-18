@@ -1,6 +1,6 @@
 function verbtn(n) {
 	
-		alert(n);
+		
 		/*---------------------------------------*/
 		
 		type = $(this).attr('data-type');

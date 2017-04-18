@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="col-md-7">
+<div class="col-md-8">
     <div class="card">
         <div class="header">
             <h4 class="title">LISTADO CLIENTES</h4>
@@ -16,6 +16,9 @@
                     <th>Apellidos</th>
                     <th>Dirección</th>
                     <th>Teléfono</th>
+                    <th>Puntos</th>
+                    <th>Acción</th>
+                
                    
                 </thead>
                 <tbody>
@@ -26,6 +29,11 @@
                         <td>{{$cliente->apellidos}}</td>
                         <td>{{$cliente->direccion}}</td>
                         <td>{{$cliente->celular}}</td>
+                        <td>1227</td>
+                        <td><input type="text" class="form-control" name="" placeholder="Puntos a redimir">
+                        <input type="submit" class="btn btn-primary" value="redimir" name="">
+                        </td>
+
                 </tr>
 
                 @endforeach
@@ -37,7 +45,7 @@
         </div>
     </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-4">
     <div class="card">
         <div class="header">
             <h4 class="title">PROXIMO CUMPLEAÑOS</h4>
@@ -47,7 +55,7 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <th>Nombre</th>
-                    <th>Fecha de Nacimiento</th>
+                    <th>Fecha Nac.</th>
                     <th>Teléfono</th>
                    
                 </thead>
