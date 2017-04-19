@@ -7,8 +7,8 @@
     <div class="parallax-overlayss">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 text-center titulo-contacto">
-                <h3>CONTÁCTANOS</h3>
+            <div class="col-md-6 col-md-offset-3 text-center titulo-contacto"><br>
+                <h2><strong>CONTÁCTANOS</strong></h2>
             </div>
 
         <!-- ****************************************** --> 
