@@ -54,21 +54,7 @@
                          
                         </div>   
                     </div>
-                    <!--fin info destinatario -->
-
-                    <!-- cupon de descuento 
-                    <div class="col-md-12 info-final"><br>
-                         <div class="col-md-12">
-                             <h5>Tienes un código de descuento? ingresalo aquí</h5>
-                         </div>
-                         <div class="col-md-12">
-                         <input type="text" name="" class="form-control" placeholder="Código Cupón">
-                         </div>
-                         <div class="col-md-12">
-                          <input type="button" class="btn btn-success" value="Aplicar Cupón" name="">
-                         </div><br> <br> <br> <br> <br> 
-                    </div>
-                    fin cupon de descuento-->
+                  
                 </div>
                 <div class="col-md-8 col-md-offset-2">
                     <div class="radio">
@@ -91,13 +77,11 @@
 
                 @endphp     
                              
-                <div class=" col-md-12">
-                    <input type="submit" name="" class="btn btn-primary form-control" value="PAGAR AHORA">
-                </div> 
-                 {!!Form::close()!!}              
+                
+                            
             </div>
             <!--*********************************************-->
-
+            
             <!--carrito de compras -->
             <div class="col-md-5 resumenCarrito-detalles">
                 <div class="col-md-12 text-center"><br>
@@ -118,6 +102,10 @@
                 </div>
             </div>
             <!--fin carrito de compras -->
+            <div class=" col-md-6 col-md-offset-3">
+                    <input type="submit" name="" class="btn btn-primary form-control" value="PAGAR AHORA">
+            </div> 
+            {!!Form::close()!!}   
         </div>
 
         

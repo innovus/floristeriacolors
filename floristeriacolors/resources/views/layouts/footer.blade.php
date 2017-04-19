@@ -63,6 +63,11 @@
                     </div>
                     
                 </div>
+                <div class="row text-center">
+                  <div class="col-md-8 col-md-offset-2"><br><br><br>
+                    <strong><h5>©<a href="">Jhon Frey Diaz</a>- <a href="">Jorge Luis Viveros Arcos</a>  2017 Todos los derechos reservados.</h5></strong>
+                  </div>
+                </div>
             </div>
         </footer>
          <!--fin footer -->

@@ -53,7 +53,7 @@ span.color {
 
 body > section,
 .footer {
-	padding: 70px 0;
+	padding: 10px 0;
 }
 
 
@@ -929,6 +929,9 @@ label.error {
   background-color:#F5F5F5;
   border-top: 5px solid #EF5350;/*#b4494f;*/
   color: #424242;
+}
+.footer a{
+  font-weight: 400;
 }
 .fb{
   color: #01579B !important;
