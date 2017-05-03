@@ -12,7 +12,7 @@
     {!!Html::style('css/metisMenu.min.css')!!}
     {!!Html::style('css/sb-admin-2.css')!!}
     {!!Html::style('css/font-awesome.min.css')!!}
-
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="52867644-4691-4dc5-9c46-4c0179957138";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 </head>
 

@@ -19,7 +19,7 @@
     <link href="/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
     <link rel="stylesheet" href='/css/style.css'>
     <script src="/assets/js/jquery-1.10.2.js" type="text/javascript"></script>
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="52867644-4691-4dc5-9c46-4c0179957138";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.im/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    
 
 </head>
 <body>
