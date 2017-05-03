@@ -17,6 +17,7 @@
                     <th>Dirección</th>
                     <th>Teléfono</th>
                     <th>Puntos</th>
+                    <th>asignar</th>
                     <th>Acción</th>
                 
                    
@@ -30,7 +31,10 @@
                         <td>{{$cliente->direccion}}</td>
                         <td>{{$cliente->celular}}</td>
                         <td>1227</td>
-                        <td><input type="text" class="form-control" name="" placeholder="Puntos a redimir">
+                        <td><input type="text" class="form-control" name="" placeholder="Puntos">
+                        <input type="submit" class="btn btn-primary" value="asignar" name="">
+                        </td>
+                        <td><input type="text" class="form-control" name="" placeholder="Puntos">
                         <input type="submit" class="btn btn-primary" value="redimir" name="">
                         </td>
 
