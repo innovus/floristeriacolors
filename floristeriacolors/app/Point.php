@@ -19,4 +19,5 @@ class Point extends Model
     {
         return $this->belongsTo('FloristeriaColors\Cart');
     }
+
 }

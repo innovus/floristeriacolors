@@ -11,6 +11,7 @@
         <div class="content table-responsive table-full-width">
             <table class="table table-hover table-striped">
                 <thead>
+
                     
                     <th>Nombre</th>
                     <th>Apellidos</th>
@@ -24,18 +25,47 @@
                 </thead>
                 <tbody>
                 @foreach($clientes as $cliente)
+
+              
                 <tr>
+
                        
                         <td>{{$cliente->nombres}}</td>
                         <td>{{$cliente->apellidos}}</td>
                         <td>{{$cliente->direccion}}</td>
+                        
                         <td>{{$cliente->celular}}</td>
-                        <td>1227</td>
-                        <td><input type="text" class="form-control" name="" placeholder="Puntos">
-                        <input type="submit" class="btn btn-primary" value="asignar" name="">
+                        <td>
+                        @php
+
+                            $collection = collect($cliente->points);
+                            echo $collection->sum("puntos");
+                                
+                                //echo $fecha->format('d/m');
+                        @endphp
+
                         </td>
-                        <td><input type="text" class="form-control" name="" placeholder="Puntos">
-                        <input type="submit" class="btn btn-primary" value="redimir" name="">
+                        <td>
+                            {!!Form::open(['route'=> 'points.store', 'method'=>'POST'])!!}
+                                 {!!Form::text('puntos',null,['class'=>'form-control','placeholder'=>'Puntos'])!!}
+                                 {!!Form::hidden('client_id',$cliente->id)!!}
+                                 {!!Form::hidden('tipo',1)!!}
+
+                                {!!Form::submit('Asignar',['class'=>'btn btn-info btn-fill pull-right'])!!}
+                                <div class="clearfix"></div>
+                            {!!Form::close()!!}
+                            <!--<input type="text" class="form-control" name="" placeholder="Puntos">
+                        <input type="submit" class="btn btn-primary" value="asignar" name="">-->
+                        </td>
+                        <td>
+                            {!!Form::open(['route'=> 'points.store', 'method'=>'POST'])!!}
+                                 {!!Form::text('puntos',null,['class'=>'form-control','placeholder'=>'Puntos'])!!}
+                                 {!!Form::hidden('client_id',$cliente->id)!!}
+                                 {!!Form::hidden('tipo',2)!!}
+
+                                {!!Form::submit('Redimir',['class'=>'btn btn-info btn-fill pull-right'])!!}
+                                <div class="clearfix"></div>
+                            {!!Form::close()!!}
                         </td>
 
                 </tr>

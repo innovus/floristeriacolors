@@ -4,7 +4,9 @@ namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
 use FloristeriaColors\Client;
+use FloristeriaColors\Point;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Collection;
 
 use Session;
 use Redirect;
@@ -58,6 +60,13 @@ class ClientController extends Controller
         Client::create($request->all());
         return redirect('/cuentaUsuario');
     }
+    /*
+
+    public function storePoint(Request $request)
+    {
+        Point::create($request->all());
+        return redirect('/admin/clientes')->with('message','store');
+    }*/
 
     /**
      * Display the specified resource.

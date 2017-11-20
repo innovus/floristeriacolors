@@ -41,15 +41,23 @@ class ProductOccasionController extends Controller
         parse_str(file_get_contents("php://input"), $_POST);
        // return "que";
         $json = $request->json()->all();
+        if($json["operacion"] == "post"){
+            $productoOcasion = new ProductOccasion;
+            $productoOcasion->product_id = $json["product_id"];
+            $productoOcasion->occasion_id =$json["occasion_id"];
+            $productoOcasion->save();
+
+
+            return $productoOcasion;
+
+        }else{
+            ProductOccasion::where('product_id', $json["product_id"])->where('occasion_id', $json["occasion_id"])->delete();
+            return "bien";
+
+        }
        /* $json = json_encode($json);
         $json = json_decode($json,true);*/
-        $productoOcasion = new ProductOccasion;
-        $productoOcasion->product_id = $json["product_id"];
-        $productoOcasion->occasion_id =$json["occasion_id"];
-        $productoOcasion->save();
-
-
-        return $productoOcasion;
+        
 
     }
 

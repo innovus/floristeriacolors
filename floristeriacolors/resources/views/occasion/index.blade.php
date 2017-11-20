@@ -187,7 +187,7 @@ function showCheckboxes() {
 
 function validar(obj){
     if(obj.checked==true){
-        var array = {"product_id":parseInt(obj.id),"occasion_id":parseInt($( "#occasion_id" ).val())}
+        var array = {"product_id":parseInt(obj.id),"occasion_id":parseInt($( "#occasion_id" ).val()),"operacion":"post"}
         console.log(obj.id);
         console.log($( "#occasion_id" ).val());
         console.log(array);
@@ -209,10 +209,25 @@ function validar(obj){
             }
         });
 
-        alert("si");
+        //alert("si");
     }else{
         //elimina
-        alert("no");
+        var array = {"product_id":parseInt(obj.id),"occasion_id":parseInt($( "#occasion_id" ).val()),"operacion":"delete"}
+        $.ajax({
+            type: "POST",
+            url: "/ocasionproducto",
+            data: JSON.stringify(array),
+            contentType: "json",
+            processData: false,
+            success:function(data) {
+                console.log(data);
+            },
+            error: function(error){
+                console.log(error);
+
+            }
+        });
+       
     }
 }
 </script>

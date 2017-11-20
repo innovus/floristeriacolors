@@ -3,6 +3,9 @@
 namespace FloristeriaColors;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use FloristeriaColors\Point;
+
 
 class Client extends Model
 {
@@ -25,5 +28,14 @@ class Client extends Model
     {
         return $this->hasMany('FloristeriaColors\Point');
     }
+
+
+   /* public function total_points() {
+        return$this->hasMany('FloristeriaColors\Point');
+        //$collection = collect($points);
+
+      //  return  $collection->sum('puntos');
+       // return $this->points->sum('puntos');
+    }*/
     
 }

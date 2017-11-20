@@ -3,6 +3,7 @@
 namespace FloristeriaColors\Http\Controllers;
 
 use Illuminate\Http\Request;
+use FloristeriaColors\Point;
 
 class PointController extends Controller
 {
@@ -36,8 +37,24 @@ class PointController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
+
     {
-        //
+        if( $request->input('tipo') == '2'){
+
+            $puntos =(((int)$request->input("puntos")) * -1);
+            $point = new Point;
+
+            $point->puntos = $puntos;
+            $point->client_id =$request->input("client_id");
+            $point->save();
+        }else{
+             Point::create($request->all());
+
+        }
+       // Point::create($request->all());
+        return redirect('/admin/clientes')->with('message','stored');
+        
     }
 
     /**

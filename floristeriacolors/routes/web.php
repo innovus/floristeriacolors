@@ -38,6 +38,7 @@ Route::get('ventas/','PrincipalController@ventas');
 
 /*-------------------*/
 Route::resource('admin/categorias','CategoryController');
+Route::resource('admin/points','PointController');
 Route::resource('admin/productos','ProductController');
 Route::resource('admin/precios','PriceController');
 Route::resource('admin/clientes','ClientController');
